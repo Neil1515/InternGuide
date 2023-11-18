@@ -36,6 +36,8 @@
             System.Windows.Forms.Label idLabel;
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.departmentlabel = new System.Windows.Forms.Label();
+            this.deanpicture = new System.Windows.Forms.PictureBox();
             this.updatecompltelabel = new System.Windows.Forms.Label();
             this.updatebtn = new System.Windows.Forms.Button();
             this.lnameTextBox = new System.Windows.Forms.TextBox();
@@ -47,8 +49,6 @@
             this.usernameLabel = new System.Windows.Forms.Label();
             this.verifypasswordtextBox = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.deanpicture = new System.Windows.Forms.PictureBox();
-            this.departmentlabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             accountingnameLabel = new System.Windows.Forms.Label();
@@ -58,6 +58,66 @@
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deanpicture)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            label2.AutoSize = true;
+            label2.BackColor = System.Drawing.Color.White;
+            label2.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(412, 258);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(141, 16);
+            label2.TabIndex = 43;
+            label2.Text = "VERIFY PASSWORD:";
+            // 
+            // label1
+            // 
+            label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.White;
+            label1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(412, 189);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(175, 16);
+            label1.TabIndex = 41;
+            label1.Text = "ENTER NEW PASSWORD:";
+            // 
+            // accountingnameLabel
+            // 
+            accountingnameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            accountingnameLabel.AutoSize = true;
+            accountingnameLabel.BackColor = System.Drawing.Color.White;
+            accountingnameLabel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            accountingnameLabel.Location = new System.Drawing.Point(37, 185);
+            accountingnameLabel.Name = "accountingnameLabel";
+            accountingnameLabel.Size = new System.Drawing.Size(96, 16);
+            accountingnameLabel.TabIndex = 25;
+            accountingnameLabel.Text = "FIRST NAME:";
+            // 
+            // passwordLabel
+            // 
+            passwordLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            passwordLabel.AutoSize = true;
+            passwordLabel.BackColor = System.Drawing.Color.White;
+            passwordLabel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            passwordLabel.Location = new System.Drawing.Point(412, 121);
+            passwordLabel.Name = "passwordLabel";
+            passwordLabel.Size = new System.Drawing.Size(171, 16);
+            passwordLabel.TabIndex = 21;
+            passwordLabel.Text = "ENTER OLD PASSWORD:";
+            // 
+            // idLabel
+            // 
+            idLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            idLabel.AutoSize = true;
+            idLabel.BackColor = System.Drawing.Color.White;
+            idLabel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(37, 117);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(26, 16);
+            idLabel.TabIndex = 23;
+            idLabel.Text = "ID:";
             // 
             // guna2CustomGradientPanel1
             // 
@@ -99,6 +159,32 @@
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(701, 394);
             this.guna2CustomGradientPanel2.TabIndex = 0;
+            // 
+            // departmentlabel
+            // 
+            this.departmentlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.departmentlabel.AutoSize = true;
+            this.departmentlabel.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.departmentlabel.Location = new System.Drawing.Point(166, 49);
+            this.departmentlabel.Name = "departmentlabel";
+            this.departmentlabel.Size = new System.Drawing.Size(82, 31);
+            this.departmentlabel.TabIndex = 49;
+            this.departmentlabel.Text = "label3";
+            this.departmentlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // deanpicture
+            // 
+            this.deanpicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.deanpicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.deanpicture.Location = new System.Drawing.Point(37, 19);
+            this.deanpicture.Name = "deanpicture";
+            this.deanpicture.Size = new System.Drawing.Size(122, 95);
+            this.deanpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.deanpicture.TabIndex = 45;
+            this.deanpicture.TabStop = false;
+            this.deanpicture.Click += new System.EventHandler(this.deanpicture_Click);
             // 
             // updatecompltelabel
             // 
@@ -166,30 +252,6 @@
             this.idtextBox.Size = new System.Drawing.Size(258, 33);
             this.idtextBox.TabIndex = 30;
             // 
-            // label2
-            // 
-            label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            label2.AutoSize = true;
-            label2.BackColor = System.Drawing.Color.White;
-            label2.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(412, 258);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(141, 16);
-            label2.TabIndex = 43;
-            label2.Text = "VERIFY PASSWORD:";
-            // 
-            // label1
-            // 
-            label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.White;
-            label1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(412, 189);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(175, 16);
-            label1.TabIndex = 41;
-            label1.Text = "ENTER NEW PASSWORD:";
-            // 
             // oldpasswordtextBox
             // 
             this.oldpasswordtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -210,18 +272,6 @@
             this.newpasswordtextBox.TabIndex = 42;
             this.newpasswordtextBox.UseSystemPasswordChar = true;
             // 
-            // accountingnameLabel
-            // 
-            accountingnameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            accountingnameLabel.AutoSize = true;
-            accountingnameLabel.BackColor = System.Drawing.Color.White;
-            accountingnameLabel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            accountingnameLabel.Location = new System.Drawing.Point(37, 185);
-            accountingnameLabel.Name = "accountingnameLabel";
-            accountingnameLabel.Size = new System.Drawing.Size(96, 16);
-            accountingnameLabel.TabIndex = 25;
-            accountingnameLabel.Text = "FIRST NAME:";
-            // 
             // usernameLabel
             // 
             this.usernameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -234,18 +284,6 @@
             this.usernameLabel.TabIndex = 34;
             this.usernameLabel.Text = "LAST NAME:";
             // 
-            // passwordLabel
-            // 
-            passwordLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            passwordLabel.AutoSize = true;
-            passwordLabel.BackColor = System.Drawing.Color.White;
-            passwordLabel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            passwordLabel.Location = new System.Drawing.Point(412, 121);
-            passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new System.Drawing.Size(171, 16);
-            passwordLabel.TabIndex = 21;
-            passwordLabel.Text = "ENTER OLD PASSWORD:";
-            // 
             // verifypasswordtextBox
             // 
             this.verifypasswordtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -256,47 +294,9 @@
             this.verifypasswordtextBox.TabIndex = 44;
             this.verifypasswordtextBox.UseSystemPasswordChar = true;
             // 
-            // idLabel
-            // 
-            idLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            idLabel.AutoSize = true;
-            idLabel.BackColor = System.Drawing.Color.White;
-            idLabel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(37, 117);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(26, 16);
-            idLabel.TabIndex = 23;
-            idLabel.Text = "ID:";
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // deanpicture
-            // 
-            this.deanpicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.deanpicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.deanpicture.Location = new System.Drawing.Point(37, 19);
-            this.deanpicture.Name = "deanpicture";
-            this.deanpicture.Size = new System.Drawing.Size(122, 95);
-            this.deanpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.deanpicture.TabIndex = 45;
-            this.deanpicture.TabStop = false;
-            this.deanpicture.Click += new System.EventHandler(this.deanpicture_Click);
-            // 
-            // departmentlabel
-            // 
-            this.departmentlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.departmentlabel.AutoSize = true;
-            this.departmentlabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.departmentlabel.Location = new System.Drawing.Point(166, 62);
-            this.departmentlabel.Name = "departmentlabel";
-            this.departmentlabel.Size = new System.Drawing.Size(45, 19);
-            this.departmentlabel.TabIndex = 49;
-            this.departmentlabel.Text = "label3";
-            this.departmentlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DeanManageAccount
             // 

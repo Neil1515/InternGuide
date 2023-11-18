@@ -38,7 +38,7 @@
             this.dashpanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.awdawd = new Guna.UI2.WinForms.Guna2Button();
-            this.Adminhistlogsbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.deanhistlogsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.deanmanageaccountbtn = new Guna.UI2.WinForms.Guna2Button();
             this.studentrequirementbtn = new Guna.UI2.WinForms.Guna2Button();
@@ -153,7 +153,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.awdawd);
-            this.panel2.Controls.Add(this.Adminhistlogsbtn);
+            this.panel2.Controls.Add(this.deanhistlogsbtn);
             this.panel2.Controls.Add(this.guna2Button1);
             this.panel2.Controls.Add(this.deanmanageaccountbtn);
             this.panel2.Controls.Add(this.studentrequirementbtn);
@@ -193,32 +193,33 @@
             this.awdawd.Text = "REPORTS";
             this.awdawd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // Adminhistlogsbtn
+            // deanhistlogsbtn
             // 
-            this.Adminhistlogsbtn.BackColor = System.Drawing.Color.White;
-            this.Adminhistlogsbtn.BorderRadius = 1;
-            this.Adminhistlogsbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.Adminhistlogsbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.Adminhistlogsbtn.CheckedState.FillColor = System.Drawing.Color.White;
-            this.Adminhistlogsbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.Adminhistlogsbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Adminhistlogsbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Adminhistlogsbtn.DisabledState.FillColor = System.Drawing.Color.White;
-            this.Adminhistlogsbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Adminhistlogsbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Adminhistlogsbtn.FillColor = System.Drawing.Color.White;
-            this.Adminhistlogsbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Adminhistlogsbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Adminhistlogsbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.Adminhistlogsbtn.Image = global::InternGuide.Properties.Resources.log_data;
-            this.Adminhistlogsbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Adminhistlogsbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.Adminhistlogsbtn.Location = new System.Drawing.Point(0, 306);
-            this.Adminhistlogsbtn.Name = "Adminhistlogsbtn";
-            this.Adminhistlogsbtn.Size = new System.Drawing.Size(253, 51);
-            this.Adminhistlogsbtn.TabIndex = 48;
-            this.Adminhistlogsbtn.Text = "HISTORY LOGS";
-            this.Adminhistlogsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.deanhistlogsbtn.BackColor = System.Drawing.Color.White;
+            this.deanhistlogsbtn.BorderRadius = 1;
+            this.deanhistlogsbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.deanhistlogsbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.deanhistlogsbtn.CheckedState.FillColor = System.Drawing.Color.White;
+            this.deanhistlogsbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.deanhistlogsbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.deanhistlogsbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.deanhistlogsbtn.DisabledState.FillColor = System.Drawing.Color.White;
+            this.deanhistlogsbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.deanhistlogsbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.deanhistlogsbtn.FillColor = System.Drawing.Color.White;
+            this.deanhistlogsbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deanhistlogsbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.deanhistlogsbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.deanhistlogsbtn.Image = global::InternGuide.Properties.Resources.log_data;
+            this.deanhistlogsbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.deanhistlogsbtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.deanhistlogsbtn.Location = new System.Drawing.Point(0, 306);
+            this.deanhistlogsbtn.Name = "deanhistlogsbtn";
+            this.deanhistlogsbtn.Size = new System.Drawing.Size(253, 51);
+            this.deanhistlogsbtn.TabIndex = 48;
+            this.deanhistlogsbtn.Text = "HISTORY LOGS";
+            this.deanhistlogsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.deanhistlogsbtn.Click += new System.EventHandler(this.deanhistlogsbtn_Click);
             // 
             // guna2Button1
             // 
@@ -417,7 +418,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label deanfnamelabel;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button Adminhistlogsbtn;
+        private Guna.UI2.WinForms.Guna2Button deanhistlogsbtn;
         private Guna.UI2.WinForms.Guna2Button deanmanageaccountbtn;
         private Guna.UI2.WinForms.Guna2Button departmentadmindetailsbtn;
         private Guna.UI2.WinForms.Guna2Button insertstudentbtn;

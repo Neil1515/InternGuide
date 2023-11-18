@@ -174,5 +174,11 @@ namespace InternGuide
                 MessageBox.Show($"An error occurred while loading dean's information: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void deanhistlogsbtn_Click(object sender, EventArgs e)
+        {
+            deanhistorylogs deanhistorylogs = new deanhistorylogs(deansId);
+            addUserControl(deanhistorylogs);
+        }
     }
 }

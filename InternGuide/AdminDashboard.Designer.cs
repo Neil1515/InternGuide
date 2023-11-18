@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Logoutbtn = new System.Windows.Forms.PictureBox();
-            this.adminpicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.adminnamelabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dashpanel = new System.Windows.Forms.Panel();
             this.Adminhistlogsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.adminmanageaccountbtn = new Guna.UI2.WinForms.Guna2Button();
             this.departmentadmindetailsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.departmentadminbtn = new Guna.UI2.WinForms.Guna2Button();
             this.homebtn = new Guna.UI2.WinForms.Guna2Button();
-            this.dashpanel = new System.Windows.Forms.Panel();
+            this.Logoutbtn = new System.Windows.Forms.PictureBox();
+            this.dashboardadminpicture1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logoutbtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adminpicture)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logoutbtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboardadminpicture1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.Logoutbtn);
-            this.panel1.Controls.Add(this.adminpicture);
+            this.panel1.Controls.Add(this.dashboardadminpicture1);
             this.panel1.Controls.Add(this.adminnamelabel);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -62,33 +62,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1184, 70);
             this.panel1.TabIndex = 0;
-            // 
-            // Logoutbtn
-            // 
-            this.Logoutbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Logoutbtn.BackColor = System.Drawing.Color.Transparent;
-            this.Logoutbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Logoutbtn.Image = global::InternGuide.Properties.Resources._8723070_logout_icon;
-            this.Logoutbtn.Location = new System.Drawing.Point(1132, 14);
-            this.Logoutbtn.Name = "Logoutbtn";
-            this.Logoutbtn.Size = new System.Drawing.Size(44, 44);
-            this.Logoutbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logoutbtn.TabIndex = 42;
-            this.Logoutbtn.TabStop = false;
-            this.Logoutbtn.Click += new System.EventHandler(this.Logoutbtn_Click);
-            // 
-            // adminpicture
-            // 
-            this.adminpicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminpicture.Image = global::InternGuide.Properties.Resources.username;
-            this.adminpicture.ImageRotate = 0F;
-            this.adminpicture.Location = new System.Drawing.Point(1072, 12);
-            this.adminpicture.Name = "adminpicture";
-            this.adminpicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.adminpicture.Size = new System.Drawing.Size(58, 50);
-            this.adminpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.adminpicture.TabIndex = 2;
-            this.adminpicture.TabStop = false;
             // 
             // adminnamelabel
             // 
@@ -149,6 +122,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(253, 491);
             this.panel2.TabIndex = 1;
+            // 
+            // dashpanel
+            // 
+            this.dashpanel.BackColor = System.Drawing.Color.White;
+            this.dashpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashpanel.Location = new System.Drawing.Point(253, 70);
+            this.dashpanel.Name = "dashpanel";
+            this.dashpanel.Size = new System.Drawing.Size(931, 491);
+            this.dashpanel.TabIndex = 2;
             // 
             // Adminhistlogsbtn
             // 
@@ -258,7 +240,7 @@
             this.departmentadminbtn.Name = "departmentadminbtn";
             this.departmentadminbtn.Size = new System.Drawing.Size(253, 51);
             this.departmentadminbtn.TabIndex = 40;
-            this.departmentadminbtn.Text = "ADD DEANS DETAILS";
+            this.departmentadminbtn.Text = "MANAGE DEANS";
             this.departmentadminbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.departmentadminbtn.Click += new System.EventHandler(this.departmentadminbtn_Click);
             // 
@@ -291,14 +273,32 @@
             this.homebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.homebtn.Click += new System.EventHandler(this.homebtn_Click);
             // 
-            // dashpanel
+            // Logoutbtn
             // 
-            this.dashpanel.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.dashpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashpanel.Location = new System.Drawing.Point(253, 70);
-            this.dashpanel.Name = "dashpanel";
-            this.dashpanel.Size = new System.Drawing.Size(931, 491);
-            this.dashpanel.TabIndex = 2;
+            this.Logoutbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Logoutbtn.BackColor = System.Drawing.Color.Transparent;
+            this.Logoutbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Logoutbtn.Image = global::InternGuide.Properties.Resources._8723070_logout_icon;
+            this.Logoutbtn.Location = new System.Drawing.Point(1132, 14);
+            this.Logoutbtn.Name = "Logoutbtn";
+            this.Logoutbtn.Size = new System.Drawing.Size(44, 44);
+            this.Logoutbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logoutbtn.TabIndex = 42;
+            this.Logoutbtn.TabStop = false;
+            this.Logoutbtn.Click += new System.EventHandler(this.Logoutbtn_Click);
+            // 
+            // dashboardadminpicture1
+            // 
+            this.dashboardadminpicture1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dashboardadminpicture1.Image = global::InternGuide.Properties.Resources.username;
+            this.dashboardadminpicture1.ImageRotate = 0F;
+            this.dashboardadminpicture1.Location = new System.Drawing.Point(1072, 12);
+            this.dashboardadminpicture1.Name = "dashboardadminpicture1";
+            this.dashboardadminpicture1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.dashboardadminpicture1.Size = new System.Drawing.Size(58, 50);
+            this.dashboardadminpicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.dashboardadminpicture1.TabIndex = 2;
+            this.dashboardadminpicture1.TabStop = false;
             // 
             // AdminDashboard
             // 
@@ -314,9 +314,9 @@
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logoutbtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adminpicture)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Logoutbtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboardadminpicture1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,7 +328,7 @@
         private System.Windows.Forms.Panel dashpanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox adminpicture;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox dashboardadminpicture1;
         private System.Windows.Forms.PictureBox Logoutbtn;
         private System.Windows.Forms.Label adminnamelabel;
         private Guna.UI2.WinForms.Guna2Button homebtn;

@@ -136,6 +136,12 @@
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Deans Form\deanhistorylogs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Deans Form\deanhistorylogs.Designer.cs">
+      <DependentUpon>deanhistorylogs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Deans Form\DeanManageAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\deanhistorylogs.resx">
+      <DependentUpon>deanhistorylogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Deans Form\DeanManageAccount.resx">
       <DependentUpon>DeanManageAccount.cs</DependentUpon>

@@ -49,23 +49,33 @@ namespace InternGuide.Deans_Form
         private void InsertInternStudent_Load(object sender, EventArgs e)
         {
             StyleDataGridView();
-            // TODO: This line of code loads data into the 'canteenDBDataSet.customertbl' table. You can move, or remove it, as needed.
-            this.studenttableTableAdapter.Fill(this.internGuideDBDataSetMain.studenttable);
-
-            this.studenttableTableAdapter.Fill(this.internGuideDBDataSetMain.studenttable);
 
             try
             {
                 // Initialize the SqlConnection and open it
-                connection = new SqlConnection(connectionString);
-                connection.Open();
+                using (connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                // Load data into the DataGridView
-                string query = "SELECT * FROM studenttable";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-                DataTable dataTable = new DataTable();
-                adapter.Fill(dataTable);
-                dataGridView1.DataSource = dataTable;
+                    // Fetch the department information for the current dean
+                    string departmentQuery = "SELECT [department] FROM [dbo].[departmentdeanstable] WHERE [Id] = @deanId";
+                    using (var departmentCommand = new SqlCommand(departmentQuery, connection))
+                    {
+                        departmentCommand.Parameters.AddWithValue("@deanId", currentDeanId);
+                        string department = departmentCommand.ExecuteScalar() as string;
+
+                        // Load data into the DataGridView only for the specific department
+                        string query = "SELECT * FROM studenttable WHERE department = @department";
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
+                        {
+                            adapter.SelectCommand.Parameters.AddWithValue("@department", department);
+
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+                            dataGridView1.DataSource = dataTable;
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {

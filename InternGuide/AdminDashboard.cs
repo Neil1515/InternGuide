@@ -23,13 +23,68 @@ namespace InternGuide
         {
             InitializeComponent();
             this.adminId = adminId;
+
+            // Initialize dashboardDeanPicture
+            dashboardAdminPicture = new PictureBox();
+            dashboardAdminPicture.Name = "dashboardadminpicture";
+            // Set other properties as needed
+            this.Controls.Add(dashboardAdminPicture);
+
             AdminHomepage AdminHomepage = new AdminHomepage();
             addUserControl(AdminHomepage);
+            LoadAdminInformation(adminId);
         }
+        private void LoadAdminInformation(int adminId)
+        {
+            // Define your connection string
+            string connectionString = "Data Source=192.168.1.3;Initial Catalog=InternGuideDB;Persist Security Info=True;User ID=SuperAdmin1;Password=SuperAdmin1";
 
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Define the SQL query to retrieve dean's information based on the dean's ID
+                    string sqlQuery = "SELECT fname, image FROM admintable WHERE Id = @adminId";
+
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@adminId", adminId);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Display dean's details
+                                AdminfName = reader["fname"].ToString();
+
+                                // Display the dean's image
+                                byte[] imageBytes = reader["image"] as byte[];
+                                if (imageBytes != null && imageBytes.Length > 0)
+                                {
+                                    using (MemoryStream ms = new MemoryStream(imageBytes))
+                                    {
+                                        dashboardadminpicture1.Image = Image.FromStream(ms);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Dean not found for this ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while loading dean's information: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
-
+            dashboardAdminPicture.Visible = true;
         }
         public string AdminfName
         {
@@ -100,7 +155,7 @@ namespace InternGuide
         {
             using (MemoryStream ms = new MemoryStream(imageBytes))
             {
-                adminpicture.Image = Image.FromStream(ms);
+                dashboardadminpicture1.Image = Image.FromStream(ms);
             }
         }
         private void departmentadminbtn_Click(object sender, EventArgs e)
