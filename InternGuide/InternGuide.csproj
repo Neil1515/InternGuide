@@ -33,13 +33,49 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus, Version=7.0.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.7.0.1\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Core.Extensions, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Core.Extensions.2.4.0\lib\net461\EPPlus.Core.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.5\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=2.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.2.3.2\lib\net462\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -100,6 +136,18 @@
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Deans Form\DeanManageAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Deans Form\DeanManageAccount.Designer.cs">
+      <DependentUpon>DeanManageAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deans Form\InsertInternStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Deans Form\InsertInternStudent.Designer.cs">
+      <DependentUpon>InsertInternStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeansDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +159,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InternGuideDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InternGuideDBDataSetMain.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InternGuideDBDataSetMain.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InternStudentDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternStudentDashboard.Designer.cs">
+      <DependentUpon>InternStudentDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +178,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student Form\ManageStudentAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Form\ManageStudentAccount.Designer.cs">
+      <DependentUpon>ManageStudentAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Form\StudentHomepage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Form\StudentHomepage.Designer.cs">
+      <DependentUpon>StudentHomepage.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin Form\AddDepartmentAdmin.resx">
       <DependentUpon>AddDepartmentAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,8 +214,17 @@
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\DeanManageAccount.resx">
+      <DependentUpon>DeanManageAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\InsertInternStudent.resx">
+      <DependentUpon>InsertInternStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeansDashboard.resx">
       <DependentUpon>DeansDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternStudentDashboard.resx">
+      <DependentUpon>InternStudentDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -159,6 +239,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Student Form\ManageStudentAccount.resx">
+      <DependentUpon>ManageStudentAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Form\StudentHomepage.resx">
+      <DependentUpon>StudentHomepage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="InternGuideDBDataSet.xsc">
       <DependentUpon>InternGuideDBDataSet.xsd</DependentUpon>
     </None>
@@ -169,6 +255,17 @@
     </None>
     <None Include="InternGuideDBDataSet.xss">
       <DependentUpon>InternGuideDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InternGuideDBDataSetMain.xsc">
+      <DependentUpon>InternGuideDBDataSetMain.xsd</DependentUpon>
+    </None>
+    <None Include="InternGuideDBDataSetMain.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InternGuideDBDataSetMain.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InternGuideDBDataSetMain.xss">
+      <DependentUpon>InternGuideDBDataSetMain.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -185,8 +282,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Deans Form\" />
-    <Folder Include="Student Form\" />
+    <Folder Include="Intern Student Form\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\png-transparent-labor-organization-internship-blue-text-logo.png" />
@@ -238,6 +334,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\log-data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xls-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\on-off-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\386881156_3550009328597777_6562289270389337043_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\306839561_490564739752911_2201593292664676125_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\writing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

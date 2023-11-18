@@ -30,13 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.idpassnotfountlabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.loginbtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.idpassnotfountlabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +72,19 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(424, 470);
             this.guna2ShadowPanel1.TabIndex = 13;
             // 
+            // idpassnotfountlabel
+            // 
+            this.idpassnotfountlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.idpassnotfountlabel.ForeColor = System.Drawing.Color.Red;
+            this.idpassnotfountlabel.Location = new System.Drawing.Point(5, 368);
+            this.idpassnotfountlabel.Name = "idpassnotfountlabel";
+            this.idpassnotfountlabel.Size = new System.Drawing.Size(413, 16);
+            this.idpassnotfountlabel.TabIndex = 12;
+            this.idpassnotfountlabel.Text = "error";
+            this.idpassnotfountlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -87,9 +100,7 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoEllipsis = true;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -189,19 +200,6 @@
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(340, 52);
             this.txtpassword.TabIndex = 10;
-            // 
-            // idpassnotfountlabel
-            // 
-            this.idpassnotfountlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.idpassnotfountlabel.ForeColor = System.Drawing.Color.Red;
-            this.idpassnotfountlabel.Location = new System.Drawing.Point(5, 368);
-            this.idpassnotfountlabel.Name = "idpassnotfountlabel";
-            this.idpassnotfountlabel.Size = new System.Drawing.Size(413, 16);
-            this.idpassnotfountlabel.TabIndex = 12;
-            this.idpassnotfountlabel.Text = "label1";
-            this.idpassnotfountlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // login
             // 

@@ -16,6 +16,8 @@ namespace InternGuide
     public partial class AdminDashboard : Form
     {
         private int adminId;
+        //private PictureBox adminpicture;
+        private PictureBox dashboardAdminPicture;
 
         public AdminDashboard(int adminId)
         {
@@ -42,14 +44,10 @@ namespace InternGuide
             userControl.BringToFront();
 
         }
-        public string AdminName
+
+        private void UpdateAdminfName(string newAdminfName)
         {
-            get { return adminnamelabel.Text; }
-            set { adminnamelabel.Text = value; }
-        }
-        private void UpdateAdminfName(string newCanteenStaffName)
-        {
-            AdminName = newCanteenStaffName;
+            AdminfName = newAdminfName;
         }
 
         private void Logoutbtn_Click(object sender, EventArgs e)
@@ -100,7 +98,6 @@ namespace InternGuide
         }
         private void UpdateAdminPicture(byte[] imageBytes)
         {
-            // Display the admin picture in the dashboard
             using (MemoryStream ms = new MemoryStream(imageBytes))
             {
                 adminpicture.Image = Image.FromStream(ms);

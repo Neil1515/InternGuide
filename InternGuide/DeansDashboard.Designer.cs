@@ -30,22 +30,24 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.Logout1brn = new System.Windows.Forms.PictureBox();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.dashpanel = new System.Windows.Forms.Panel();
+            this.dashboarddeanpicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.deanfnamelabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.adminnamelabel = new System.Windows.Forms.Label();
+            this.dashpanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.awdawd = new Guna.UI2.WinForms.Guna2Button();
             this.Adminhistlogsbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.adminmanageaccountbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.departmentadmindetailsbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.departmentadminbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.homebtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.deanmanageaccountbtn = new Guna.UI2.WinForms.Guna2Button();
             this.studentrequirementbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.departmentadmindetailsbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.insertstudentbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.homebtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logout1brn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboarddeanpicture)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,8 +55,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.Logout1brn);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.panel1.Controls.Add(this.adminnamelabel);
+            this.panel1.Controls.Add(this.dashboarddeanpicture);
+            this.panel1.Controls.Add(this.deanfnamelabel);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -78,27 +80,32 @@
             this.Logout1brn.TabStop = false;
             this.Logout1brn.Click += new System.EventHandler(this.Logout1brn_Click);
             // 
-            // guna2CirclePictureBox1
+            // dashboarddeanpicture
             // 
-            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2CirclePictureBox1.Image = global::InternGuide.Properties.Resources.username;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1072, 12);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(58, 50);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 2;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.dashboarddeanpicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dashboarddeanpicture.Image = global::InternGuide.Properties.Resources.username;
+            this.dashboarddeanpicture.ImageRotate = 0F;
+            this.dashboarddeanpicture.Location = new System.Drawing.Point(1072, 12);
+            this.dashboarddeanpicture.Name = "dashboarddeanpicture";
+            this.dashboarddeanpicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.dashboarddeanpicture.Size = new System.Drawing.Size(58, 50);
+            this.dashboarddeanpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.dashboarddeanpicture.TabIndex = 2;
+            this.dashboarddeanpicture.TabStop = false;
+            this.dashboarddeanpicture.Click += new System.EventHandler(this.dashboarddeanpicture_Click);
             // 
-            // dashpanel
+            // deanfnamelabel
             // 
-            this.dashpanel.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.dashpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashpanel.Location = new System.Drawing.Point(253, 70);
-            this.dashpanel.Name = "dashpanel";
-            this.dashpanel.Size = new System.Drawing.Size(931, 491);
-            this.dashpanel.TabIndex = 3;
+            this.deanfnamelabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.deanfnamelabel.Font = new System.Drawing.Font("Leelawadee", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deanfnamelabel.ForeColor = System.Drawing.Color.Black;
+            this.deanfnamelabel.Location = new System.Drawing.Point(875, 5);
+            this.deanfnamelabel.Name = "deanfnamelabel";
+            this.deanfnamelabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.deanfnamelabel.Size = new System.Drawing.Size(201, 62);
+            this.deanfnamelabel.TabIndex = 47;
+            this.deanfnamelabel.Text = "deanfname";
+            this.deanfnamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
@@ -133,33 +140,58 @@
             this.label1.TabIndex = 44;
             this.label1.Text = "IG";
             // 
-            // adminnamelabel
+            // dashpanel
             // 
-            this.adminnamelabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminnamelabel.Font = new System.Drawing.Font("Leelawadee", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminnamelabel.ForeColor = System.Drawing.Color.Black;
-            this.adminnamelabel.Location = new System.Drawing.Point(875, 5);
-            this.adminnamelabel.Name = "adminnamelabel";
-            this.adminnamelabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.adminnamelabel.Size = new System.Drawing.Size(201, 62);
-            this.adminnamelabel.TabIndex = 47;
-            this.adminnamelabel.Text = "adminname";
-            this.adminnamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashpanel.BackColor = System.Drawing.Color.White;
+            this.dashpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashpanel.Location = new System.Drawing.Point(253, 70);
+            this.dashpanel.Name = "dashpanel";
+            this.dashpanel.Size = new System.Drawing.Size(931, 491);
+            this.dashpanel.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.awdawd);
             this.panel2.Controls.Add(this.Adminhistlogsbtn);
-            this.panel2.Controls.Add(this.adminmanageaccountbtn);
+            this.panel2.Controls.Add(this.guna2Button1);
+            this.panel2.Controls.Add(this.deanmanageaccountbtn);
             this.panel2.Controls.Add(this.studentrequirementbtn);
             this.panel2.Controls.Add(this.departmentadmindetailsbtn);
-            this.panel2.Controls.Add(this.departmentadminbtn);
+            this.panel2.Controls.Add(this.insertstudentbtn);
             this.panel2.Controls.Add(this.homebtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 70);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(253, 491);
             this.panel2.TabIndex = 2;
+            // 
+            // awdawd
+            // 
+            this.awdawd.BackColor = System.Drawing.Color.White;
+            this.awdawd.BorderRadius = 1;
+            this.awdawd.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.awdawd.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.awdawd.CheckedState.FillColor = System.Drawing.Color.White;
+            this.awdawd.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.awdawd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.awdawd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.awdawd.DisabledState.FillColor = System.Drawing.Color.White;
+            this.awdawd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.awdawd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.awdawd.FillColor = System.Drawing.Color.White;
+            this.awdawd.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.awdawd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.awdawd.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.awdawd.Image = global::InternGuide.Properties.Resources.report;
+            this.awdawd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.awdawd.ImageSize = new System.Drawing.Size(30, 30);
+            this.awdawd.Location = new System.Drawing.Point(0, 357);
+            this.awdawd.Name = "awdawd";
+            this.awdawd.Size = new System.Drawing.Size(253, 51);
+            this.awdawd.TabIndex = 50;
+            this.awdawd.Text = "REPORTS";
+            this.awdawd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Adminhistlogsbtn
             // 
@@ -181,39 +213,94 @@
             this.Adminhistlogsbtn.Image = global::InternGuide.Properties.Resources.log_data;
             this.Adminhistlogsbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Adminhistlogsbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.Adminhistlogsbtn.Location = new System.Drawing.Point(0, 255);
+            this.Adminhistlogsbtn.Location = new System.Drawing.Point(0, 306);
             this.Adminhistlogsbtn.Name = "Adminhistlogsbtn";
             this.Adminhistlogsbtn.Size = new System.Drawing.Size(253, 51);
             this.Adminhistlogsbtn.TabIndex = 48;
             this.Adminhistlogsbtn.Text = "HISTORY LOGS";
             this.Adminhistlogsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // adminmanageaccountbtn
+            // guna2Button1
             // 
-            this.adminmanageaccountbtn.BackColor = System.Drawing.Color.White;
-            this.adminmanageaccountbtn.BorderRadius = 1;
-            this.adminmanageaccountbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.adminmanageaccountbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.adminmanageaccountbtn.CheckedState.FillColor = System.Drawing.Color.White;
-            this.adminmanageaccountbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.adminmanageaccountbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.adminmanageaccountbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.adminmanageaccountbtn.DisabledState.FillColor = System.Drawing.Color.White;
-            this.adminmanageaccountbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.adminmanageaccountbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.adminmanageaccountbtn.FillColor = System.Drawing.Color.White;
-            this.adminmanageaccountbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminmanageaccountbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.adminmanageaccountbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.adminmanageaccountbtn.Image = global::InternGuide.Properties.Resources.manageaccount;
-            this.adminmanageaccountbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.adminmanageaccountbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.adminmanageaccountbtn.Location = new System.Drawing.Point(0, 204);
-            this.adminmanageaccountbtn.Name = "adminmanageaccountbtn";
-            this.adminmanageaccountbtn.Size = new System.Drawing.Size(253, 51);
-            this.adminmanageaccountbtn.TabIndex = 47;
-            this.adminmanageaccountbtn.Text = "MANAGE ACCOUNT";
-            this.adminmanageaccountbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.BackColor = System.Drawing.Color.White;
+            this.guna2Button1.BorderRadius = 1;
+            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button1.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.guna2Button1.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.guna2Button1.Image = global::InternGuide.Properties.Resources.document;
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.Location = new System.Drawing.Point(0, 255);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(253, 51);
+            this.guna2Button1.TabIndex = 50;
+            this.guna2Button1.Text = "MANAGE  MEETINGS";
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // deanmanageaccountbtn
+            // 
+            this.deanmanageaccountbtn.BackColor = System.Drawing.Color.White;
+            this.deanmanageaccountbtn.BorderRadius = 1;
+            this.deanmanageaccountbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.deanmanageaccountbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.deanmanageaccountbtn.CheckedState.FillColor = System.Drawing.Color.White;
+            this.deanmanageaccountbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.deanmanageaccountbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.deanmanageaccountbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.deanmanageaccountbtn.DisabledState.FillColor = System.Drawing.Color.White;
+            this.deanmanageaccountbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.deanmanageaccountbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.deanmanageaccountbtn.FillColor = System.Drawing.Color.White;
+            this.deanmanageaccountbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deanmanageaccountbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.deanmanageaccountbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.deanmanageaccountbtn.Image = global::InternGuide.Properties.Resources.manageaccount;
+            this.deanmanageaccountbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.deanmanageaccountbtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.deanmanageaccountbtn.Location = new System.Drawing.Point(0, 204);
+            this.deanmanageaccountbtn.Name = "deanmanageaccountbtn";
+            this.deanmanageaccountbtn.Size = new System.Drawing.Size(253, 51);
+            this.deanmanageaccountbtn.TabIndex = 47;
+            this.deanmanageaccountbtn.Text = "MANAGE ACCOUNT";
+            this.deanmanageaccountbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.deanmanageaccountbtn.Click += new System.EventHandler(this.deanmanageaccountbtn_Click);
+            // 
+            // studentrequirementbtn
+            // 
+            this.studentrequirementbtn.BackColor = System.Drawing.Color.White;
+            this.studentrequirementbtn.BorderRadius = 1;
+            this.studentrequirementbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.studentrequirementbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.studentrequirementbtn.CheckedState.FillColor = System.Drawing.Color.White;
+            this.studentrequirementbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.studentrequirementbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.studentrequirementbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.studentrequirementbtn.DisabledState.FillColor = System.Drawing.Color.White;
+            this.studentrequirementbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.studentrequirementbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.studentrequirementbtn.FillColor = System.Drawing.Color.White;
+            this.studentrequirementbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentrequirementbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.studentrequirementbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.studentrequirementbtn.Image = global::InternGuide.Properties.Resources.document;
+            this.studentrequirementbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.studentrequirementbtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.studentrequirementbtn.Location = new System.Drawing.Point(0, 153);
+            this.studentrequirementbtn.Name = "studentrequirementbtn";
+            this.studentrequirementbtn.Size = new System.Drawing.Size(253, 51);
+            this.studentrequirementbtn.TabIndex = 49;
+            this.studentrequirementbtn.Text = "MANAGE STUDENT REQUIREMENT";
+            this.studentrequirementbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // departmentadmindetailsbtn
             // 
@@ -242,32 +329,33 @@
             this.departmentadmindetailsbtn.Text = "SHOW ALL STUDENT";
             this.departmentadmindetailsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // departmentadminbtn
+            // insertstudentbtn
             // 
-            this.departmentadminbtn.BackColor = System.Drawing.Color.White;
-            this.departmentadminbtn.BorderRadius = 1;
-            this.departmentadminbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.departmentadminbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.departmentadminbtn.CheckedState.FillColor = System.Drawing.Color.White;
-            this.departmentadminbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.departmentadminbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.departmentadminbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.departmentadminbtn.DisabledState.FillColor = System.Drawing.Color.White;
-            this.departmentadminbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.departmentadminbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.departmentadminbtn.FillColor = System.Drawing.Color.White;
-            this.departmentadminbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.departmentadminbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.departmentadminbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.departmentadminbtn.Image = global::InternGuide.Properties.Resources.teacher;
-            this.departmentadminbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.departmentadminbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.departmentadminbtn.Location = new System.Drawing.Point(0, 51);
-            this.departmentadminbtn.Name = "departmentadminbtn";
-            this.departmentadminbtn.Size = new System.Drawing.Size(253, 51);
-            this.departmentadminbtn.TabIndex = 45;
-            this.departmentadminbtn.Text = "ADD STUDENT";
-            this.departmentadminbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.insertstudentbtn.BackColor = System.Drawing.Color.White;
+            this.insertstudentbtn.BorderRadius = 1;
+            this.insertstudentbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.insertstudentbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.insertstudentbtn.CheckedState.FillColor = System.Drawing.Color.White;
+            this.insertstudentbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.insertstudentbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.insertstudentbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.insertstudentbtn.DisabledState.FillColor = System.Drawing.Color.White;
+            this.insertstudentbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.insertstudentbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.insertstudentbtn.FillColor = System.Drawing.Color.White;
+            this.insertstudentbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insertstudentbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.insertstudentbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.insertstudentbtn.Image = global::InternGuide.Properties.Resources.teacher;
+            this.insertstudentbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.insertstudentbtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.insertstudentbtn.Location = new System.Drawing.Point(0, 51);
+            this.insertstudentbtn.Name = "insertstudentbtn";
+            this.insertstudentbtn.Size = new System.Drawing.Size(253, 51);
+            this.insertstudentbtn.TabIndex = 45;
+            this.insertstudentbtn.Text = "MANAGE STUDENT";
+            this.insertstudentbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.insertstudentbtn.Click += new System.EventHandler(this.insertstudentbtn_Click);
             // 
             // homebtn
             // 
@@ -297,33 +385,6 @@
             this.homebtn.Text = "HOME";
             this.homebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // studentrequirementbtn
-            // 
-            this.studentrequirementbtn.BackColor = System.Drawing.Color.White;
-            this.studentrequirementbtn.BorderRadius = 1;
-            this.studentrequirementbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.studentrequirementbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.studentrequirementbtn.CheckedState.FillColor = System.Drawing.Color.White;
-            this.studentrequirementbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.studentrequirementbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.studentrequirementbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.studentrequirementbtn.DisabledState.FillColor = System.Drawing.Color.White;
-            this.studentrequirementbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.studentrequirementbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.studentrequirementbtn.FillColor = System.Drawing.Color.White;
-            this.studentrequirementbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentrequirementbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.studentrequirementbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.studentrequirementbtn.Image = global::InternGuide.Properties.Resources.log_data;
-            this.studentrequirementbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.studentrequirementbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.studentrequirementbtn.Location = new System.Drawing.Point(0, 153);
-            this.studentrequirementbtn.Name = "studentrequirementbtn";
-            this.studentrequirementbtn.Size = new System.Drawing.Size(253, 51);
-            this.studentrequirementbtn.TabIndex = 49;
-            this.studentrequirementbtn.Text = "STUDENT REQUIREMENT";
-            this.studentrequirementbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // DeansDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,7 +400,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logout1brn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboarddeanpicture)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -349,18 +410,20 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox Logout1brn;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox dashboarddeanpicture;
         private System.Windows.Forms.Panel dashpanel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label adminnamelabel;
+        private System.Windows.Forms.Label deanfnamelabel;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button Adminhistlogsbtn;
-        private Guna.UI2.WinForms.Guna2Button adminmanageaccountbtn;
+        private Guna.UI2.WinForms.Guna2Button deanmanageaccountbtn;
         private Guna.UI2.WinForms.Guna2Button departmentadmindetailsbtn;
-        private Guna.UI2.WinForms.Guna2Button departmentadminbtn;
+        private Guna.UI2.WinForms.Guna2Button insertstudentbtn;
         private Guna.UI2.WinForms.Guna2Button homebtn;
         private Guna.UI2.WinForms.Guna2Button studentrequirementbtn;
+        private Guna.UI2.WinForms.Guna2Button awdawd;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

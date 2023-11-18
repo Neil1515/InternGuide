@@ -58,73 +58,87 @@ namespace InternGuide
 
         private void loginbtn_Click_1(object sender, EventArgs e)
         {
-            if (txtpassword.Text != string.Empty || txtusername.Text != string.Empty)
+            if (string.IsNullOrEmpty(txtpassword.Text) || string.IsNullOrEmpty(txtusername.Text))
             {
-                int userId; 
+                idpassnotfountlabel.Text = "Please enter values in all fields.";
+                return;
+            }
 
-                using (SqlCommand cmd = new SqlCommand())
+            int userId;
+
+            using (SqlCommand cmd = new SqlCommand())
+            {
+                cmd.Connection = cn;
+
+                cmd.CommandText = "SELECT * FROM admintable WHERE id = @id AND password = @password";
+                cmd.Parameters.AddWithValue("@id", txtusername.Text);
+                cmd.Parameters.AddWithValue("@password", txtpassword.Text);
+
+                using (dr = cmd.ExecuteReader())
                 {
-                    cmd.Connection = cn;
-
-
-                    cmd.CommandText = "SELECT * FROM admintable WHERE id = @id AND password = @password";
-                    cmd.Parameters.AddWithValue("@id", txtusername.Text);
-                    cmd.Parameters.AddWithValue("@password", txtpassword.Text);
-
-                    dr = cmd.ExecuteReader();
-
-                    if (dr.HasRows) 
+                    if (dr.HasRows)
                     {
-                        dr.Read(); 
-                        string adminfName = dr["fname"].ToString(); 
-                        userId = Convert.ToInt32(dr["id"]); 
-                        dr.Close(); 
-
+                        dr.Read();
+                        string adminfName = dr["fname"].ToString();
+                        userId = Convert.ToInt32(dr["id"]);
                         InsertLoginHistory(userId);
                         MessageBox.Show("Login Successful as Admin.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        
                         this.Hide();
-
-
-                        AdminDashboard AdminDashboard = new AdminDashboard(userId);
-                        AdminDashboard.AdminfName = adminfName;
-                        AdminDashboard.ShowDialog();
-                        return; 
+                        AdminDashboard adminDashboard = new AdminDashboard(userId);
+                        adminDashboard.AdminfName = adminfName;
+                        adminDashboard.ShowDialog();
+                        return;
                     }
+                }
 
+                dr.Close(); // Close the SqlDataReader
 
-                    dr.Close(); // Close the SqlDataReader
-
-                    // If not found in admintable, check the deanstable table
-                    cmd.CommandText = "SELECT * FROM departmentdeanstable WHERE id = @id AND password = @password";
-                    dr = cmd.ExecuteReader();
-
-                    if (dr.HasRows) // Check if any rows were returned
+                // If not found in admintable, check the deanstable table
+                cmd.CommandText = "SELECT * FROM departmentdeanstable WHERE id = @id AND password = @password";
+                using (dr = cmd.ExecuteReader())
+                {
+                    if (dr.HasRows)
                     {
-                        dr.Read(); // Move to the first row
-                        string deansName = dr["deansfname"].ToString();
+                        dr.Read();
+                        string deansfName = dr["deansfname"].ToString();
                         userId = Convert.ToInt32(dr["id"]);
                         dr.Close(); // Close the SqlDataReader after reading data
 
                         InsertLoginHistory(userId);
                         MessageBox.Show("Login Successful as Deans Account.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
-                        DeansDashboard DeansDashboard = new DeansDashboard();//(userId);
-                        //DeansDashboard.DeansName = deansName; // Set the accounting member's name
-                        DeansDashboard.ShowDialog();
+                        DeansDashboard deansDashboard = new DeansDashboard(userId);
+                        deansDashboard.DeansfName = deansfName; // Set the accounting member's name
+                        deansDashboard.ShowDialog();
                         return;
                     }
-
-                    dr.Close(); // Close the SqlDataReader
                 }
 
-                idpassnotfountlabel.Text = "No Account available with this username and password.";
+                dr.Close(); // Close the SqlDataReader
+
+                cmd.CommandText = "SELECT * FROM studenttable WHERE id = @id AND password = @password";
+                using (dr = cmd.ExecuteReader())
+                {
+                    if (dr.HasRows)
+                    {
+                        dr.Read();
+                        string studentfName = $"{dr["fname"]} {dr["mname"]} {dr["lname"]}".Trim();
+                        userId = Convert.ToInt32(dr["id"]);
+                        dr.Close();
+
+                        InsertLoginHistory(userId);
+                        MessageBox.Show("Login Successful as Student Account.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        InternStudentDashboard internStudentDashboard = new InternStudentDashboard(userId);
+                        internStudentDashboard.StudentfName = studentfName;
+                        internStudentDashboard.ShowDialog();
+                        return;
+                    }
+                }
             }
-            else
-            {
-                idpassnotfountlabel.Text = "Please enter values in all fields.";
-            }
+
+            // If no account is found, show the error message
+            idpassnotfountlabel.Text = "No Account available with this username and password.";
         }
     }
 }
