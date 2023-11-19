@@ -55,7 +55,7 @@ namespace InternGuide.Student_Form
                                     if (reader.Read())
                                     {
                                         // Display dean's name in the label
-                                        deansnamelabel.Text = $"{reader["deansfname"]} {reader["deanslname"]}".Trim();
+                                        deansnamelabel.Text = "Dean: " + $"{reader["deansfname"]} {reader["deanslname"]}".Trim();
                                         departmentemaillabel.Text = $"{reader["departmentemail"]}".ToString();
 
                                         // Convert the byte array to Image

@@ -21,6 +21,8 @@ namespace InternGuide
         {
             InitializeComponent();
             idpassnotfountlabel.Text = " ";
+
+            this.AcceptButton = loginbtn;
         }
         
         private void login_Load(object sender, EventArgs e)
@@ -55,7 +57,7 @@ namespace InternGuide
         {
             if (string.IsNullOrEmpty(txtpassword.Text) || string.IsNullOrEmpty(txtusername.Text))
             {
-                idpassnotfountlabel.Text = "Please enter your ID (or Email) and password";
+                idpassnotfountlabel.Text = "Please enter your ID and password";
                 return;
             }
 

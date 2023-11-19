@@ -19,9 +19,11 @@ namespace InternGuide.Deans_Form
         private SqlConnection connection;
         private SqlCommand command;
         private SqlDataReader reader;
-        public ViewStudentDetails()
+        private int deansId;
+        public ViewStudentDetails(int deansId)
         {
             InitializeComponent();
+            this.deansId = deansId;
         }
 
         private void ViewStudentDetails_Load(object sender, EventArgs e)
@@ -30,45 +32,67 @@ namespace InternGuide.Deans_Form
         }
         private void populateitems()
         {
-            string connectionString = @"Data Source=192.168.1.3;Initial Catalog=InternGuideDB;Persist Security Info=True;User ID=SuperAdmin1;Password=SuperAdmin1";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
 
-                    string query = "SELECT id, fname, mname, lname, yrlvl, course, email, image FROM studenttable";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    // Retrieve the dean's department
+                    string deanDepartmentQuery = "SELECT department FROM departmentdeanstable WHERE Id = @deansId";
+
+                    using (SqlCommand deanDepartmentCmd = new SqlCommand(deanDepartmentQuery, connection))
                     {
-                        while (reader.Read())
+                        deanDepartmentCmd.Parameters.AddWithValue("@deansId", deansId);
+
+                        string deanDepartment = deanDepartmentCmd.ExecuteScalar() as string;
+
+                        if (deanDepartment != null)
                         {
-                            int studentID = reader.GetInt32(reader.GetOrdinal("id"));
-                            string studentName = reader["fname"].ToString() + " " + reader["mname"].ToString() + " " + reader["lname"].ToString();
-                            string yrlvlcourse = reader["yrlvl"].ToString() + "/" + reader["course"].ToString();
-                            string studemail = reader["email"].ToString();
+                            // Now that we have the dean's department, retrieve the students from the same department
+                            string query = "SELECT id, fname, mname, lname, yrlvl, course, email, image FROM studenttable WHERE department = @department";
 
-                            // Check if the 'image' column is DBNull
-                            byte[] imageData = reader["image"] == DBNull.Value ? null : (byte[])reader["image"];
-
-                            // Skip adding the widget if the image is DBNull
-                            if (imageData == null)
+                            using (SqlCommand command = new SqlCommand(query, connection))
                             {
-                                continue;
+                                command.Parameters.AddWithValue("@department", deanDepartment);
+
+                                using (SqlDataReader reader = command.ExecuteReader())
+                                {
+                                    while (reader.Read())
+                                    {
+                                        int studentID = reader.GetInt32(reader.GetOrdinal("id"));
+                                        string studentName = reader["fname"].ToString() + " " + reader["mname"].ToString() + " " + reader["lname"].ToString();
+                                        string yrlvlcourse = reader["yrlvl"].ToString() + "/" + reader["course"].ToString();
+                                        string studemail = reader["email"].ToString();
+
+                                        // Check if the 'image' column is DBNull
+                                        byte[] imageData = reader["image"] == DBNull.Value ? null : (byte[])reader["image"];
+
+                                        // Skip adding the widget if the image is DBNull
+                                        if (imageData == null)
+                                        {
+                                            continue;
+                                        }
+
+                                        // Create a new StudentWidget
+                                        StudentWidget widget = new StudentWidget
+                                        {
+                                            StudID = studentID,
+                                            StudentName = studentName,
+                                            Yrcourse = yrlvlcourse,
+                                            Studemail = studemail,
+                                            StudentImage = Image.FromStream(new MemoryStream(imageData))
+                                        };
+
+                                        // Add the widget to the FlowLayoutPanel
+                                        flowLayoutPanel1.Controls.Add(widget);
+                                    }
+                                }
                             }
-
-                            // Create a new DepartmentAdminDetailsWidget
-                            StudentWidget widget = new StudentWidget
-                            {
-                                StudID = studentID,
-                                StudentName = studentName,
-                                Yrcourse = yrlvlcourse,
-                                Studemail = studemail,
-                                StudentImage = Image.FromStream(new MemoryStream(imageData))
-                            };
-
-                            // Add the widget to the FlowLayoutPanel
-                            flowLayoutPanel1.Controls.Add(widget);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Dean not found or department not specified for the dean.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

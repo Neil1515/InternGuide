@@ -189,7 +189,7 @@ namespace InternGuide
 
         private void showstudentdetailsbtn_Click(object sender, EventArgs e)
         {
-            ViewStudentDetails ViewStudentDetails = new ViewStudentDetails();
+            ViewStudentDetails ViewStudentDetails = new ViewStudentDetails(deansId);
             addUserControl(ViewStudentDetails);
         }
     }

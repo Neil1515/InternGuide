@@ -357,7 +357,7 @@
             this.showstudentdetailsbtn.Name = "showstudentdetailsbtn";
             this.showstudentdetailsbtn.Size = new System.Drawing.Size(253, 51);
             this.showstudentdetailsbtn.TabIndex = 46;
-            this.showstudentdetailsbtn.Text = "SHOW ALL STUDENT";
+            this.showstudentdetailsbtn.Text = "VIEW STUDENT";
             this.showstudentdetailsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.showstudentdetailsbtn.Click += new System.EventHandler(this.showstudentdetailsbtn_Click);
             // 
