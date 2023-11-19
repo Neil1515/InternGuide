@@ -28,11 +28,6 @@ namespace InternGuide
             cn = new SqlConnection(@"Data Source=192.168.1.3;Initial Catalog=InternGuideDB;Persist Security Info=True;User ID=SuperAdmin1;Password=SuperAdmin1");
             cn.Open();
         }
-
-        private void loginbtn_Click(object sender, EventArgs e)
-        {
-            
-        }
         private void InsertLoginHistory(int userId)
         {
             try
@@ -60,7 +55,7 @@ namespace InternGuide
         {
             if (string.IsNullOrEmpty(txtpassword.Text) || string.IsNullOrEmpty(txtusername.Text))
             {
-                idpassnotfountlabel.Text = "Please enter values in all fields.";
+                idpassnotfountlabel.Text = "Please enter your ID (or Email) and password";
                 return;
             }
 
@@ -138,7 +133,7 @@ namespace InternGuide
             }
 
             // If no account is found, show the error message
-            idpassnotfountlabel.Text = "No Account available with this username and password.";
+            idpassnotfountlabel.Text = "Invalid Login Credentials";
         }
     }
 }

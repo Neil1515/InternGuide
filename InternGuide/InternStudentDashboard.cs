@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using InternGuide.Student_Form;
 using InternGuide.Deans_Form;
+using InternGuide.Admin_Form;
 
 namespace InternGuide
 {
@@ -30,10 +31,20 @@ namespace InternGuide
             // Set other properties as needed
             this.Controls.Add(studentpicture);
 
+            StudentHomepage StudentHomepage = new StudentHomepage(studentId);
             
+            addUserControl(StudentHomepage);
 
             // Load dean's information and picture upon login
             LoadStudentInformation(studentId);
+        }
+
+        private void UpdateStudentPicture(byte[] imageBytes)
+        {
+            using (MemoryStream ms = new MemoryStream(imageBytes))
+            {
+                dashboardstudentpicture1.Image = Image.FromStream(ms);
+            }
         }
         private void LoadStudentInformation(int studentId)
         {
@@ -121,12 +132,13 @@ namespace InternGuide
         private void studentmanageaccountbtn_Click(object sender, EventArgs e)
         {
             ManageStudentAccount ManageStudentAccount = new ManageStudentAccount(studentId);
+            ManageStudentAccount.StudentPictureUpdated += UpdateStudentPicture;
             addUserControl(ManageStudentAccount);
         }
 
         private void studdashboardhomepage_Click(object sender, EventArgs e)
         {
-            StudentHomepage StudentHomepage = new StudentHomepage();
+            StudentHomepage StudentHomepage = new StudentHomepage(studentId);
             addUserControl(StudentHomepage);
         }
 

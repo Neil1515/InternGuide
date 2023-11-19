@@ -45,6 +45,7 @@
             this.departmentadmindetailsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.insertstudentbtn = new Guna.UI2.WinForms.Guna2Button();
             this.homebtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logout1brn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboarddeanpicture)).BeginInit();
@@ -154,6 +155,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.awdawd);
             this.panel2.Controls.Add(this.deanhistlogsbtn);
+            this.panel2.Controls.Add(this.guna2Button2);
             this.panel2.Controls.Add(this.guna2Button1);
             this.panel2.Controls.Add(this.deanmanageaccountbtn);
             this.panel2.Controls.Add(this.studentrequirementbtn);
@@ -186,7 +188,7 @@
             this.awdawd.Image = global::InternGuide.Properties.Resources.report;
             this.awdawd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.awdawd.ImageSize = new System.Drawing.Size(30, 30);
-            this.awdawd.Location = new System.Drawing.Point(0, 357);
+            this.awdawd.Location = new System.Drawing.Point(0, 408);
             this.awdawd.Name = "awdawd";
             this.awdawd.Size = new System.Drawing.Size(253, 51);
             this.awdawd.TabIndex = 50;
@@ -213,7 +215,7 @@
             this.deanhistlogsbtn.Image = global::InternGuide.Properties.Resources.log_data;
             this.deanhistlogsbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.deanhistlogsbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.deanhistlogsbtn.Location = new System.Drawing.Point(0, 306);
+            this.deanhistlogsbtn.Location = new System.Drawing.Point(0, 357);
             this.deanhistlogsbtn.Name = "deanhistlogsbtn";
             this.deanhistlogsbtn.Size = new System.Drawing.Size(253, 51);
             this.deanhistlogsbtn.TabIndex = 48;
@@ -386,6 +388,33 @@
             this.homebtn.Text = "HOME";
             this.homebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.BackColor = System.Drawing.Color.White;
+            this.guna2Button2.BorderRadius = 1;
+            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button2.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.White;
+            this.guna2Button2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.White;
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button2.FillColor = System.Drawing.Color.White;
+            this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.guna2Button2.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.guna2Button2.Image = global::InternGuide.Properties.Resources.enterprise;
+            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button2.Location = new System.Drawing.Point(0, 306);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(253, 51);
+            this.guna2Button2.TabIndex = 51;
+            this.guna2Button2.Text = "MANAGE DEPARTMENT PARTNERS";
+            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // DeansDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,5 +455,6 @@
         private Guna.UI2.WinForms.Guna2Button studentrequirementbtn;
         private Guna.UI2.WinForms.Guna2Button awdawd;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

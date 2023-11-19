@@ -295,7 +295,7 @@
             this.insertstudentbtn.Name = "insertstudentbtn";
             this.insertstudentbtn.Size = new System.Drawing.Size(286, 51);
             this.insertstudentbtn.TabIndex = 47;
-            this.insertstudentbtn.Text = "VIEW REQUIREMENTS";
+            this.insertstudentbtn.Text = "INTERN REQUIREMENTS";
             this.insertstudentbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // studdashboardhomepage

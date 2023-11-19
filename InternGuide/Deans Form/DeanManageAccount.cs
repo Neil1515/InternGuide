@@ -41,7 +41,7 @@ namespace InternGuide.Deans_Form
                 connection.Open();
 
                 // Define the SQL query to retrieve admin information based on the admin ID
-                string sqlQuery = "SELECT Id, deansfname, deanslname, image, department FROM departmentdeanstable WHERE Id = @deansId";
+                string sqlQuery = "SELECT Id, deansfname, deanslname, departmentemail, image, department FROM departmentdeanstable WHERE Id = @deansId";
 
                 using (SqlCommand cmd = new SqlCommand(sqlQuery, connection))
                 {
@@ -53,6 +53,7 @@ namespace InternGuide.Deans_Form
                         {
                             // Display admin details in the textboxes
                             idtextBox.Text = reader["Id"].ToString();
+                            departmentemailtextBox.Text = reader["departmentemail"].ToString();
                             departmentlabel.Text = reader["department"].ToString();
                             fnametextBox.Text = reader["deansfname"].ToString();
                             lnameTextBox.Text = reader["deanslname"].ToString();
@@ -84,8 +85,16 @@ namespace InternGuide.Deans_Form
         {
             string newfname = fnametextBox.Text;
             string newlname = lnameTextBox.Text;
+            string newemail = departmentemailtextBox.Text;
 
-            if (UpdateDeansInfo(newfname, newlname, selectedImageBytes, deansId))
+            // Validate input fields (Example: Check if required fields are not empty)
+            if (string.IsNullOrWhiteSpace(newfname) || string.IsNullOrWhiteSpace(newlname) || string.IsNullOrWhiteSpace(newemail))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (UpdateDeansInfo(newfname, newlname, newemail, selectedImageBytes, deansId))
             {
                 updatecompltelabel.Text = "Update Successfully.";
                 DeanfNameUpdated?.Invoke(newfname);
@@ -98,7 +107,7 @@ namespace InternGuide.Deans_Form
                 MessageBox.Show("Failed to update Deans information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private bool UpdateDeansInfo(string newfname, string newlname, byte[] imageBytes, int deansId)
+        private bool UpdateDeansInfo(string newfname, string newlname, string newemail, byte[] imageBytes, int deansId)
         {
             try
             {
@@ -109,36 +118,56 @@ namespace InternGuide.Deans_Form
                 {
                     connection.Open();
 
-                    // Define the SQL query to update admin information
-                    string sqlQuery = "UPDATE departmentdeanstable SET deansfname = @deansfname, deanslname = @deanslname";
-
-                    // Include image update only if an image is selected
-                    if (imageBytes != null && imageBytes.Length > 0)
+                    // Start a transaction to ensure atomicity
+                    using (SqlTransaction transaction = connection.BeginTransaction())
                     {
-                        sqlQuery += ", image = @image";
-                    }
-
-                    sqlQuery += " WHERE id = @deansId";
-
-                    using (SqlCommand cmd = new SqlCommand(sqlQuery, connection))
-                    {
-                        cmd.Parameters.AddWithValue("@deansfname", newfname);
-                        cmd.Parameters.AddWithValue("@deanslname", newlname);
-
-                        // Add image parameter only if an image is selected
-                        if (imageBytes != null && imageBytes.Length > 0)
+                        try
                         {
-                            cmd.Parameters.AddWithValue("@image", imageBytes);
+                            // Define the SQL query to update admin information
+                            string sqlQuery = "UPDATE departmentdeanstable SET deansfname = @deansfname, departmentemail = @departmentemail, deanslname = @deanslname";
 
-                            // Raise the event to notify about admin picture update
-                            DeanPictureUpdated?.Invoke(imageBytes);
+                            // Include image update only if an image is selected
+                            if (imageBytes != null && imageBytes.Length > 0)
+                            {
+                                sqlQuery += ", image = @image";
+                            }
+
+                            sqlQuery += " WHERE id = @deansId";
+
+                            using (SqlCommand cmd = new SqlCommand(sqlQuery, connection, transaction))
+                            {
+                                cmd.Parameters.AddWithValue("@deansfname", newfname);
+                                cmd.Parameters.AddWithValue("@deanslname", newlname);
+                                cmd.Parameters.AddWithValue("@departmentemail", newemail);
+
+                                // Add image parameter only if an image is selected
+                                if (imageBytes != null && imageBytes.Length > 0)
+                                {
+                                    cmd.Parameters.AddWithValue("@image", imageBytes);
+
+                                    // Raise the event to notify about admin picture update
+                                    DeanPictureUpdated?.Invoke(imageBytes);
+                                }
+
+                                cmd.Parameters.AddWithValue("@deansId", deansId);
+
+                                int rowsAffected = cmd.ExecuteNonQuery();
+
+                                // Update emails for all deans in the same department
+                                UpdateEmailsForSameDepartment(connection, transaction, newemail, deansId);
+
+                                // Commit the transaction
+                                transaction.Commit();
+
+                                return rowsAffected > 0;
+                            }
                         }
-
-
-                        cmd.Parameters.AddWithValue("@deansId", deansId);
-
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        return rowsAffected > 0;
+                        catch (Exception ex)
+                        {
+                            // An error occurred, rollback the transaction
+                            transaction.Rollback();
+                            throw ex;
+                        }
                     }
                 }
             }
@@ -146,6 +175,20 @@ namespace InternGuide.Deans_Form
             {
                 MessageBox.Show($"An error occurred while updating Deans information: {ex.Message}\nStackTrace: {ex.StackTrace}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
+            }
+        }
+
+        private void UpdateEmailsForSameDepartment(SqlConnection connection, SqlTransaction transaction, string newEmail, int deansId)
+        {
+            // Define the SQL query to update emails for all deans in the same department
+            string updateEmailsQuery = "UPDATE departmentdeanstable SET departmentemail = @newEmail WHERE department = (SELECT department FROM departmentdeanstable WHERE id = @deansId)";
+
+            using (SqlCommand updateCmd = new SqlCommand(updateEmailsQuery, connection, transaction))
+            {
+                updateCmd.Parameters.AddWithValue("@newEmail", newEmail);
+                updateCmd.Parameters.AddWithValue("@deansId", deansId);
+
+                updateCmd.ExecuteNonQuery();
             }
         }
         private void timer1_Tick(object sender, EventArgs e)

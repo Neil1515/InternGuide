@@ -36,18 +36,19 @@
             System.Windows.Forms.Label idLabel;
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.idtextBox = new System.Windows.Forms.Label();
             this.departmentlabel = new System.Windows.Forms.Label();
             this.deanpicture = new System.Windows.Forms.PictureBox();
-            this.updatecompltelabel = new System.Windows.Forms.Label();
             this.updatebtn = new System.Windows.Forms.Button();
             this.lnameTextBox = new System.Windows.Forms.TextBox();
             this.fnametextBox = new System.Windows.Forms.TextBox();
             this.browsepicturebtn = new System.Windows.Forms.Button();
-            this.idtextBox = new System.Windows.Forms.TextBox();
+            this.departmentemailtextBox = new System.Windows.Forms.TextBox();
             this.oldpasswordtextBox = new System.Windows.Forms.TextBox();
             this.newpasswordtextBox = new System.Windows.Forms.TextBox();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.verifypasswordtextBox = new System.Windows.Forms.TextBox();
+            this.updatecompltelabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -115,13 +116,14 @@
             idLabel.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             idLabel.Location = new System.Drawing.Point(37, 117);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(26, 16);
+            idLabel.Size = new System.Drawing.Size(155, 16);
             idLabel.TabIndex = 23;
-            idLabel.Text = "ID:";
+            idLabel.Text = "DEPARTMENT EMAIL:";
             // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2CustomGradientPanel2);
+            this.guna2CustomGradientPanel1.Controls.Add(this.updatecompltelabel);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.DarkGray;
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.DarkGray;
@@ -138,14 +140,14 @@
             this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel2.BorderRadius = 10;
             this.guna2CustomGradientPanel2.BorderThickness = 2;
+            this.guna2CustomGradientPanel2.Controls.Add(this.idtextBox);
             this.guna2CustomGradientPanel2.Controls.Add(this.departmentlabel);
             this.guna2CustomGradientPanel2.Controls.Add(this.deanpicture);
-            this.guna2CustomGradientPanel2.Controls.Add(this.updatecompltelabel);
             this.guna2CustomGradientPanel2.Controls.Add(this.updatebtn);
             this.guna2CustomGradientPanel2.Controls.Add(this.lnameTextBox);
             this.guna2CustomGradientPanel2.Controls.Add(this.fnametextBox);
             this.guna2CustomGradientPanel2.Controls.Add(this.browsepicturebtn);
-            this.guna2CustomGradientPanel2.Controls.Add(this.idtextBox);
+            this.guna2CustomGradientPanel2.Controls.Add(this.departmentemailtextBox);
             this.guna2CustomGradientPanel2.Controls.Add(label2);
             this.guna2CustomGradientPanel2.Controls.Add(label1);
             this.guna2CustomGradientPanel2.Controls.Add(this.oldpasswordtextBox);
@@ -160,6 +162,18 @@
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(701, 394);
             this.guna2CustomGradientPanel2.TabIndex = 0;
             // 
+            // idtextBox
+            // 
+            this.idtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.idtextBox.AutoSize = true;
+            this.idtextBox.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idtextBox.Location = new System.Drawing.Point(166, 19);
+            this.idtextBox.Name = "idtextBox";
+            this.idtextBox.Size = new System.Drawing.Size(35, 31);
+            this.idtextBox.TabIndex = 50;
+            this.idtextBox.Text = "id";
+            this.idtextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // departmentlabel
             // 
             this.departmentlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -167,9 +181,9 @@
             this.departmentlabel.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.departmentlabel.Location = new System.Drawing.Point(166, 49);
             this.departmentlabel.Name = "departmentlabel";
-            this.departmentlabel.Size = new System.Drawing.Size(82, 31);
+            this.departmentlabel.Size = new System.Drawing.Size(137, 31);
             this.departmentlabel.TabIndex = 49;
-            this.departmentlabel.Text = "label3";
+            this.departmentlabel.Text = "department";
             this.departmentlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // deanpicture
@@ -185,19 +199,6 @@
             this.deanpicture.TabIndex = 45;
             this.deanpicture.TabStop = false;
             this.deanpicture.Click += new System.EventHandler(this.deanpicture_Click);
-            // 
-            // updatecompltelabel
-            // 
-            this.updatecompltelabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.updatecompltelabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.updatecompltelabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.updatecompltelabel.Location = new System.Drawing.Point(258, 19);
-            this.updatecompltelabel.Name = "updatecompltelabel";
-            this.updatecompltelabel.Size = new System.Drawing.Size(283, 43);
-            this.updatecompltelabel.TabIndex = 48;
-            this.updatecompltelabel.Text = "Update Complete";
-            this.updatecompltelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // updatebtn
             // 
@@ -242,15 +243,14 @@
             this.browsepicturebtn.UseVisualStyleBackColor = true;
             this.browsepicturebtn.Click += new System.EventHandler(this.browsepicturebtn_Click);
             // 
-            // idtextBox
+            // departmentemailtextBox
             // 
-            this.idtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.idtextBox.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idtextBox.Location = new System.Drawing.Point(37, 140);
-            this.idtextBox.Name = "idtextBox";
-            this.idtextBox.ReadOnly = true;
-            this.idtextBox.Size = new System.Drawing.Size(258, 33);
-            this.idtextBox.TabIndex = 30;
+            this.departmentemailtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.departmentemailtextBox.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.departmentemailtextBox.Location = new System.Drawing.Point(37, 140);
+            this.departmentemailtextBox.Name = "departmentemailtextBox";
+            this.departmentemailtextBox.Size = new System.Drawing.Size(258, 33);
+            this.departmentemailtextBox.TabIndex = 30;
             // 
             // oldpasswordtextBox
             // 
@@ -294,6 +294,20 @@
             this.verifypasswordtextBox.TabIndex = 44;
             this.verifypasswordtextBox.UseSystemPasswordChar = true;
             // 
+            // updatecompltelabel
+            // 
+            this.updatecompltelabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.updatecompltelabel.BackColor = System.Drawing.Color.Transparent;
+            this.updatecompltelabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.updatecompltelabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.updatecompltelabel.Location = new System.Drawing.Point(344, 3);
+            this.updatecompltelabel.Name = "updatecompltelabel";
+            this.updatecompltelabel.Size = new System.Drawing.Size(283, 43);
+            this.updatecompltelabel.TabIndex = 48;
+            this.updatecompltelabel.Text = "Update Complete";
+            this.updatecompltelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -324,12 +338,13 @@
         private System.Windows.Forms.TextBox lnameTextBox;
         private System.Windows.Forms.TextBox fnametextBox;
         private System.Windows.Forms.Button browsepicturebtn;
-        private System.Windows.Forms.TextBox idtextBox;
+        private System.Windows.Forms.TextBox departmentemailtextBox;
         private System.Windows.Forms.TextBox oldpasswordtextBox;
         private System.Windows.Forms.TextBox newpasswordtextBox;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.TextBox verifypasswordtextBox;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label departmentlabel;
+        private System.Windows.Forms.Label idtextBox;
     }
 }

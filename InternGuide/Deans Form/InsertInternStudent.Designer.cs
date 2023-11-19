@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.ImportStudentExcelfilesbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,18 +39,25 @@
             this.yrlvlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studenttableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.internGuideDBDataSetMain = new InternGuide.InternGuideDBDataSetMain();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.ImportStudentExcelfilesbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.studenttableTableAdapter = new InternGuide.InternGuideDBDataSetMainTableAdapters.studenttableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studenttableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).BeginInit();
+            this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -73,56 +77,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(931, 424);
             this.dataGridView1.TabIndex = 45;
-            // 
-            // guna2CustomGradientPanel1
-            // 
-            this.guna2CustomGradientPanel1.AllowDrop = true;
-            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.BorderRadius = 5;
-            this.guna2CustomGradientPanel1.Controls.Add(this.ImportStudentExcelfilesbtn);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label1);
-            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(931, 67);
-            this.guna2CustomGradientPanel1.TabIndex = 44;
-            // 
-            // ImportStudentExcelfilesbtn
-            // 
-            this.ImportStudentExcelfilesbtn.BorderRadius = 10;
-            this.ImportStudentExcelfilesbtn.BorderThickness = 1;
-            this.ImportStudentExcelfilesbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ImportStudentExcelfilesbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ImportStudentExcelfilesbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ImportStudentExcelfilesbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ImportStudentExcelfilesbtn.FillColor = System.Drawing.Color.White;
-            this.ImportStudentExcelfilesbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ImportStudentExcelfilesbtn.ForeColor = System.Drawing.Color.Black;
-            this.ImportStudentExcelfilesbtn.Image = global::InternGuide.Properties.Resources.xls_file;
-            this.ImportStudentExcelfilesbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.ImportStudentExcelfilesbtn.Location = new System.Drawing.Point(17, 15);
-            this.ImportStudentExcelfilesbtn.Name = "ImportStudentExcelfilesbtn";
-            this.ImportStudentExcelfilesbtn.Size = new System.Drawing.Size(141, 37);
-            this.ImportStudentExcelfilesbtn.TabIndex = 40;
-            this.ImportStudentExcelfilesbtn.Text = "Import Student";
-            this.ImportStudentExcelfilesbtn.Click += new System.EventHandler(this.ImportStudentExcelfilesbtn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Century", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(328, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 33);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "INTERN STUDENT";
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -190,6 +144,56 @@
             this.internGuideDBDataSetMain.DataSetName = "InternGuideDBDataSetMain";
             this.internGuideDBDataSetMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.AllowDrop = true;
+            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.BorderRadius = 5;
+            this.guna2CustomGradientPanel1.Controls.Add(this.ImportStudentExcelfilesbtn);
+            this.guna2CustomGradientPanel1.Controls.Add(this.label1);
+            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(931, 67);
+            this.guna2CustomGradientPanel1.TabIndex = 44;
+            // 
+            // ImportStudentExcelfilesbtn
+            // 
+            this.ImportStudentExcelfilesbtn.BorderRadius = 10;
+            this.ImportStudentExcelfilesbtn.BorderThickness = 1;
+            this.ImportStudentExcelfilesbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ImportStudentExcelfilesbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ImportStudentExcelfilesbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ImportStudentExcelfilesbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ImportStudentExcelfilesbtn.FillColor = System.Drawing.Color.White;
+            this.ImportStudentExcelfilesbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ImportStudentExcelfilesbtn.ForeColor = System.Drawing.Color.Black;
+            this.ImportStudentExcelfilesbtn.Image = global::InternGuide.Properties.Resources.xls_file;
+            this.ImportStudentExcelfilesbtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.ImportStudentExcelfilesbtn.Location = new System.Drawing.Point(17, 15);
+            this.ImportStudentExcelfilesbtn.Name = "ImportStudentExcelfilesbtn";
+            this.ImportStudentExcelfilesbtn.Size = new System.Drawing.Size(141, 37);
+            this.ImportStudentExcelfilesbtn.TabIndex = 40;
+            this.ImportStudentExcelfilesbtn.Text = "Import Student";
+            this.ImportStudentExcelfilesbtn.Click += new System.EventHandler(this.ImportStudentExcelfilesbtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Century", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(328, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(274, 33);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "INTERN STUDENT";
+            // 
             // studenttableTableAdapter
             // 
             this.studenttableTableAdapter.ClearBeforeFill = true;
@@ -204,10 +208,10 @@
             this.Size = new System.Drawing.Size(931, 491);
             this.Load += new System.EventHandler(this.InsertInternStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.guna2CustomGradientPanel1.ResumeLayout(false);
-            this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studenttableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).EndInit();
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.guna2CustomGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
