@@ -39,8 +39,8 @@
             this.departmentdeanstableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.internGuideDBDataSet = new InternGuide.InternGuideDBDataSet();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.addadmindetails = new System.Windows.Forms.PictureBox();
             this.departmentdeanstableTableAdapter = new InternGuide.InternGuideDBDataSetTableAdapters.departmentdeanstableTableAdapter();
+            this.addadmindetails = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentdeanstableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSet)).BeginInit();
@@ -57,9 +57,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(60, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(378, 33);
+            this.label1.Size = new System.Drawing.Size(325, 33);
             this.label1.TabIndex = 39;
-            this.label1.Text = "ADD DEPARTMENT DEAN";
+            this.label1.Text = "DEPARTMENT DEANS";
             // 
             // dataGridView1
             // 
@@ -153,6 +153,10 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(931, 67);
             this.guna2CustomGradientPanel1.TabIndex = 41;
             // 
+            // departmentdeanstableTableAdapter
+            // 
+            this.departmentdeanstableTableAdapter.ClearBeforeFill = true;
+            // 
             // addadmindetails
             // 
             this.addadmindetails.BackColor = System.Drawing.Color.Transparent;
@@ -165,10 +169,6 @@
             this.addadmindetails.TabIndex = 38;
             this.addadmindetails.TabStop = false;
             this.addadmindetails.Click += new System.EventHandler(this.addadmindetails_Click);
-            // 
-            // departmentdeanstableTableAdapter
-            // 
-            this.departmentdeanstableTableAdapter.ClearBeforeFill = true;
             // 
             // DepartmentDeans
             // 

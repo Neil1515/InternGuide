@@ -40,8 +40,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.awdawd = new Guna.UI2.WinForms.Guna2Button();
             this.deanhistlogsbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.DepartmentPartnersCompbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.Managemeetingsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.deanmanageaccountbtn = new Guna.UI2.WinForms.Guna2Button();
             this.studentrequirementbtn = new Guna.UI2.WinForms.Guna2Button();
             this.showstudentdetailsbtn = new Guna.UI2.WinForms.Guna2Button();
@@ -156,8 +156,8 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.awdawd);
             this.panel2.Controls.Add(this.deanhistlogsbtn);
-            this.panel2.Controls.Add(this.guna2Button2);
-            this.panel2.Controls.Add(this.guna2Button1);
+            this.panel2.Controls.Add(this.DepartmentPartnersCompbtn);
+            this.panel2.Controls.Add(this.Managemeetingsbtn);
             this.panel2.Controls.Add(this.deanmanageaccountbtn);
             this.panel2.Controls.Add(this.studentrequirementbtn);
             this.panel2.Controls.Add(this.showstudentdetailsbtn);
@@ -224,59 +224,61 @@
             this.deanhistlogsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.deanhistlogsbtn.Click += new System.EventHandler(this.deanhistlogsbtn_Click);
             // 
-            // guna2Button2
+            // DepartmentPartnersCompbtn
             // 
-            this.guna2Button2.BackColor = System.Drawing.Color.White;
-            this.guna2Button2.BorderRadius = 1;
-            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button2.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.guna2Button2.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.guna2Button2.Image = global::InternGuide.Properties.Resources.enterprise;
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button2.Location = new System.Drawing.Point(0, 306);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(253, 51);
-            this.guna2Button2.TabIndex = 51;
-            this.guna2Button2.Text = "MANAGE DEPARTMENT PARTNERS";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.DepartmentPartnersCompbtn.BackColor = System.Drawing.Color.White;
+            this.DepartmentPartnersCompbtn.BorderRadius = 1;
+            this.DepartmentPartnersCompbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.DepartmentPartnersCompbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.DepartmentPartnersCompbtn.CheckedState.FillColor = System.Drawing.Color.White;
+            this.DepartmentPartnersCompbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.DepartmentPartnersCompbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DepartmentPartnersCompbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DepartmentPartnersCompbtn.DisabledState.FillColor = System.Drawing.Color.White;
+            this.DepartmentPartnersCompbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DepartmentPartnersCompbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DepartmentPartnersCompbtn.FillColor = System.Drawing.Color.White;
+            this.DepartmentPartnersCompbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartmentPartnersCompbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DepartmentPartnersCompbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.DepartmentPartnersCompbtn.Image = global::InternGuide.Properties.Resources.enterprise;
+            this.DepartmentPartnersCompbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.DepartmentPartnersCompbtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.DepartmentPartnersCompbtn.Location = new System.Drawing.Point(0, 306);
+            this.DepartmentPartnersCompbtn.Name = "DepartmentPartnersCompbtn";
+            this.DepartmentPartnersCompbtn.Size = new System.Drawing.Size(253, 51);
+            this.DepartmentPartnersCompbtn.TabIndex = 51;
+            this.DepartmentPartnersCompbtn.Text = "MANAGE DEPARTMENT PARTNERS";
+            this.DepartmentPartnersCompbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.DepartmentPartnersCompbtn.Click += new System.EventHandler(this.DepartmentPartnersCompbtn_Click);
             // 
-            // guna2Button1
+            // Managemeetingsbtn
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.White;
-            this.guna2Button1.BorderRadius = 1;
-            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button1.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.guna2Button1.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.guna2Button1.Image = global::InternGuide.Properties.Resources.document;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 255);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(253, 51);
-            this.guna2Button1.TabIndex = 50;
-            this.guna2Button1.Text = "MANAGE  MEETINGS";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Managemeetingsbtn.BackColor = System.Drawing.Color.White;
+            this.Managemeetingsbtn.BorderRadius = 1;
+            this.Managemeetingsbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.Managemeetingsbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.Managemeetingsbtn.CheckedState.FillColor = System.Drawing.Color.White;
+            this.Managemeetingsbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.Managemeetingsbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Managemeetingsbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Managemeetingsbtn.DisabledState.FillColor = System.Drawing.Color.White;
+            this.Managemeetingsbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Managemeetingsbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Managemeetingsbtn.FillColor = System.Drawing.Color.White;
+            this.Managemeetingsbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Managemeetingsbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Managemeetingsbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.Managemeetingsbtn.Image = global::InternGuide.Properties.Resources.document;
+            this.Managemeetingsbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Managemeetingsbtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.Managemeetingsbtn.Location = new System.Drawing.Point(0, 255);
+            this.Managemeetingsbtn.Name = "Managemeetingsbtn";
+            this.Managemeetingsbtn.Size = new System.Drawing.Size(253, 51);
+            this.Managemeetingsbtn.TabIndex = 50;
+            this.Managemeetingsbtn.Text = "MANAGE  MEETINGS";
+            this.Managemeetingsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Managemeetingsbtn.Click += new System.EventHandler(this.Managemeetingsbtn_Click);
             // 
             // deanmanageaccountbtn
             // 
@@ -332,6 +334,7 @@
             this.studentrequirementbtn.TabIndex = 49;
             this.studentrequirementbtn.Text = "MANAGE STUDENT REQUIREMENT";
             this.studentrequirementbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.studentrequirementbtn.Click += new System.EventHandler(this.studentrequirementbtn_Click);
             // 
             // showstudentdetailsbtn
             // 
@@ -459,7 +462,7 @@
         private Guna.UI2.WinForms.Guna2Button homebtn;
         private Guna.UI2.WinForms.Guna2Button studentrequirementbtn;
         private Guna.UI2.WinForms.Guna2Button awdawd;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button Managemeetingsbtn;
+        private Guna.UI2.WinForms.Guna2Button DepartmentPartnersCompbtn;
     }
 }

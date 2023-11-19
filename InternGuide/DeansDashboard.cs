@@ -192,5 +192,23 @@ namespace InternGuide
             ViewStudentDetails ViewStudentDetails = new ViewStudentDetails(deansId);
             addUserControl(ViewStudentDetails);
         }
+
+        private void Managemeetingsbtn_Click(object sender, EventArgs e)
+        {
+            ManageMeetings ManageMeetings = new ManageMeetings();
+            addUserControl(ManageMeetings);
+        }
+
+        private void DepartmentPartnersCompbtn_Click(object sender, EventArgs e)
+        {
+            DepartmentPartnersComp DepartmentPartnersComp = new DepartmentPartnersComp();
+            addUserControl(DepartmentPartnersComp);
+        }
+
+        private void studentrequirementbtn_Click(object sender, EventArgs e)
+        {
+            ManageStudentReq ManageStudentReq = new ManageStudentReq();
+            addUserControl(ManageStudentReq);
+        }
     }
 }

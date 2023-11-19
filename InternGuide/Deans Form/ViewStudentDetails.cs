@@ -49,6 +49,9 @@ namespace InternGuide.Deans_Form
 
                         if (deanDepartment != null)
                         {
+                            // Set the department text in studdepartmentlabel
+                            studdepartmentlabel.Text = $"{deanDepartment} Students";
+
                             // Now that we have the dean's department, retrieve the students from the same department
                             string query = "SELECT id, fname, mname, lname, yrlvl, course, email, image FROM studenttable WHERE department = @department";
 
@@ -68,12 +71,6 @@ namespace InternGuide.Deans_Form
                                         // Check if the 'image' column is DBNull
                                         byte[] imageData = reader["image"] == DBNull.Value ? null : (byte[])reader["image"];
 
-                                        // Skip adding the widget if the image is DBNull
-                                        if (imageData == null)
-                                        {
-                                            continue;
-                                        }
-
                                         // Create a new StudentWidget
                                         StudentWidget widget = new StudentWidget
                                         {
@@ -81,11 +78,12 @@ namespace InternGuide.Deans_Form
                                             StudentName = studentName,
                                             Yrcourse = yrlvlcourse,
                                             Studemail = studemail,
-                                            StudentImage = Image.FromStream(new MemoryStream(imageData))
+                                            StudentImage = imageData != null ? Image.FromStream(new MemoryStream(imageData)) : null
                                         };
 
                                         // Add the widget to the FlowLayoutPanel
                                         flowLayoutPanel1.Controls.Add(widget);
+
                                     }
                                 }
                             }

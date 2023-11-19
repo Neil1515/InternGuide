@@ -185,11 +185,29 @@
     <Compile Include="Deans Form\DeanManageAccount.Designer.cs">
       <DependentUpon>DeanManageAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Deans Form\DepartmentPartnersComp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Deans Form\DepartmentPartnersComp.Designer.cs">
+      <DependentUpon>DepartmentPartnersComp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Deans Form\InsertInternStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Deans Form\InsertInternStudent.Designer.cs">
       <DependentUpon>InsertInternStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deans Form\ManageMeetings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Deans Form\ManageMeetings.Designer.cs">
+      <DependentUpon>ManageMeetings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deans Form\ManageStudentReq.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Deans Form\ManageStudentReq.Designer.cs">
+      <DependentUpon>ManageStudentReq.cs</DependentUpon>
     </Compile>
     <Compile Include="Deans Form\StudentWidget.cs">
       <SubType>UserControl</SubType>
@@ -278,8 +296,17 @@
     <EmbeddedResource Include="Deans Form\DeanManageAccount.resx">
       <DependentUpon>DeanManageAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\DepartmentPartnersComp.resx">
+      <DependentUpon>DepartmentPartnersComp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Deans Form\InsertInternStudent.resx">
       <DependentUpon>InsertInternStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\ManageMeetings.resx">
+      <DependentUpon>ManageMeetings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\ManageStudentReq.resx">
+      <DependentUpon>ManageStudentReq.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Deans Form\StudentWidget.resx">
       <DependentUpon>StudentWidget.cs</DependentUpon>
@@ -438,6 +465,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="386881156_3550009328597777_6562289270389337043_n.ico" />
+    <None Include="Resources\people.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

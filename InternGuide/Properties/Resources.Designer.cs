@@ -243,6 +243,16 @@ namespace InternGuide.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap people {
+            get {
+                object obj = ResourceManager.GetObject("people", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_transparent_labor_organization_internship_blue_text_logo {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-labor-organization-internship-blue-text-logo", resourceCulture);
