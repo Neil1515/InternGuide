@@ -33,11 +33,11 @@
             this.departmentemaillabel = new System.Windows.Forms.Label();
             this.deansnamelabel = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.dashdeanpicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashdeanpicture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,7 +60,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.departmentemaillabel);
             this.guna2CustomGradientPanel1.Controls.Add(this.deansnamelabel);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.dashdeanpicture);
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(8, 370);
@@ -103,17 +103,17 @@
             this.guna2PictureBox1.TabIndex = 51;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // guna2CirclePictureBox1
+            // dashdeanpicture
             // 
-            this.guna2CirclePictureBox1.Image = global::InternGuide.Properties.Resources.profile_user;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(6, 5);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(48, 41);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 1;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.dashdeanpicture.Image = global::InternGuide.Properties.Resources.profile_user;
+            this.dashdeanpicture.ImageRotate = 0F;
+            this.dashdeanpicture.Location = new System.Drawing.Point(6, 5);
+            this.dashdeanpicture.Name = "dashdeanpicture";
+            this.dashdeanpicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.dashdeanpicture.Size = new System.Drawing.Size(48, 41);
+            this.dashdeanpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.dashdeanpicture.TabIndex = 1;
+            this.dashdeanpicture.TabStop = false;
             // 
             // StudentHomepage
             // 
@@ -125,7 +125,7 @@
             this.panel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashdeanpicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -134,7 +134,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox dashdeanpicture;
         private System.Windows.Forms.Label deansnamelabel;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label departmentemaillabel;

@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InternStudentDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.myprofilebtn = new Guna.UI2.WinForms.Guna2Button();
+            this.logoutbtn = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.studcourselabel = new System.Windows.Forms.Label();
-            this.studidlabel = new System.Windows.Forms.Label();
-            this.studentnamelabel = new System.Windows.Forms.Label();
-            this.dashpanel = new System.Windows.Forms.Panel();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.homebtn = new Guna.UI2.WinForms.Guna2Button();
             this.Adminhistlogsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.studentmanageaccountbtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.insertstudentbtn = new Guna.UI2.WinForms.Guna2Button();
             this.studdashboardhomepage = new Guna.UI2.WinForms.Guna2Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.studcourselabel = new System.Windows.Forms.Label();
+            this.studidlabel = new System.Windows.Forms.Label();
+            this.studentnamelabel = new System.Windows.Forms.Label();
             this.dashboardstudentpicture1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.myprofilebtn = new Guna.UI2.WinForms.Guna2Button();
-            this.logoutbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.dashpanel = new System.Windows.Forms.Panel();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.homebtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardstudentpicture1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,6 +68,58 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1284, 55);
             this.panel1.TabIndex = 2;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.AccessibleName = "00";
+            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2PictureBox1.Image = global::InternGuide.Properties.Resources._386881156_3550009328597777_6562289270389337043_n;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 1);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(68, 55);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 46;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // myprofilebtn
+            // 
+            this.myprofilebtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.myprofilebtn.BorderRadius = 5;
+            this.myprofilebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.myprofilebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.myprofilebtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.myprofilebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.myprofilebtn.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myprofilebtn.ForeColor = System.Drawing.Color.White;
+            this.myprofilebtn.Image = global::InternGuide.Properties.Resources.profile_user;
+            this.myprofilebtn.Location = new System.Drawing.Point(1005, 10);
+            this.myprofilebtn.Name = "myprofilebtn";
+            this.myprofilebtn.Size = new System.Drawing.Size(135, 35);
+            this.myprofilebtn.TabIndex = 48;
+            this.myprofilebtn.Text = "My Profile";
+            this.myprofilebtn.Click += new System.EventHandler(this.myprofilebtn_Click);
+            // 
+            // logoutbtn
+            // 
+            this.logoutbtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.logoutbtn.BorderRadius = 5;
+            this.logoutbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.logoutbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.logoutbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logoutbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.logoutbtn.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutbtn.ForeColor = System.Drawing.Color.White;
+            this.logoutbtn.Image = global::InternGuide.Properties.Resources.on_off_button;
+            this.logoutbtn.Location = new System.Drawing.Point(1163, 10);
+            this.logoutbtn.Name = "logoutbtn";
+            this.logoutbtn.Size = new System.Drawing.Size(104, 35);
+            this.logoutbtn.TabIndex = 47;
+            this.logoutbtn.Text = "Logout";
+            this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click);
             // 
             // label3
             // 
@@ -93,101 +146,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(290, 506);
             this.panel2.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.studcourselabel);
-            this.panel3.Controls.Add(this.studidlabel);
-            this.panel3.Controls.Add(this.studentnamelabel);
-            this.panel3.Controls.Add(this.dashboardstudentpicture1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(286, 79);
-            this.panel3.TabIndex = 0;
-            // 
-            // studcourselabel
-            // 
-            this.studcourselabel.AutoSize = true;
-            this.studcourselabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studcourselabel.ForeColor = System.Drawing.Color.Black;
-            this.studcourselabel.Location = new System.Drawing.Point(85, 52);
-            this.studcourselabel.Name = "studcourselabel";
-            this.studcourselabel.Size = new System.Drawing.Size(47, 17);
-            this.studcourselabel.TabIndex = 51;
-            this.studcourselabel.Text = "course";
-            // 
-            // studidlabel
-            // 
-            this.studidlabel.AutoSize = true;
-            this.studidlabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studidlabel.ForeColor = System.Drawing.Color.Black;
-            this.studidlabel.Location = new System.Drawing.Point(85, 29);
-            this.studidlabel.Name = "studidlabel";
-            this.studidlabel.Size = new System.Drawing.Size(18, 17);
-            this.studidlabel.TabIndex = 50;
-            this.studidlabel.Text = "id";
-            // 
-            // studentnamelabel
-            // 
-            this.studentnamelabel.AutoSize = true;
-            this.studentnamelabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentnamelabel.ForeColor = System.Drawing.Color.Black;
-            this.studentnamelabel.Location = new System.Drawing.Point(85, 6);
-            this.studentnamelabel.Name = "studentnamelabel";
-            this.studentnamelabel.Size = new System.Drawing.Size(40, 17);
-            this.studentnamelabel.TabIndex = 49;
-            this.studentnamelabel.Text = "name";
-            // 
-            // dashpanel
-            // 
-            this.dashpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashpanel.Location = new System.Drawing.Point(290, 135);
-            this.dashpanel.Name = "dashpanel";
-            this.dashpanel.Size = new System.Drawing.Size(994, 426);
-            this.dashpanel.TabIndex = 53;
-            // 
-            // guna2CirclePictureBox2
-            // 
-            this.guna2CirclePictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2CirclePictureBox2.Image = global::InternGuide.Properties.Resources.bell;
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(1220, 78);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(34, 37);
-            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox2.TabIndex = 52;
-            this.guna2CirclePictureBox2.TabStop = false;
-            // 
-            // homebtn
-            // 
-            this.homebtn.BackColor = System.Drawing.Color.White;
-            this.homebtn.BorderRadius = 1;
-            this.homebtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.homebtn.Checked = true;
-            this.homebtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.homebtn.CheckedState.FillColor = System.Drawing.Color.White;
-            this.homebtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.homebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.homebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.homebtn.DisabledState.FillColor = System.Drawing.Color.White;
-            this.homebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.homebtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.homebtn.FillColor = System.Drawing.Color.White;
-            this.homebtn.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.homebtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.homebtn.HoverState.CustomBorderColor = System.Drawing.Color.Tan;
-            this.homebtn.Image = global::InternGuide.Properties.Resources.edit;
-            this.homebtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.homebtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.homebtn.Location = new System.Drawing.Point(290, 55);
-            this.homebtn.Name = "homebtn";
-            this.homebtn.Size = new System.Drawing.Size(994, 80);
-            this.homebtn.TabIndex = 45;
-            this.homebtn.Text = "DASHBOARD";
-            this.homebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Adminhistlogsbtn
             // 
@@ -327,6 +285,52 @@
             this.studdashboardhomepage.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.studdashboardhomepage.Click += new System.EventHandler(this.studdashboardhomepage_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.studcourselabel);
+            this.panel3.Controls.Add(this.studidlabel);
+            this.panel3.Controls.Add(this.studentnamelabel);
+            this.panel3.Controls.Add(this.dashboardstudentpicture1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(286, 79);
+            this.panel3.TabIndex = 0;
+            // 
+            // studcourselabel
+            // 
+            this.studcourselabel.AutoSize = true;
+            this.studcourselabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studcourselabel.ForeColor = System.Drawing.Color.Black;
+            this.studcourselabel.Location = new System.Drawing.Point(85, 52);
+            this.studcourselabel.Name = "studcourselabel";
+            this.studcourselabel.Size = new System.Drawing.Size(47, 17);
+            this.studcourselabel.TabIndex = 51;
+            this.studcourselabel.Text = "course";
+            // 
+            // studidlabel
+            // 
+            this.studidlabel.AutoSize = true;
+            this.studidlabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studidlabel.ForeColor = System.Drawing.Color.Black;
+            this.studidlabel.Location = new System.Drawing.Point(85, 29);
+            this.studidlabel.Name = "studidlabel";
+            this.studidlabel.Size = new System.Drawing.Size(18, 17);
+            this.studidlabel.TabIndex = 50;
+            this.studidlabel.Text = "id";
+            // 
+            // studentnamelabel
+            // 
+            this.studentnamelabel.AutoSize = true;
+            this.studentnamelabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentnamelabel.ForeColor = System.Drawing.Color.Black;
+            this.studentnamelabel.Location = new System.Drawing.Point(85, 6);
+            this.studentnamelabel.Name = "studentnamelabel";
+            this.studentnamelabel.Size = new System.Drawing.Size(40, 17);
+            this.studentnamelabel.TabIndex = 49;
+            this.studentnamelabel.Text = "name";
+            // 
             // dashboardstudentpicture1
             // 
             this.dashboardstudentpicture1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -340,57 +344,54 @@
             this.dashboardstudentpicture1.TabIndex = 0;
             this.dashboardstudentpicture1.TabStop = false;
             // 
-            // guna2PictureBox1
+            // dashpanel
             // 
-            this.guna2PictureBox1.AccessibleName = "00";
-            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2PictureBox1.Image = global::InternGuide.Properties.Resources._386881156_3550009328597777_6562289270389337043_n;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 1);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(68, 55);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 46;
-            this.guna2PictureBox1.TabStop = false;
+            this.dashpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashpanel.Location = new System.Drawing.Point(290, 135);
+            this.dashpanel.Name = "dashpanel";
+            this.dashpanel.Size = new System.Drawing.Size(994, 426);
+            this.dashpanel.TabIndex = 53;
             // 
-            // myprofilebtn
+            // guna2CirclePictureBox2
             // 
-            this.myprofilebtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.myprofilebtn.BorderRadius = 5;
-            this.myprofilebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.myprofilebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.myprofilebtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.myprofilebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.myprofilebtn.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myprofilebtn.ForeColor = System.Drawing.Color.White;
-            this.myprofilebtn.Image = global::InternGuide.Properties.Resources.profile_user;
-            this.myprofilebtn.Location = new System.Drawing.Point(1005, 10);
-            this.myprofilebtn.Name = "myprofilebtn";
-            this.myprofilebtn.Size = new System.Drawing.Size(135, 35);
-            this.myprofilebtn.TabIndex = 48;
-            this.myprofilebtn.Text = "My Profile";
-            this.myprofilebtn.Click += new System.EventHandler(this.myprofilebtn_Click);
+            this.guna2CirclePictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CirclePictureBox2.Image = global::InternGuide.Properties.Resources.bell;
+            this.guna2CirclePictureBox2.ImageRotate = 0F;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(1220, 78);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(34, 37);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox2.TabIndex = 52;
+            this.guna2CirclePictureBox2.TabStop = false;
             // 
-            // logoutbtn
+            // homebtn
             // 
-            this.logoutbtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.logoutbtn.BorderRadius = 5;
-            this.logoutbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.logoutbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.logoutbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.logoutbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.logoutbtn.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutbtn.ForeColor = System.Drawing.Color.White;
-            this.logoutbtn.Image = global::InternGuide.Properties.Resources.on_off_button;
-            this.logoutbtn.Location = new System.Drawing.Point(1163, 10);
-            this.logoutbtn.Name = "logoutbtn";
-            this.logoutbtn.Size = new System.Drawing.Size(104, 35);
-            this.logoutbtn.TabIndex = 47;
-            this.logoutbtn.Text = "Logout";
-            this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click);
+            this.homebtn.BackColor = System.Drawing.Color.White;
+            this.homebtn.BorderRadius = 1;
+            this.homebtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.homebtn.Checked = true;
+            this.homebtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.homebtn.CheckedState.FillColor = System.Drawing.Color.White;
+            this.homebtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.homebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.homebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.homebtn.DisabledState.FillColor = System.Drawing.Color.White;
+            this.homebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.homebtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.homebtn.FillColor = System.Drawing.Color.White;
+            this.homebtn.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.homebtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.homebtn.HoverState.CustomBorderColor = System.Drawing.Color.Tan;
+            this.homebtn.Image = global::InternGuide.Properties.Resources.edit;
+            this.homebtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.homebtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.homebtn.Location = new System.Drawing.Point(290, 55);
+            this.homebtn.Name = "homebtn";
+            this.homebtn.Size = new System.Drawing.Size(994, 80);
+            this.homebtn.TabIndex = 45;
+            this.homebtn.Text = "DASHBOARD";
+            this.homebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // InternStudentDashboard
             // 
@@ -402,6 +403,7 @@
             this.Controls.Add(this.homebtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InternStudentDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InternStudent";
@@ -409,12 +411,12 @@
             this.Load += new System.EventHandler(this.InternStudent_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardstudentpicture1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

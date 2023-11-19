@@ -12,6 +12,22 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +47,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>386881156_3550009328597777_6562289270389337043_n.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AF37581FD9278FA61B787E4104DC88DE8D0A48FC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>InternGuide_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EPPlus, Version=7.0.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
@@ -160,6 +191,18 @@
     <Compile Include="Deans Form\InsertInternStudent.Designer.cs">
       <DependentUpon>InsertInternStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Deans Form\StudentWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Deans Form\StudentWidget.Designer.cs">
+      <DependentUpon>StudentWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deans Form\ViewStudentDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Deans Form\ViewStudentDetails.Designer.cs">
+      <DependentUpon>ViewStudentDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeansDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +281,12 @@
     <EmbeddedResource Include="Deans Form\InsertInternStudent.resx">
       <DependentUpon>InsertInternStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\StudentWidget.resx">
+      <DependentUpon>StudentWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\ViewStudentDetails.resx">
+      <DependentUpon>ViewStudentDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeansDashboard.resx">
       <DependentUpon>DeansDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,6 +334,7 @@
     <None Include="InternGuideDBDataSetMain.xss">
       <DependentUpon>InternGuideDBDataSetMain.xsd</DependentUpon>
     </None>
+    <None Include="InternGuide_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -385,6 +435,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\paper-plane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="386881156_3550009328597777_6562289270389337043_n.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -180,5 +180,17 @@ namespace InternGuide
             deanhistorylogs deanhistorylogs = new deanhistorylogs(deansId);
             addUserControl(deanhistorylogs);
         }
+
+        private void homebtn_Click(object sender, EventArgs e)
+        {
+            DeanHomepage DeanHomepage = new DeanHomepage();
+            addUserControl(DeanHomepage);
+        }
+
+        private void showstudentdetailsbtn_Click(object sender, EventArgs e)
+        {
+            ViewStudentDetails ViewStudentDetails = new ViewStudentDetails();
+            addUserControl(ViewStudentDetails);
+        }
     }
 }

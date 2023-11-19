@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,7 +44,7 @@ namespace InternGuide.Student_Form
                         if (department != null)
                         {
                             // Now that we have the student's department, retrieve the dean's information
-                            string deanQuery = "SELECT TOP 1 deansfname, deanslname, departmentemail FROM departmentdeanstable WHERE department = @department";
+                            string deanQuery = "SELECT TOP 1 deansfname, deanslname, departmentemail, image FROM departmentdeanstable WHERE department = @department";
 
                             using (SqlCommand cmd = new SqlCommand(deanQuery, connection))
                             {
@@ -56,6 +57,21 @@ namespace InternGuide.Student_Form
                                         // Display dean's name in the label
                                         deansnamelabel.Text = $"{reader["deansfname"]} {reader["deanslname"]}".Trim();
                                         departmentemaillabel.Text = $"{reader["departmentemail"]}".ToString();
+
+                                        // Convert the byte array to Image
+                                        byte[] imageBytes = reader["image"] as byte[];
+                                        if (imageBytes != null && imageBytes.Length > 0)
+                                        {
+                                            using (MemoryStream ms = new MemoryStream(imageBytes))
+                                            {
+                                                dashdeanpicture.Image = Image.FromStream(ms);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            // Handle the case when no image is found
+                                            dashdeanpicture.Image = null;
+                                        }
                                     }
                                     else
                                     {
