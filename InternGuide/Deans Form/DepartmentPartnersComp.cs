@@ -49,7 +49,45 @@ namespace InternGuide.Deans_Form
         }
         private void DepartmentPartnersComp_Load(object sender, EventArgs e)
         {
+            try
+            {
+                // Initialize the SqlConnection and open it
+                using (connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
+                    // Fetch the department information for the current dean
+                    string departmentQuery = "SELECT [department] FROM [dbo].[departmentdeanstable] WHERE [Id] = @deanId";
+                    using (var departmentCommand = new SqlCommand(departmentQuery, connection))
+                    {
+                        departmentCommand.Parameters.AddWithValue("@deanId", currentDeanId);
+                        string department = departmentCommand.ExecuteScalar() as string;
+
+                        // Load data into the DataGridView only for the specific department
+                        string query = "SELECT * FROM departmentpartnershipcompanytable WHERE department = @department";
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
+                        {
+                            adapter.SelectCommand.Parameters.AddWithValue("@department", department);
+
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+                            dataGridView1.DataSource = dataTable;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                // Close the connection
+                if (connection != null && connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
         }
 
         private void ImportStudentExcelfilesbtn_Click(object sender, EventArgs e)
@@ -74,7 +112,7 @@ namespace InternGuide.Deans_Form
                     int rowCount = worksheet.Dimension.Rows;
                     List<CompanyPartners> newCompanyPartners = new List<CompanyPartners>();
 
-                    for (int row = 2; row <= rowCount; row++) // Assuming the header is in the first row
+                    for (int row = 2; row <= rowCount; row++)
                     {
                         string companyname = worksheet.Cells[row, 1].Value?.ToString();
                         string address = worksheet.Cells[row, 2].Value?.ToString();
@@ -86,7 +124,7 @@ namespace InternGuide.Deans_Form
                         string remark = worksheet.Cells[row, 8].Value?.ToString();
 
                         // Ensure that required fields are not null or empty before adding to the list
-                        if (!string.IsNullOrEmpty(companyname) && !string.IsNullOrEmpty(address) && !string.IsNullOrEmpty(contactperson))
+                        if (!string.IsNullOrEmpty(companyname))
                         {
                             // Create a Student object and add it to the list
                             CompanyPartners companypartners = new CompanyPartners
@@ -119,6 +157,7 @@ namespace InternGuide.Deans_Form
 
         private void InsertCompanyPartners(List<CompanyPartners> companypartners, string currentDeanId)
         {
+            string department = "";
             try
             {
                 using (connection = new SqlConnection(connectionString))
@@ -130,76 +169,74 @@ namespace InternGuide.Deans_Form
                     using (var departmentCommand = new SqlCommand(departmentQuery, connection))
                     {
                         departmentCommand.Parameters.AddWithValue("@deanId", currentDeanId);
-                        string department = departmentCommand.ExecuteScalar() as string;
+                        department = departmentCommand.ExecuteScalar() as string;
+                    }
 
-                        // Begin a transaction
-                        using (var transaction = connection.BeginTransaction())
+                    // Begin a transaction
+                    using (var transaction = connection.BeginTransaction())
+                    {
+                        try
                         {
-                            try
+                            foreach (CompanyPartners companypartner in companypartners)
                             {
-                                foreach (CompanyPartners companypartner in companypartners)
+                                // Check if a company with the same name already exists
+                                string checkQuery = "SELECT COUNT(*) FROM departmentpartnershipcompanytable WHERE companyname = @companyname";
+                                using (var checkCommand = new SqlCommand(checkQuery, connection, transaction))
                                 {
-                                
-                                    // Check if a company  with the same name already exists
-                                    string checkQuery = "SELECT COUNT(*) FROM departmentpartnershipcompanytable WHERE companyname = @companyname";
-                                    using (var checkCommand = new SqlCommand(checkQuery, connection, transaction))
+                                    checkCommand.Parameters.AddWithValue("@companyname", companypartner.Companyname);
+                                    int countResult = (int)checkCommand.ExecuteScalar();
+
+                                    if (countResult == 0)
                                     {
-                                        checkCommand.Parameters.AddWithValue("@companyname", companypartner.Companyname);
-                                        int countResult = (int)checkCommand.ExecuteScalar();
+                                        string insertQuery = "INSERT INTO departmentpartnershipcompanytable (companyname, address, contactperson, designation, contactnumber, emailaddress, yearstartedaspartner, remark, department, deanId, password, status) " +
+                                                               "VALUES (@companyname, @address, @contactperson, @designation, @contactnumber, @emailaddress, @yearstartedaspartner, @remark, @department, @deanId, @password, @status)";
 
-                                        if (countResult == 0)
+                                        using (var insertCommand = new SqlCommand(insertQuery, connection, transaction))
                                         {
-                                            string insertQuery = "INSERT INTO departmentpartnershipcompanytable (companyname, status, deanId, address, designation, contactperson, contactnumber, emailaddress, yearstartedaspartner, department, remark, password) " +
-                                            "VALUES (@companyname, @deanId, @address, @contactperson,@contactnumber, @status, @emailaddress, @yearstartedaspartner,@designation, @department, @remark, @password)";
+                                            insertCommand.Parameters.AddWithValue("@companyname", companypartner.Companyname);
+                                            insertCommand.Parameters.AddWithValue("@address", companypartner.Address);
+                                            insertCommand.Parameters.AddWithValue("@contactperson", companypartner.Contactperson);
+                                            insertCommand.Parameters.AddWithValue("@designation", companypartner.Designation);
+                                            insertCommand.Parameters.AddWithValue("@contactnumber", companypartner.Contactnumber);
+                                            insertCommand.Parameters.AddWithValue("@emailaddress", companypartner.Emailaddress);
+                                            insertCommand.Parameters.AddWithValue("@yearstartedaspartner", companypartner.Yearstartedaspartner);
+                                            insertCommand.Parameters.AddWithValue("@remark", companypartner.Remark);
+                                            insertCommand.Parameters.AddWithValue("@department", department);
+                                            insertCommand.Parameters.AddWithValue("@deanId", currentDeanId);
+                                            insertCommand.Parameters.AddWithValue("@password", $"uclm-{companypartner.Companyname}");
+                                            insertCommand.Parameters.AddWithValue("@status", "Active");
 
-                                            using (var insertCommand = new SqlCommand(insertQuery, connection, transaction))
-                                            {
-                                                insertCommand.Parameters.AddWithValue("@companyname", companypartner.Companyname);
-                                                insertCommand.Parameters.AddWithValue("@address", companypartner.Address);
-                                                insertCommand.Parameters.AddWithValue("@contactperson", companypartner.Contactperson);
-                                                insertCommand.Parameters.AddWithValue("@designation", companypartner.Designation);
-                                                insertCommand.Parameters.AddWithValue("@contactnumber", companypartner.Contactnumber);
-                                                insertCommand.Parameters.AddWithValue("@emailaddress", companypartner.Emailaddress);
-                                                insertCommand.Parameters.AddWithValue("@yearstartedaspartner", companypartner.Yearstartedaspartner);
-                                                insertCommand.Parameters.AddWithValue("@remark", companypartner.Remark);
-                                                insertCommand.Parameters.AddWithValue("@department", department); // Use the fetched department
-                                                insertCommand.Parameters.AddWithValue("@deanId", currentDeanId);
-                                                insertCommand.Parameters.AddWithValue("@password", $"uclm-{companypartner.Companyname}");
-                                                insertCommand.Parameters.AddWithValue("@status", "Active");
-
-
-                                                insertCommand.ExecuteNonQuery();
-                                            }
-                                        }
-                                        else
-                                        {
-                                            MessageBox.Show($"Student with ID {companypartner.Companyname} already exists. Skipping insertion.");
+                                            insertCommand.ExecuteNonQuery();
                                         }
                                     }
+                                    else
+                                    {
+                                        MessageBox.Show($"Company with Name {companypartner.Companyname} already exists. Skipping insertion.");
+                                    }
                                 }
-
-                                // Commit the transaction if all inserts were successful
-                                transaction.Commit();
-                            }
-                            catch (SqlException sqlEx)
-                            {
-                                // Handle SQL-specific exceptions here
-                                transaction.Rollback();
-                                MessageBox.Show($"SQL Error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            catch (Exception ex)
-                            {
-                                // Handle other exceptions here
-                                transaction.Rollback();
-                                MessageBox.Show($"Error occurred during the insert transaction: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
 
+                            // Commit the transaction if all inserts were successful
+                            transaction.Commit();
+                        }
+                        catch (SqlException sqlEx)
+                        {
+                            // Handle SQL-specific exceptions here
+                            transaction.Rollback();
+                            MessageBox.Show($"SQL Error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        catch (Exception ex)
+                        {
+                            // Handle other exceptions here
+                            transaction.Rollback();
+                            MessageBox.Show($"Error occurred during the insert transaction: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
 
-                    // Reload data into the DataGridView to reflect the changes
-                    string query = "SELECT * FROM departmentpartnershipcompanytable";
+                    // Reload data into the DataGridView to reflect the changes for the specific department
+                    string query = "SELECT * FROM departmentpartnershipcompanytable WHERE department = @department";
                     SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    adapter.SelectCommand.Parameters.AddWithValue("@department", department);
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
                     dataGridView1.DataSource = dataTable;

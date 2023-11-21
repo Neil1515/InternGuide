@@ -157,6 +157,8 @@ namespace InternGuide.Deans_Form
 
         private void InsertStudent(List<Student> students, string currentDeanId)
         {
+            string department = "";
+
             try
             {
                 using (connection = new SqlConnection(connectionString))
@@ -168,74 +170,73 @@ namespace InternGuide.Deans_Form
                     using (var departmentCommand = new SqlCommand(departmentQuery, connection))
                     {
                         departmentCommand.Parameters.AddWithValue("@deanId", currentDeanId);
-                        string department = departmentCommand.ExecuteScalar() as string;
+                        department = departmentCommand.ExecuteScalar() as string;
+                    }
 
-                        // Begin a transaction
-                        using (var transaction = connection.BeginTransaction())
+                    // Begin a transaction
+                    using (var transaction = connection.BeginTransaction())
+                    {
+                        try
                         {
-                            try
+                            foreach (Student student in students)
                             {
-                                foreach (Student student in students)
+                                // Check if a student with the same ID already exists
+                                string checkQuery = "SELECT COUNT(*) FROM studenttable WHERE id = @id";
+                                using (var checkCommand = new SqlCommand(checkQuery, connection, transaction))
                                 {
-                                    // Check if a student with the same ID already exists
-                                    string checkQuery = "SELECT COUNT(*) FROM studenttable WHERE id = @id";
-                                    using (var checkCommand = new SqlCommand(checkQuery, connection, transaction))
-                                    {
-                                        checkCommand.Parameters.AddWithValue("@id", student.Id);
-                                        int count = (int)checkCommand.ExecuteScalar();
+                                    checkCommand.Parameters.AddWithValue("@id", student.Id);
+                                    int count = (int)checkCommand.ExecuteScalar();
 
-                                        if (count == 0)
-                                        {
-                                            // Student does not exist, insert it
-                                            string insertQuery = "INSERT INTO studenttable (Id, deanId, fname, lname, mname, course, department, email, yrlvl, image, password) " +
+                                    if (count == 0)
+                                    {
+                                        // Student does not exist, insert it
+                                        string insertQuery = "INSERT INTO studenttable (Id, deanId, fname, lname, mname, course, department, email, yrlvl, image, password) " +
                                             "VALUES (@id, @deanId, @fname, @lname, @mname, @course, @department, @email, @yrlvl, NULL, @password)";
 
-                                            using (var insertCommand = new SqlCommand(insertQuery, connection, transaction))
-                                            {
-                                                insertCommand.Parameters.AddWithValue("@id", student.Id);
-                                                insertCommand.Parameters.AddWithValue("@fname", student.Fname);
-                                                insertCommand.Parameters.AddWithValue("@lname", student.Lname);
-                                                insertCommand.Parameters.AddWithValue("@mname", student.Mname);
-                                                insertCommand.Parameters.AddWithValue("@email", student.Email);
-                                                insertCommand.Parameters.AddWithValue("@course", student.Course);
-                                                insertCommand.Parameters.AddWithValue("@yrlvl", student.Yrlvl);
-                                                insertCommand.Parameters.AddWithValue("@department", department); // Use the fetched department
-                                                insertCommand.Parameters.AddWithValue("@deanId", currentDeanId);
-                                                insertCommand.Parameters.AddWithValue("@password", $"uclm-{student.Id}");
-
-
-                                                insertCommand.ExecuteNonQuery();
-                                            }
-                                        }
-                                        else
+                                        using (var insertCommand = new SqlCommand(insertQuery, connection, transaction))
                                         {
-                                            MessageBox.Show($"Student with ID {student.Id} already exists. Skipping insertion.");
+                                            insertCommand.Parameters.AddWithValue("@id", student.Id);
+                                            insertCommand.Parameters.AddWithValue("@fname", student.Fname);
+                                            insertCommand.Parameters.AddWithValue("@lname", student.Lname);
+                                            insertCommand.Parameters.AddWithValue("@mname", student.Mname);
+                                            insertCommand.Parameters.AddWithValue("@email", student.Email);
+                                            insertCommand.Parameters.AddWithValue("@course", student.Course);
+                                            insertCommand.Parameters.AddWithValue("@yrlvl", student.Yrlvl);
+                                            insertCommand.Parameters.AddWithValue("@department", department); // Use the fetched department
+                                            insertCommand.Parameters.AddWithValue("@deanId", currentDeanId);
+                                            insertCommand.Parameters.AddWithValue("@password", $"uclm-{student.Id}");
+
+                                            insertCommand.ExecuteNonQuery();
                                         }
                                     }
+                                    else
+                                    {
+                                        MessageBox.Show($"Student with ID {student.Id} already exists. Skipping insertion.");
+                                    }
                                 }
-
-                                // Commit the transaction if all inserts were successful
-                                transaction.Commit();
-                            }
-                            catch (SqlException sqlEx)
-                            {
-                                // Handle SQL-specific exceptions here
-                                transaction.Rollback();
-                                MessageBox.Show($"SQL Error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            catch (Exception ex)
-                            {
-                                // Handle other exceptions here
-                                transaction.Rollback();
-                                MessageBox.Show($"Error occurred during the insert transaction: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
 
+                            // Commit the transaction if all inserts were successful
+                            transaction.Commit();
+                        }
+                        catch (SqlException sqlEx)
+                        {
+                            // Handle SQL-specific exceptions here
+                            transaction.Rollback();
+                            MessageBox.Show($"SQL Error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        catch (Exception ex)
+                        {
+                            // Handle other exceptions here
+                            transaction.Rollback();
+                            MessageBox.Show($"Error occurred during the insert transaction: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
 
-                    // Reload data into the DataGridView to reflect the changes
-                    string query = "SELECT * FROM studenttable";
+                    // Reload data into the DataGridView to reflect the changes for the specific department
+                    string query = "SELECT * FROM studenttable WHERE department = @department";
                     SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    adapter.SelectCommand.Parameters.AddWithValue("@department", department);
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
                     dataGridView1.DataSource = dataTable;
