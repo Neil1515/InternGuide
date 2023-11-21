@@ -40,7 +40,7 @@ namespace InternGuide.Admin_Form
         private void DepartmentAdmin_Load(object sender, EventArgs e)
         {
            
-            this.departmentdeanstableTableAdapter.Fill(this.internGuideDBDataSet.departmentdeanstable);
+            this.departmentdeanstableTableAdapter.Fill(this.internGuideDBDataSetMain.departmentdeanstable);
 
             // Load data into the DataGridView
             LoadDataIntoDataGridView();

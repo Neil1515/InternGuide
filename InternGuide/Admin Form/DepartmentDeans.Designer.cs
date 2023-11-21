@@ -31,21 +31,20 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.addadmindetails = new System.Windows.Forms.PictureBox();
+            this.internGuideDBDataSetMain = new InternGuide.InternGuideDBDataSetMain();
+            this.departmentdeanstableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.departmentdeanstableTableAdapter = new InternGuide.InternGuideDBDataSetMainTableAdapters.departmentdeanstableTableAdapter();
             this.deansfnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deanslnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departmentdeanstableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.internGuideDBDataSet = new InternGuide.InternGuideDBDataSet();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.departmentdeanstableTableAdapter = new InternGuide.InternGuideDBDataSetTableAdapters.departmentdeanstableTableAdapter();
-            this.addadmindetails = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentdeanstableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSet)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addadmindetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentdeanstableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +72,6 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
             this.deansfnameDataGridViewTextBoxColumn,
             this.deanslnameDataGridViewTextBoxColumn,
             this.departmentDataGridViewTextBoxColumn,
@@ -86,13 +84,49 @@
             this.dataGridView1.Size = new System.Drawing.Size(931, 418);
             this.dataGridView1.TabIndex = 40;
             // 
-            // idDataGridViewTextBoxColumn
+            // guna2CustomGradientPanel1
             // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.guna2CustomGradientPanel1.AllowDrop = true;
+            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.BorderRadius = 5;
+            this.guna2CustomGradientPanel1.Controls.Add(this.label1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.addadmindetails);
+            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(931, 67);
+            this.guna2CustomGradientPanel1.TabIndex = 41;
+            // 
+            // addadmindetails
+            // 
+            this.addadmindetails.BackColor = System.Drawing.Color.Transparent;
+            this.addadmindetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addadmindetails.Image = global::InternGuide.Properties.Resources.adduser;
+            this.addadmindetails.Location = new System.Drawing.Point(12, 13);
+            this.addadmindetails.Name = "addadmindetails";
+            this.addadmindetails.Size = new System.Drawing.Size(43, 43);
+            this.addadmindetails.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.addadmindetails.TabIndex = 38;
+            this.addadmindetails.TabStop = false;
+            this.addadmindetails.Click += new System.EventHandler(this.addadmindetails_Click);
+            // 
+            // internGuideDBDataSetMain
+            // 
+            this.internGuideDBDataSetMain.DataSetName = "InternGuideDBDataSetMain";
+            this.internGuideDBDataSetMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // departmentdeanstableBindingSource
+            // 
+            this.departmentdeanstableBindingSource.DataMember = "departmentdeanstable";
+            this.departmentdeanstableBindingSource.DataSource = this.internGuideDBDataSetMain;
+            // 
+            // departmentdeanstableTableAdapter
+            // 
+            this.departmentdeanstableTableAdapter.ClearBeforeFill = true;
             // 
             // deansfnameDataGridViewTextBoxColumn
             // 
@@ -126,50 +160,6 @@
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // departmentdeanstableBindingSource
-            // 
-            this.departmentdeanstableBindingSource.DataMember = "departmentdeanstable";
-            this.departmentdeanstableBindingSource.DataSource = this.internGuideDBDataSet;
-            // 
-            // internGuideDBDataSet
-            // 
-            this.internGuideDBDataSet.DataSetName = "InternGuideDBDataSet";
-            this.internGuideDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // guna2CustomGradientPanel1
-            // 
-            this.guna2CustomGradientPanel1.AllowDrop = true;
-            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.BorderRadius = 5;
-            this.guna2CustomGradientPanel1.Controls.Add(this.label1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.addadmindetails);
-            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
-            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
-            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(931, 67);
-            this.guna2CustomGradientPanel1.TabIndex = 41;
-            // 
-            // departmentdeanstableTableAdapter
-            // 
-            this.departmentdeanstableTableAdapter.ClearBeforeFill = true;
-            // 
-            // addadmindetails
-            // 
-            this.addadmindetails.BackColor = System.Drawing.Color.Transparent;
-            this.addadmindetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addadmindetails.Image = global::InternGuide.Properties.Resources.adduser;
-            this.addadmindetails.Location = new System.Drawing.Point(12, 13);
-            this.addadmindetails.Name = "addadmindetails";
-            this.addadmindetails.Size = new System.Drawing.Size(43, 43);
-            this.addadmindetails.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.addadmindetails.TabIndex = 38;
-            this.addadmindetails.TabStop = false;
-            this.addadmindetails.Click += new System.EventHandler(this.addadmindetails_Click);
-            // 
             // DepartmentDeans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,11 +170,11 @@
             this.Size = new System.Drawing.Size(931, 491);
             this.Load += new System.EventHandler(this.DepartmentAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentdeanstableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSet)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addadmindetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentdeanstableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,13 +185,12 @@
         private System.Windows.Forms.PictureBox addadmindetails;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deansfnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deanslnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn departmentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource departmentdeanstableBindingSource;
-        private InternGuideDBDataSet internGuideDBDataSet;
-        private InternGuideDBDataSetTableAdapters.departmentdeanstableTableAdapter departmentdeanstableTableAdapter;
+        private InternGuideDBDataSetMain internGuideDBDataSetMain;
+        private InternGuideDBDataSetMainTableAdapters.departmentdeanstableTableAdapter departmentdeanstableTableAdapter;
     }
 }

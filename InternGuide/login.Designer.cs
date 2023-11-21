@@ -66,11 +66,11 @@
             this.guna2ShadowPanel1.Controls.Add(this.txtusername);
             this.guna2ShadowPanel1.Controls.Add(this.txtpassword);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(473, 135);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(507, 135);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 10;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(424, 470);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(357, 470);
             this.guna2ShadowPanel1.TabIndex = 13;
             // 
             // idpassnotfountlabel
@@ -81,7 +81,7 @@
             this.idpassnotfountlabel.ForeColor = System.Drawing.Color.Red;
             this.idpassnotfountlabel.Location = new System.Drawing.Point(5, 368);
             this.idpassnotfountlabel.Name = "idpassnotfountlabel";
-            this.idpassnotfountlabel.Size = new System.Drawing.Size(413, 16);
+            this.idpassnotfountlabel.Size = new System.Drawing.Size(346, 16);
             this.idpassnotfountlabel.TabIndex = 12;
             this.idpassnotfountlabel.Text = "error";
             this.idpassnotfountlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,7 +94,7 @@
             this.pictureBox1.Image = global::InternGuide.Properties.Resources.uc_logo_bg_160x83_c24343b851e5b064daf9;
             this.pictureBox1.Location = new System.Drawing.Point(61, 29);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(298, 166);
+            this.pictureBox1.Size = new System.Drawing.Size(231, 166);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -105,7 +105,7 @@
             this.label2.AutoEllipsis = true;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(108, 204);
+            this.label2.Location = new System.Drawing.Point(74, 204);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(207, 29);
             this.label2.TabIndex = 7;
@@ -128,7 +128,7 @@
             this.loginbtn.ImageSize = new System.Drawing.Size(30, 30);
             this.loginbtn.Location = new System.Drawing.Point(40, 387);
             this.loginbtn.Name = "loginbtn";
-            this.loginbtn.Size = new System.Drawing.Size(340, 55);
+            this.loginbtn.Size = new System.Drawing.Size(273, 55);
             this.loginbtn.TabIndex = 11;
             this.loginbtn.Text = "Login";
             this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click_1);
@@ -144,7 +144,7 @@
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.DimGray;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(5, 216);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(413, 2);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(346, 2);
             this.guna2CustomGradientPanel1.TabIndex = 11;
             // 
             // txtusername
@@ -172,7 +172,7 @@
             this.txtusername.PasswordChar = '\0';
             this.txtusername.PlaceholderText = "ID Number";
             this.txtusername.SelectedText = "";
-            this.txtusername.Size = new System.Drawing.Size(340, 52);
+            this.txtusername.Size = new System.Drawing.Size(273, 52);
             this.txtusername.TabIndex = 9;
             // 
             // txtpassword
@@ -199,7 +199,7 @@
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.PlaceholderText = "Password";
             this.txtpassword.SelectedText = "";
-            this.txtpassword.Size = new System.Drawing.Size(340, 52);
+            this.txtpassword.Size = new System.Drawing.Size(273, 52);
             this.txtpassword.TabIndex = 10;
             // 
             // login

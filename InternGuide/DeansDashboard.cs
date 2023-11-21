@@ -201,7 +201,7 @@ namespace InternGuide
 
         private void DepartmentPartnersCompbtn_Click(object sender, EventArgs e)
         {
-            DepartmentPartnersComp DepartmentPartnersComp = new DepartmentPartnersComp();
+            DepartmentPartnersComp DepartmentPartnersComp = new DepartmentPartnersComp(deansId);
             addUserControl(DepartmentPartnersComp);
         }
 

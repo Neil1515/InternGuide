@@ -33,9 +33,6 @@
             this.ImportStudentExcelfilesbtn = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.internGuideDBDataSetMain = new InternGuide.InternGuideDBDataSetMain();
-            this.departmentpartnershipcompanytableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.departmentpartnershipcompanytableTableAdapter = new InternGuide.InternGuideDBDataSetMainTableAdapters.departmentpartnershipcompanytableTableAdapter();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,10 +42,13 @@
             this.emailaddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yearstartedaspartnerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remarkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departmentpartnershipcompanytableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.internGuideDBDataSetMain = new InternGuide.InternGuideDBDataSetMain();
+            this.departmentpartnershipcompanytableTableAdapter = new InternGuide.InternGuideDBDataSetMainTableAdapters.departmentpartnershipcompanytableTableAdapter();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentpartnershipcompanytableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -86,6 +86,7 @@
             this.ImportStudentExcelfilesbtn.Size = new System.Drawing.Size(141, 37);
             this.ImportStudentExcelfilesbtn.TabIndex = 40;
             this.ImportStudentExcelfilesbtn.Text = "Import Companies";
+            this.ImportStudentExcelfilesbtn.Click += new System.EventHandler(this.ImportStudentExcelfilesbtn_Click);
             // 
             // label1
             // 
@@ -134,20 +135,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(931, 424);
             this.dataGridView1.TabIndex = 46;
-            // 
-            // internGuideDBDataSetMain
-            // 
-            this.internGuideDBDataSetMain.DataSetName = "InternGuideDBDataSetMain";
-            this.internGuideDBDataSetMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // departmentpartnershipcompanytableBindingSource
-            // 
-            this.departmentpartnershipcompanytableBindingSource.DataMember = "departmentpartnershipcompanytable";
-            this.departmentpartnershipcompanytableBindingSource.DataSource = this.internGuideDBDataSetMain;
-            // 
-            // departmentpartnershipcompanytableTableAdapter
-            // 
-            this.departmentpartnershipcompanytableTableAdapter.ClearBeforeFill = true;
             // 
             // statusDataGridViewTextBoxColumn
             // 
@@ -212,6 +199,20 @@
             this.remarkDataGridViewTextBoxColumn.Name = "remarkDataGridViewTextBoxColumn";
             this.remarkDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // departmentpartnershipcompanytableBindingSource
+            // 
+            this.departmentpartnershipcompanytableBindingSource.DataMember = "departmentpartnershipcompanytable";
+            this.departmentpartnershipcompanytableBindingSource.DataSource = this.internGuideDBDataSetMain;
+            // 
+            // internGuideDBDataSetMain
+            // 
+            this.internGuideDBDataSetMain.DataSetName = "InternGuideDBDataSetMain";
+            this.internGuideDBDataSetMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // departmentpartnershipcompanytableTableAdapter
+            // 
+            this.departmentpartnershipcompanytableTableAdapter.ClearBeforeFill = true;
+            // 
             // DepartmentPartnersComp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,8 +224,8 @@
             this.Load += new System.EventHandler(this.DepartmentPartnersComp_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentpartnershipcompanytableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).EndInit();
             this.ResumeLayout(false);
 
         }
