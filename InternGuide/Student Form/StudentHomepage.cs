@@ -19,6 +19,7 @@ namespace InternGuide.Student_Form
         {
             InitializeComponent();
             DisplayDeansName(studentId);
+            DisplayCompanyPartners(studentId);
         }
 
         private void DisplayDeansName(int studentId)
@@ -93,6 +94,62 @@ namespace InternGuide.Student_Form
             {
                 MessageBox.Show($"An error occurred while loading dean's information: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private void DisplayCompanyPartners(int studentId)
+        {
+            try
+            {
+                // Define your connection string
+                string connectionString = "Data Source=192.168.1.3;Initial Catalog=InternGuideDB;Persist Security Info=True;User ID=SuperAdmin1;Password=SuperAdmin1";
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Retrieve the student's department
+                    string departmentQuery = "SELECT department FROM studenttable WHERE Id = @studentId";
+
+                    using (SqlCommand departmentCmd = new SqlCommand(departmentQuery, connection))
+                    {
+                        departmentCmd.Parameters.AddWithValue("@studentId", studentId);
+
+                        string department = departmentCmd.ExecuteScalar() as string;
+
+                        if (department != null)
+                        {
+                            // Now that we have the student's department, retrieve company partners for that department
+                            string companyQuery = "SELECT Status, Companyname, Address, Contactperson, Designation, Contactnumber, Emailaddress, Yearstartedaspartner, Remark " +
+                                "FROM departmentpartnershipcompanytable WHERE department = @department";
+
+                            using (SqlCommand cmd = new SqlCommand(companyQuery, connection))
+                            {
+                                cmd.Parameters.AddWithValue("@department", department);
+
+                                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                                DataTable dataTable = new DataTable();
+                                adapter.Fill(dataTable);
+
+                                // Bind the data to the DataGridView
+                                dataGridView1.DataSource = dataTable;
+                            }
+                        }
+                        else
+                        {
+                            // Handle the case when no department is found for the student
+                            MessageBox.Show("Department not found for the student.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while loading company partners: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    
+    private void StudentHomepage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
