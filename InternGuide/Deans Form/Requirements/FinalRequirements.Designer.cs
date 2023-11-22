@@ -31,6 +31,7 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.addadmindetails = new System.Windows.Forms.PictureBox();
+            this.prelimflowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addadmindetails)).BeginInit();
             this.SuspendLayout();
@@ -77,13 +78,23 @@
             this.addadmindetails.TabIndex = 38;
             this.addadmindetails.TabStop = false;
             // 
+            // prelimflowLayoutPanel
+            // 
+            this.prelimflowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prelimflowLayoutPanel.Location = new System.Drawing.Point(0, 67);
+            this.prelimflowLayoutPanel.Name = "prelimflowLayoutPanel";
+            this.prelimflowLayoutPanel.Size = new System.Drawing.Size(931, 363);
+            this.prelimflowLayoutPanel.TabIndex = 45;
+            // 
             // FinalRequirements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.prelimflowLayoutPanel);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "FinalRequirements";
             this.Size = new System.Drawing.Size(931, 430);
+            this.Load += new System.EventHandler(this.FinalRequirements_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addadmindetails)).EndInit();
@@ -96,5 +107,6 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox addadmindetails;
+        private System.Windows.Forms.FlowLayoutPanel prelimflowLayoutPanel;
     }
 }

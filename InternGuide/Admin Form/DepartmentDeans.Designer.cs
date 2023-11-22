@@ -31,20 +31,21 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.departmentdeanstableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.internGuideDBDataSetMain = new InternGuide.InternGuideDBDataSetMain();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.addadmindetails = new System.Windows.Forms.PictureBox();
-            this.internGuideDBDataSetMain = new InternGuide.InternGuideDBDataSetMain();
-            this.departmentdeanstableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departmentdeanstableTableAdapter = new InternGuide.InternGuideDBDataSetMainTableAdapters.departmentdeanstableTableAdapter();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deansfnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deanslnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentdeanstableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addadmindetails)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentdeanstableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,6 +73,7 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.deansfnameDataGridViewTextBoxColumn,
             this.deanslnameDataGridViewTextBoxColumn,
             this.departmentDataGridViewTextBoxColumn,
@@ -83,6 +85,16 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(931, 418);
             this.dataGridView1.TabIndex = 40;
+            // 
+            // departmentdeanstableBindingSource
+            // 
+            this.departmentdeanstableBindingSource.DataMember = "departmentdeanstable";
+            this.departmentdeanstableBindingSource.DataSource = this.internGuideDBDataSetMain;
+            // 
+            // internGuideDBDataSetMain
+            // 
+            this.internGuideDBDataSetMain.DataSetName = "InternGuideDBDataSetMain";
+            this.internGuideDBDataSetMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -114,19 +126,16 @@
             this.addadmindetails.TabStop = false;
             this.addadmindetails.Click += new System.EventHandler(this.addadmindetails_Click);
             // 
-            // internGuideDBDataSetMain
-            // 
-            this.internGuideDBDataSetMain.DataSetName = "InternGuideDBDataSetMain";
-            this.internGuideDBDataSetMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // departmentdeanstableBindingSource
-            // 
-            this.departmentdeanstableBindingSource.DataMember = "departmentdeanstable";
-            this.departmentdeanstableBindingSource.DataSource = this.internGuideDBDataSetMain;
-            // 
             // departmentdeanstableTableAdapter
             // 
             this.departmentdeanstableTableAdapter.ClearBeforeFill = true;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "Id";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // deansfnameDataGridViewTextBoxColumn
             // 
@@ -170,11 +179,11 @@
             this.Size = new System.Drawing.Size(931, 491);
             this.Load += new System.EventHandler(this.DepartmentAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentdeanstableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addadmindetails)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentdeanstableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,12 +194,13 @@
         private System.Windows.Forms.PictureBox addadmindetails;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private System.Windows.Forms.BindingSource departmentdeanstableBindingSource;
+        private InternGuideDBDataSetMain internGuideDBDataSetMain;
+        private InternGuideDBDataSetMainTableAdapters.departmentdeanstableTableAdapter departmentdeanstableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn deansfnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deanslnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn departmentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource departmentdeanstableBindingSource;
-        private InternGuideDBDataSetMain internGuideDBDataSetMain;
-        private InternGuideDBDataSetMainTableAdapters.departmentdeanstableTableAdapter departmentdeanstableTableAdapter;
     }
 }

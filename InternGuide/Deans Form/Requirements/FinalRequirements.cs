@@ -16,5 +16,10 @@ namespace InternGuide.Deans_Form.Requirements
         {
             InitializeComponent();
         }
+
+        private void FinalRequirements_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
