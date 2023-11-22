@@ -1,6 +1,6 @@
 ﻿namespace InternGuide.Deans_Form
 {
-    partial class deanhistorylogs
+    partial class Deanhistorylogs
     {
         /// <summary> 
         /// Required designer variable.

@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace InternGuide.Deans_Form
 {
-    public partial class deanhistorylogs : UserControl
+    public partial class Deanhistorylogs : UserControl
     {
         private string connectionString = @"Data Source=192.168.1.3;Initial Catalog=InternGuideDB;Persist Security Info=True;User ID=SuperAdmin1;Password=SuperAdmin1";
         private SqlConnection connection;
         private SqlCommand command;
         private SqlDataReader reader;
 
-        public deanhistorylogs(int deansId)
+        public Deanhistorylogs(int deansId)
         {
             InitializeComponent();
             try

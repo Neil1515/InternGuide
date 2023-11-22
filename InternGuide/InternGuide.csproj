@@ -167,11 +167,11 @@
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Deans Form\deanhistorylogs.cs">
+    <Compile Include="Deans Form\Deanhistorylogs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Deans Form\deanhistorylogs.Designer.cs">
-      <DependentUpon>deanhistorylogs.cs</DependentUpon>
+    <Compile Include="Deans Form\Deanhistorylogs.Designer.cs">
+      <DependentUpon>Deanhistorylogs.cs</DependentUpon>
     </Compile>
     <Compile Include="Deans Form\DeanHomepage.cs">
       <SubType>UserControl</SubType>
@@ -208,6 +208,30 @@
     </Compile>
     <Compile Include="Deans Form\ManageStudentReq.Designer.cs">
       <DependentUpon>ManageStudentReq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\FinalRequirements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\FinalRequirements.Designer.cs">
+      <DependentUpon>FinalRequirements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\MidtermRequirements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\MidtermRequirements.Designer.cs">
+      <DependentUpon>MidtermRequirements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\PrelimRequirements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\PrelimRequirements.Designer.cs">
+      <DependentUpon>PrelimRequirements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\SemifinalRequirements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\SemifinalRequirements.Designer.cs">
+      <DependentUpon>SemifinalRequirements.cs</DependentUpon>
     </Compile>
     <Compile Include="Deans Form\StudentWidget.cs">
       <SubType>UserControl</SubType>
@@ -287,8 +311,8 @@
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Deans Form\deanhistorylogs.resx">
-      <DependentUpon>deanhistorylogs.cs</DependentUpon>
+    <EmbeddedResource Include="Deans Form\Deanhistorylogs.resx">
+      <DependentUpon>Deanhistorylogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Deans Form\DeanHomepage.resx">
       <DependentUpon>DeanHomepage.cs</DependentUpon>
@@ -307,6 +331,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Deans Form\ManageStudentReq.resx">
       <DependentUpon>ManageStudentReq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\Requirements\FinalRequirements.resx">
+      <DependentUpon>FinalRequirements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\Requirements\MidtermRequirements.resx">
+      <DependentUpon>MidtermRequirements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\Requirements\PrelimRequirements.resx">
+      <DependentUpon>PrelimRequirements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\Requirements\SemifinalRequirements.resx">
+      <DependentUpon>SemifinalRequirements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Deans Form\StudentWidget.resx">
       <DependentUpon>StudentWidget.cs</DependentUpon>

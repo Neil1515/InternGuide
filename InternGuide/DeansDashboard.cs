@@ -177,7 +177,7 @@ namespace InternGuide
 
         private void deanhistlogsbtn_Click(object sender, EventArgs e)
         {
-            deanhistorylogs deanhistorylogs = new deanhistorylogs(deansId);
+            Deanhistorylogs deanhistorylogs = new Deanhistorylogs(deansId);
             addUserControl(deanhistorylogs);
         }
 
