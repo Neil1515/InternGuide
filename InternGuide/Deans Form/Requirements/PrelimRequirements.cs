@@ -16,5 +16,16 @@ namespace InternGuide.Deans_Form.Requirements
         {
             InitializeComponent();
         }
+
+        private void PrelimRequirements_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addprelimrequirements_Click(object sender, EventArgs e)
+        {
+            AddPrelimReqs AddPrelimReqs = new AddPrelimReqs();
+            AddPrelimReqs.ShowDialog();
+        }
     }
 }

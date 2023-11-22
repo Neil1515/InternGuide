@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace InternGuide.Deans_Form.Requirements
 {
-    public partial class MidtermRequirements : UserControl
+    public partial class AddMidtermReqs : Form
     {
-        public MidtermRequirements()
+        public AddMidtermReqs()
         {
             InitializeComponent();
-        }
-
-        private void addmidtermrequirements_Click(object sender, EventArgs e)
-        {
-            AddMidtermReqs AddMidtermReqs = new AddMidtermReqs();
-            AddMidtermReqs.ShowDialog();
         }
     }
 }

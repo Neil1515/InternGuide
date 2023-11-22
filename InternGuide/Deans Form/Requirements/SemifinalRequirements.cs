@@ -16,5 +16,11 @@ namespace InternGuide.Deans_Form.Requirements
         {
             InitializeComponent();
         }
+
+        private void addsemifinalrequirements_Click(object sender, EventArgs e)
+        {
+            AddSemiFinalReqs AddSemiFinalReqs = new AddSemiFinalReqs();
+            AddSemiFinalReqs.ShowDialog();
+        }
     }
 }

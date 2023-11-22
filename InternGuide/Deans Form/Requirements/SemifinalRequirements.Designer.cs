@@ -76,6 +76,7 @@
             this.addsemifinalrequirements.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.addsemifinalrequirements.TabIndex = 38;
             this.addsemifinalrequirements.TabStop = false;
+            this.addsemifinalrequirements.Click += new System.EventHandler(this.addsemifinalrequirements_Click);
             // 
             // SemifinalRequirements
             // 

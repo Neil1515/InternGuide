@@ -209,6 +209,30 @@
     <Compile Include="Deans Form\ManageStudentReq.Designer.cs">
       <DependentUpon>ManageStudentReq.cs</DependentUpon>
     </Compile>
+    <Compile Include="Deans Form\Requirements\AddFinalReqs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\AddFinalReqs.Designer.cs">
+      <DependentUpon>AddFinalReqs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\AddMidtermReqs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\AddMidtermReqs.Designer.cs">
+      <DependentUpon>AddMidtermReqs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\AddPrelimReqs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\AddPrelimReqs.Designer.cs">
+      <DependentUpon>AddPrelimReqs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\AddSemiFinalReqs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deans Form\Requirements\AddSemiFinalReqs.Designer.cs">
+      <DependentUpon>AddSemiFinalReqs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Deans Form\Requirements\FinalRequirements.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -331,6 +355,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Deans Form\ManageStudentReq.resx">
       <DependentUpon>ManageStudentReq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\Requirements\AddFinalReqs.resx">
+      <DependentUpon>AddFinalReqs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\Requirements\AddMidtermReqs.resx">
+      <DependentUpon>AddMidtermReqs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\Requirements\AddPrelimReqs.resx">
+      <DependentUpon>AddPrelimReqs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Deans Form\Requirements\AddSemiFinalReqs.resx">
+      <DependentUpon>AddSemiFinalReqs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Deans Form\Requirements\FinalRequirements.resx">
       <DependentUpon>FinalRequirements.cs</DependentUpon>

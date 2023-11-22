@@ -76,6 +76,7 @@
             this.addprelimrequirements.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.addprelimrequirements.TabIndex = 38;
             this.addprelimrequirements.TabStop = false;
+            this.addprelimrequirements.Click += new System.EventHandler(this.addprelimrequirements_Click);
             // 
             // PrelimRequirements
             // 
@@ -84,6 +85,7 @@
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "PrelimRequirements";
             this.Size = new System.Drawing.Size(931, 430);
+            this.Load += new System.EventHandler(this.PrelimRequirements_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addprelimrequirements)).EndInit();

@@ -116,7 +116,7 @@ namespace InternGuide.Admin_Form
 
                     if (result > 0)
                     {
-                        MessageBox.Show("Product added successfully!");
+                        MessageBox.Show("Department Dean added successfully!");
 
 
                         OnAdminAdded(new AdminAddedEventArgs
@@ -141,6 +141,51 @@ namespace InternGuide.Admin_Form
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void idtextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void departmentcategorycomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fnametextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lnametextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admindepartpicture_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

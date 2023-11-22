@@ -30,10 +30,10 @@
         {
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.addadmindetails = new System.Windows.Forms.PictureBox();
+            this.addfinalreqs = new System.Windows.Forms.PictureBox();
             this.prelimflowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addadmindetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addfinalreqs)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -42,7 +42,7 @@
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.BorderRadius = 5;
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.addadmindetails);
+            this.guna2CustomGradientPanel1.Controls.Add(this.addfinalreqs);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
@@ -66,17 +66,18 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Final Requirement";
             // 
-            // addadmindetails
+            // addfinalreqs
             // 
-            this.addadmindetails.BackColor = System.Drawing.Color.Transparent;
-            this.addadmindetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.addadmindetails.Image = global::InternGuide.Properties.Resources.adduser;
-            this.addadmindetails.Location = new System.Drawing.Point(12, 13);
-            this.addadmindetails.Name = "addadmindetails";
-            this.addadmindetails.Size = new System.Drawing.Size(43, 43);
-            this.addadmindetails.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.addadmindetails.TabIndex = 38;
-            this.addadmindetails.TabStop = false;
+            this.addfinalreqs.BackColor = System.Drawing.Color.Transparent;
+            this.addfinalreqs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addfinalreqs.Image = global::InternGuide.Properties.Resources.adduser;
+            this.addfinalreqs.Location = new System.Drawing.Point(12, 13);
+            this.addfinalreqs.Name = "addfinalreqs";
+            this.addfinalreqs.Size = new System.Drawing.Size(43, 43);
+            this.addfinalreqs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.addfinalreqs.TabIndex = 38;
+            this.addfinalreqs.TabStop = false;
+            this.addfinalreqs.Click += new System.EventHandler(this.addfinalreqs_Click);
             // 
             // prelimflowLayoutPanel
             // 
@@ -97,7 +98,7 @@
             this.Load += new System.EventHandler(this.FinalRequirements_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addadmindetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addfinalreqs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,7 +107,7 @@
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox addadmindetails;
+        private System.Windows.Forms.PictureBox addfinalreqs;
         private System.Windows.Forms.FlowLayoutPanel prelimflowLayoutPanel;
     }
 }
