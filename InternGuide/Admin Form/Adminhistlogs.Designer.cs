@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.internGuideDBDataSet = new InternGuide.InternGuideDBDataSet();
-            this.historylogstblBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.historylogstblTableAdapter = new InternGuide.InternGuideDBDataSetTableAdapters.historylogstblTableAdapter();
             this.datetimeinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datetimeoutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.historylogstblBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.internGuideDBDataSet = new InternGuide.InternGuideDBDataSet();
+            this.historylogstblTableAdapter = new InternGuide.InternGuideDBDataSetTableAdapters.historylogstblTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historylogstblBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -49,6 +49,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.datetimeinDataGridViewTextBoxColumn,
@@ -59,20 +60,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(614, 459);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // internGuideDBDataSet
-            // 
-            this.internGuideDBDataSet.DataSetName = "InternGuideDBDataSet";
-            this.internGuideDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // historylogstblBindingSource
-            // 
-            this.historylogstblBindingSource.DataMember = "historylogstbl";
-            this.historylogstblBindingSource.DataSource = this.internGuideDBDataSet;
-            // 
-            // historylogstblTableAdapter
-            // 
-            this.historylogstblTableAdapter.ClearBeforeFill = true;
             // 
             // datetimeinDataGridViewTextBoxColumn
             // 
@@ -90,17 +77,31 @@
             this.datetimeoutDataGridViewTextBoxColumn.Name = "datetimeoutDataGridViewTextBoxColumn";
             this.datetimeoutDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // adminhistlogs
+            // historylogstblBindingSource
+            // 
+            this.historylogstblBindingSource.DataMember = "historylogstbl";
+            this.historylogstblBindingSource.DataSource = this.internGuideDBDataSet;
+            // 
+            // internGuideDBDataSet
+            // 
+            this.internGuideDBDataSet.DataSetName = "InternGuideDBDataSet";
+            this.internGuideDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // historylogstblTableAdapter
+            // 
+            this.historylogstblTableAdapter.ClearBeforeFill = true;
+            // 
+            // Adminhistlogs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView1);
-            this.Name = "adminhistlogs";
+            this.Name = "Adminhistlogs";
             this.Size = new System.Drawing.Size(931, 491);
             this.Load += new System.EventHandler(this.adminhistlogs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historylogstblBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
