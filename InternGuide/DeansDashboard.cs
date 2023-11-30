@@ -149,7 +149,7 @@ namespace InternGuide
                             if (reader.Read())
                             {
                                 // Display dean's details
-                                DeansfName = reader["deansfname"].ToString();
+                                DeansfName = "Dean, "+reader["deansfname"].ToString();
 
                                 // Display the dean's image
                                 byte[] imageBytes = reader["image"] as byte[];
@@ -157,7 +157,7 @@ namespace InternGuide
                                 {
                                     using (MemoryStream ms = new MemoryStream(imageBytes))
                                     {
-                                        dashboarddeanpicture.Image = Image.FromStream(ms);
+                                        dashboarddeanpicture1.Image = Image.FromStream(ms);
                                     }
                                 }
                             }
@@ -209,6 +209,11 @@ namespace InternGuide
         {
             ManageStudentReq ManageStudentReq = new ManageStudentReq();
             addUserControl(ManageStudentReq);
+        }
+
+        private void deanfnamelabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

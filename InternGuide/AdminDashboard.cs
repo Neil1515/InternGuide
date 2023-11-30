@@ -89,7 +89,7 @@ namespace InternGuide
         public string AdminfName
         {
             get { return adminnamelabel.Text; }
-            set { adminnamelabel.Text = value; }
+            set { adminnamelabel.Text = "Admin, "+value; }
         }
         private void addUserControl(UserControl userControl)
         {
@@ -179,6 +179,14 @@ namespace InternGuide
             this.Hide();
             login login = new login();
             login.ShowDialog();
+        }
+
+        private void myprofilebtn_Click(object sender, EventArgs e)
+        {
+            ManageAdminAccount ManageAdminAccount = new ManageAdminAccount(adminId);
+            ManageAdminAccount.AdminfNameUpdated += UpdateAdminfName;
+            ManageAdminAccount.AdminPictureUpdated += UpdateAdminPicture;
+            addUserControl(ManageAdminAccount);
         }
     }
 }

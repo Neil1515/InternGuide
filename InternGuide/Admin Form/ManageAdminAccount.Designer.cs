@@ -33,15 +33,15 @@
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.updatecompltelabel = new System.Windows.Forms.Label();
             this.browsebtn = new Guna.UI2.WinForms.Guna2Button();
-            this.historylogsbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.changepassbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.adminpicture = new System.Windows.Forms.PictureBox();
             this.emailtextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.fnametextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lnametextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.idlabel = new System.Windows.Forms.Label();
             this.updatebtn = new Guna.UI2.WinForms.Guna2Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.historylogsbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.changepassbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.adminpicture = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.adminpicture)).BeginInit();
@@ -108,54 +108,6 @@
             this.browsebtn.TabIndex = 57;
             this.browsebtn.Text = "Browse";
             this.browsebtn.Click += new System.EventHandler(this.browsebtn_Click);
-            // 
-            // historylogsbtn
-            // 
-            this.historylogsbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.historylogsbtn.BorderRadius = 5;
-            this.historylogsbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.historylogsbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.historylogsbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.historylogsbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.historylogsbtn.FillColor = System.Drawing.Color.White;
-            this.historylogsbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.historylogsbtn.ForeColor = System.Drawing.Color.Black;
-            this.historylogsbtn.Image = global::InternGuide.Properties.Resources.log_data1;
-            this.historylogsbtn.Location = new System.Drawing.Point(322, 6);
-            this.historylogsbtn.Name = "historylogsbtn";
-            this.historylogsbtn.Size = new System.Drawing.Size(30, 33);
-            this.historylogsbtn.TabIndex = 55;
-            this.historylogsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // changepassbtn
-            // 
-            this.changepassbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.changepassbtn.BorderRadius = 5;
-            this.changepassbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.changepassbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.changepassbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.changepassbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.changepassbtn.FillColor = System.Drawing.Color.White;
-            this.changepassbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.changepassbtn.ForeColor = System.Drawing.Color.Black;
-            this.changepassbtn.Image = global::InternGuide.Properties.Resources.process;
-            this.changepassbtn.Location = new System.Drawing.Point(356, 6);
-            this.changepassbtn.Name = "changepassbtn";
-            this.changepassbtn.Size = new System.Drawing.Size(30, 33);
-            this.changepassbtn.TabIndex = 54;
-            this.changepassbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // adminpicture
-            // 
-            this.adminpicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminpicture.Location = new System.Drawing.Point(106, 47);
-            this.adminpicture.Name = "adminpicture";
-            this.adminpicture.Size = new System.Drawing.Size(175, 128);
-            this.adminpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.adminpicture.TabIndex = 45;
-            this.adminpicture.TabStop = false;
             // 
             // emailtextBox
             // 
@@ -227,7 +179,7 @@
             this.idlabel.Name = "idlabel";
             this.idlabel.Size = new System.Drawing.Size(390, 39);
             this.idlabel.TabIndex = 61;
-            this.idlabel.Text = "Canteen Staff ID";
+            this.idlabel.Text = "ADMIN ID";
             this.idlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // updatebtn
@@ -250,6 +202,56 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // historylogsbtn
+            // 
+            this.historylogsbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.historylogsbtn.BorderRadius = 5;
+            this.historylogsbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.historylogsbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.historylogsbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.historylogsbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.historylogsbtn.FillColor = System.Drawing.Color.White;
+            this.historylogsbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.historylogsbtn.ForeColor = System.Drawing.Color.Black;
+            this.historylogsbtn.Image = global::InternGuide.Properties.Resources.log_data1;
+            this.historylogsbtn.Location = new System.Drawing.Point(322, 6);
+            this.historylogsbtn.Name = "historylogsbtn";
+            this.historylogsbtn.Size = new System.Drawing.Size(30, 33);
+            this.historylogsbtn.TabIndex = 55;
+            this.historylogsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.historylogsbtn.Click += new System.EventHandler(this.historylogsbtn_Click);
+            // 
+            // changepassbtn
+            // 
+            this.changepassbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.changepassbtn.BorderRadius = 5;
+            this.changepassbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.changepassbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.changepassbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.changepassbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.changepassbtn.FillColor = System.Drawing.Color.White;
+            this.changepassbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.changepassbtn.ForeColor = System.Drawing.Color.Black;
+            this.changepassbtn.Image = global::InternGuide.Properties.Resources.process;
+            this.changepassbtn.Location = new System.Drawing.Point(356, 6);
+            this.changepassbtn.Name = "changepassbtn";
+            this.changepassbtn.Size = new System.Drawing.Size(30, 33);
+            this.changepassbtn.TabIndex = 54;
+            this.changepassbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.changepassbtn.Click += new System.EventHandler(this.changepassbtn_Click);
+            // 
+            // adminpicture
+            // 
+            this.adminpicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.adminpicture.Location = new System.Drawing.Point(106, 47);
+            this.adminpicture.Name = "adminpicture";
+            this.adminpicture.Size = new System.Drawing.Size(175, 128);
+            this.adminpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.adminpicture.TabIndex = 45;
+            this.adminpicture.TabStop = false;
             // 
             // ManageAdminAccount
             // 

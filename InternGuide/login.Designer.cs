@@ -79,7 +79,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.idpassnotfountlabel.ForeColor = System.Drawing.Color.Red;
-            this.idpassnotfountlabel.Location = new System.Drawing.Point(5, 368);
+            this.idpassnotfountlabel.Location = new System.Drawing.Point(3, 368);
             this.idpassnotfountlabel.Name = "idpassnotfountlabel";
             this.idpassnotfountlabel.Size = new System.Drawing.Size(346, 16);
             this.idpassnotfountlabel.TabIndex = 12;
@@ -104,10 +104,10 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoEllipsis = true;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 204);
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(98, 206);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 29);
+            this.label2.Size = new System.Drawing.Size(157, 23);
             this.label2.TabIndex = 7;
             this.label2.Text = "INTERN GUIDE";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -125,7 +125,7 @@
             this.loginbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginbtn.ForeColor = System.Drawing.Color.White;
             this.loginbtn.Image = global::InternGuide.Properties.Resources.login;
-            this.loginbtn.Location = new System.Drawing.Point(50, 387);
+            this.loginbtn.Location = new System.Drawing.Point(43, 387);
             this.loginbtn.Name = "loginbtn";
             this.loginbtn.Size = new System.Drawing.Size(266, 44);
             this.loginbtn.TabIndex = 11;
@@ -164,8 +164,8 @@
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusername.IconLeft = global::InternGuide.Properties.Resources.profile_user;
             this.txtusername.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.txtusername.Location = new System.Drawing.Point(50, 257);
-            this.txtusername.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtusername.Location = new System.Drawing.Point(43, 257);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(6);
             this.txtusername.Name = "txtusername";
             this.txtusername.PasswordChar = '\0';
             this.txtusername.PlaceholderText = "ID Number";
@@ -190,8 +190,8 @@
             this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.IconLeft = global::InternGuide.Properties.Resources.padlock;
-            this.txtpassword.Location = new System.Drawing.Point(50, 315);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtpassword.Location = new System.Drawing.Point(43, 315);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(6);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.PlaceholderText = "Password";

@@ -305,11 +305,23 @@
     <Compile Include="Admin Form\AddDepartmentAdmin.Designer.cs">
       <DependentUpon>AddDepartmentAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin Form\AdminChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Form\AdminChangePassword.Designer.cs">
+      <DependentUpon>AdminChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin Form\Adminhistlogs.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Admin Form\Adminhistlogs.Designer.cs">
       <DependentUpon>Adminhistlogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\AdminHistorylogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Form\AdminHistorylogs.Designer.cs">
+      <DependentUpon>AdminHistorylogs.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin Form\AdminHomepage.cs">
       <SubType>UserControl</SubType>
@@ -500,8 +512,14 @@
     <EmbeddedResource Include="Admin Form\AddDepartmentAdmin.resx">
       <DependentUpon>AddDepartmentAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\AdminChangePassword.resx">
+      <DependentUpon>AdminChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin Form\Adminhistlogs.resx">
       <DependentUpon>Adminhistlogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\AdminHistorylogs.resx">
+      <DependentUpon>AdminHistorylogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Form\AdminHomepage.resx">
       <DependentUpon>AdminHomepage.cs</DependentUpon>
@@ -726,6 +744,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="386881156_3550009328597777_6562289270389337043_n.ico" />
+    <None Include="Resources\padlock1.png" />
+    <None Include="Resources\key-chain.png" />
     <None Include="Resources\log-data1.png" />
     <None Include="Resources\process.png" />
     <None Include="Resources\edit %281%29.png" />

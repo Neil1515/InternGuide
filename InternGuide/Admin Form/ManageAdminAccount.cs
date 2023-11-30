@@ -25,7 +25,7 @@ namespace InternGuide.Admin_Form
             this.adminId = adminId;
             LoadAdminInformation(adminId);
             updatecompltelabel.Text = " ";
-
+            
             // Initialize the Timer
             updateTimer = new Timer();
             updateTimer.Interval = 2000; // 5000 milliseconds (5 seconds)
@@ -52,7 +52,7 @@ namespace InternGuide.Admin_Form
                         if (reader.Read())
                         {
                             // Display admin details in the textboxes
-                            idlabel.Text = reader["Id"].ToString();
+                            idlabel.Text = "ADMIN ID: "+reader["Id"].ToString();
                             fnametextBox.Text = reader["fname"].ToString();
                             lnametextBox.Text = reader["lname"].ToString();
                             emailtextBox.Text = reader["email"].ToString();
@@ -169,6 +169,18 @@ namespace InternGuide.Admin_Form
             // Clear the label text and stop the Timer
             updatecompltelabel.Text = " ";
             updateTimer.Stop();
+        }
+
+        private void historylogsbtn_Click(object sender, EventArgs e)
+        {
+            AdminHistorylogs AdminHistorylogs = new AdminHistorylogs(adminId);
+            AdminHistorylogs.ShowDialog();
+        }
+
+        private void changepassbtn_Click(object sender, EventArgs e)
+        {
+            AdminChangePassword AdminChangePassword = new AdminChangePassword(adminId);
+            AdminChangePassword.ShowDialog();
         }
     }
 }

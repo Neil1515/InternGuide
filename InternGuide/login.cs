@@ -79,7 +79,7 @@ namespace InternGuide
                         string adminfName = dr["fname"].ToString();
                         userId = Convert.ToInt32(dr["id"]);
                         InsertLoginHistory(userId);
-                        MessageBox.Show("Login Successful as Admin.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       // MessageBox.Show("Login Successful as Admin.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                         AdminDashboard adminDashboard = new AdminDashboard(userId);
                         adminDashboard.AdminfName = adminfName;
@@ -102,7 +102,7 @@ namespace InternGuide
                         dr.Close(); // Close the SqlDataReader after reading data
 
                         InsertLoginHistory(userId);
-                        MessageBox.Show("Login Successful as Deans Account.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       // MessageBox.Show("Login Successful as Deans Account.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                         DeansDashboard deansDashboard = new DeansDashboard(userId);
                         deansDashboard.DeansfName = deansfName; // Set the accounting member's name
@@ -124,7 +124,7 @@ namespace InternGuide
                         dr.Close();
 
                         InsertLoginHistory(userId);
-                        MessageBox.Show("Login Successful as Student Account.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       // MessageBox.Show("Login Successful as Student Account.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                         InternStudentDashboard internStudentDashboard = new InternStudentDashboard(userId);
                         internStudentDashboard.StudentfName = studentfName;

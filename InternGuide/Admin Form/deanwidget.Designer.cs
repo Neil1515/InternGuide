@@ -31,9 +31,7 @@
             this.departmentlabel = new System.Windows.Forms.Label();
             this.namelabel = new System.Windows.Forms.Label();
             this.idlabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.deptadminpictureBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptadminpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,16 +68,6 @@
             this.idlabel.TabIndex = 6;
             this.idlabel.Text = "Id";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::InternGuide.Properties.Resources.edit;
-            this.pictureBox1.Location = new System.Drawing.Point(136, 86);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 18);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
             // deptadminpictureBox
             // 
             this.deptadminpictureBox.BackColor = System.Drawing.Color.Transparent;
@@ -95,7 +83,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.idlabel);
             this.Controls.Add(this.namelabel);
             this.Controls.Add(this.departmentlabel);
@@ -103,7 +90,6 @@
             this.Name = "deanwidget";
             this.Size = new System.Drawing.Size(164, 132);
             this.Load += new System.EventHandler(this.adminwidget_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deptadminpictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -116,6 +102,5 @@
         private System.Windows.Forms.Label departmentlabel;
         private System.Windows.Forms.Label namelabel;
         private System.Windows.Forms.Label idlabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

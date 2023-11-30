@@ -31,15 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeansDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Logout1brn = new System.Windows.Forms.PictureBox();
-            this.dashboarddeanpicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.deanfnamelabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dashpanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.awdawd = new Guna.UI2.WinForms.Guna2Button();
-            this.deanhistlogsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.DepartmentPartnersCompbtn = new Guna.UI2.WinForms.Guna2Button();
             this.Managemeetingsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.deanmanageaccountbtn = new Guna.UI2.WinForms.Guna2Button();
@@ -47,18 +44,22 @@
             this.showstudentdetailsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.insertstudentbtn = new Guna.UI2.WinForms.Guna2Button();
             this.homebtn = new Guna.UI2.WinForms.Guna2Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.deanfnamelabel = new System.Windows.Forms.Label();
+            this.dashboarddeanpicture1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logout1brn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashboarddeanpicture)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboarddeanpicture1)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.Logout1brn);
-            this.panel1.Controls.Add(this.dashboarddeanpicture);
-            this.panel1.Controls.Add(this.deanfnamelabel);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -81,33 +82,6 @@
             this.Logout1brn.TabIndex = 42;
             this.Logout1brn.TabStop = false;
             this.Logout1brn.Click += new System.EventHandler(this.Logout1brn_Click);
-            // 
-            // dashboarddeanpicture
-            // 
-            this.dashboarddeanpicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dashboarddeanpicture.Image = global::InternGuide.Properties.Resources.username;
-            this.dashboarddeanpicture.ImageRotate = 0F;
-            this.dashboarddeanpicture.Location = new System.Drawing.Point(1072, 12);
-            this.dashboarddeanpicture.Name = "dashboarddeanpicture";
-            this.dashboarddeanpicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.dashboarddeanpicture.Size = new System.Drawing.Size(58, 50);
-            this.dashboarddeanpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.dashboarddeanpicture.TabIndex = 2;
-            this.dashboarddeanpicture.TabStop = false;
-            this.dashboarddeanpicture.Click += new System.EventHandler(this.dashboarddeanpicture_Click);
-            // 
-            // deanfnamelabel
-            // 
-            this.deanfnamelabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.deanfnamelabel.Font = new System.Drawing.Font("Leelawadee", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deanfnamelabel.ForeColor = System.Drawing.Color.Black;
-            this.deanfnamelabel.Location = new System.Drawing.Point(875, 5);
-            this.deanfnamelabel.Name = "deanfnamelabel";
-            this.deanfnamelabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.deanfnamelabel.Size = new System.Drawing.Size(201, 62);
-            this.deanfnamelabel.TabIndex = 47;
-            this.deanfnamelabel.Text = "deanfname";
-            this.deanfnamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
@@ -148,25 +122,18 @@
             this.dashpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashpanel.Location = new System.Drawing.Point(253, 70);
             this.dashpanel.Name = "dashpanel";
-            this.dashpanel.Size = new System.Drawing.Size(931, 491);
+            this.dashpanel.Size = new System.Drawing.Size(931, 679);
             this.dashpanel.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.awdawd);
-            this.panel2.Controls.Add(this.deanhistlogsbtn);
-            this.panel2.Controls.Add(this.DepartmentPartnersCompbtn);
-            this.panel2.Controls.Add(this.Managemeetingsbtn);
-            this.panel2.Controls.Add(this.deanmanageaccountbtn);
-            this.panel2.Controls.Add(this.studentrequirementbtn);
-            this.panel2.Controls.Add(this.showstudentdetailsbtn);
-            this.panel2.Controls.Add(this.insertstudentbtn);
-            this.panel2.Controls.Add(this.homebtn);
+            this.panel2.Controls.Add(this.flowLayoutPanel1);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(253, 491);
+            this.panel2.Size = new System.Drawing.Size(253, 679);
             this.panel2.TabIndex = 2;
             // 
             // awdawd
@@ -189,40 +156,12 @@
             this.awdawd.Image = global::InternGuide.Properties.Resources.report;
             this.awdawd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.awdawd.ImageSize = new System.Drawing.Size(30, 30);
-            this.awdawd.Location = new System.Drawing.Point(0, 408);
+            this.awdawd.Location = new System.Drawing.Point(3, 402);
             this.awdawd.Name = "awdawd";
             this.awdawd.Size = new System.Drawing.Size(253, 51);
             this.awdawd.TabIndex = 50;
             this.awdawd.Text = "REPORTS";
             this.awdawd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // deanhistlogsbtn
-            // 
-            this.deanhistlogsbtn.BackColor = System.Drawing.Color.White;
-            this.deanhistlogsbtn.BorderRadius = 1;
-            this.deanhistlogsbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.deanhistlogsbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.deanhistlogsbtn.CheckedState.FillColor = System.Drawing.Color.White;
-            this.deanhistlogsbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.deanhistlogsbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.deanhistlogsbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.deanhistlogsbtn.DisabledState.FillColor = System.Drawing.Color.White;
-            this.deanhistlogsbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.deanhistlogsbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.deanhistlogsbtn.FillColor = System.Drawing.Color.White;
-            this.deanhistlogsbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deanhistlogsbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.deanhistlogsbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.deanhistlogsbtn.Image = global::InternGuide.Properties.Resources.log_data;
-            this.deanhistlogsbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.deanhistlogsbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.deanhistlogsbtn.Location = new System.Drawing.Point(0, 357);
-            this.deanhistlogsbtn.Name = "deanhistlogsbtn";
-            this.deanhistlogsbtn.Size = new System.Drawing.Size(253, 51);
-            this.deanhistlogsbtn.TabIndex = 48;
-            this.deanhistlogsbtn.Text = "HISTORY LOGS";
-            this.deanhistlogsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.deanhistlogsbtn.Click += new System.EventHandler(this.deanhistlogsbtn_Click);
             // 
             // DepartmentPartnersCompbtn
             // 
@@ -244,7 +183,7 @@
             this.DepartmentPartnersCompbtn.Image = global::InternGuide.Properties.Resources.enterprise;
             this.DepartmentPartnersCompbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.DepartmentPartnersCompbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.DepartmentPartnersCompbtn.Location = new System.Drawing.Point(0, 306);
+            this.DepartmentPartnersCompbtn.Location = new System.Drawing.Point(3, 288);
             this.DepartmentPartnersCompbtn.Name = "DepartmentPartnersCompbtn";
             this.DepartmentPartnersCompbtn.Size = new System.Drawing.Size(253, 51);
             this.DepartmentPartnersCompbtn.TabIndex = 51;
@@ -272,7 +211,7 @@
             this.Managemeetingsbtn.Image = global::InternGuide.Properties.Resources.document;
             this.Managemeetingsbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Managemeetingsbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.Managemeetingsbtn.Location = new System.Drawing.Point(0, 255);
+            this.Managemeetingsbtn.Location = new System.Drawing.Point(3, 174);
             this.Managemeetingsbtn.Name = "Managemeetingsbtn";
             this.Managemeetingsbtn.Size = new System.Drawing.Size(253, 51);
             this.Managemeetingsbtn.TabIndex = 50;
@@ -300,7 +239,7 @@
             this.deanmanageaccountbtn.Image = global::InternGuide.Properties.Resources.manageaccount;
             this.deanmanageaccountbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.deanmanageaccountbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.deanmanageaccountbtn.Location = new System.Drawing.Point(0, 204);
+            this.deanmanageaccountbtn.Location = new System.Drawing.Point(3, 60);
             this.deanmanageaccountbtn.Name = "deanmanageaccountbtn";
             this.deanmanageaccountbtn.Size = new System.Drawing.Size(253, 51);
             this.deanmanageaccountbtn.TabIndex = 47;
@@ -328,7 +267,7 @@
             this.studentrequirementbtn.Image = global::InternGuide.Properties.Resources.document;
             this.studentrequirementbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.studentrequirementbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.studentrequirementbtn.Location = new System.Drawing.Point(0, 153);
+            this.studentrequirementbtn.Location = new System.Drawing.Point(3, 117);
             this.studentrequirementbtn.Name = "studentrequirementbtn";
             this.studentrequirementbtn.Size = new System.Drawing.Size(253, 51);
             this.studentrequirementbtn.TabIndex = 49;
@@ -356,7 +295,7 @@
             this.showstudentdetailsbtn.Image = global::InternGuide.Properties.Resources.view;
             this.showstudentdetailsbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.showstudentdetailsbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.showstudentdetailsbtn.Location = new System.Drawing.Point(0, 102);
+            this.showstudentdetailsbtn.Location = new System.Drawing.Point(3, 345);
             this.showstudentdetailsbtn.Name = "showstudentdetailsbtn";
             this.showstudentdetailsbtn.Size = new System.Drawing.Size(253, 51);
             this.showstudentdetailsbtn.TabIndex = 46;
@@ -384,7 +323,7 @@
             this.insertstudentbtn.Image = global::InternGuide.Properties.Resources.teacher;
             this.insertstudentbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.insertstudentbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.insertstudentbtn.Location = new System.Drawing.Point(0, 51);
+            this.insertstudentbtn.Location = new System.Drawing.Point(3, 231);
             this.insertstudentbtn.Name = "insertstudentbtn";
             this.insertstudentbtn.Size = new System.Drawing.Size(253, 51);
             this.insertstudentbtn.TabIndex = 45;
@@ -413,7 +352,7 @@
             this.homebtn.Image = global::InternGuide.Properties.Resources.home;
             this.homebtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.homebtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.homebtn.Location = new System.Drawing.Point(0, 0);
+            this.homebtn.Location = new System.Drawing.Point(3, 3);
             this.homebtn.Name = "homebtn";
             this.homebtn.Size = new System.Drawing.Size(253, 51);
             this.homebtn.TabIndex = 44;
@@ -421,11 +360,64 @@
             this.homebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.homebtn.Click += new System.EventHandler(this.homebtn_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.deanfnamelabel);
+            this.panel3.Controls.Add(this.dashboarddeanpicture1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(253, 152);
+            this.panel3.TabIndex = 45;
+            // 
+            // deanfnamelabel
+            // 
+            this.deanfnamelabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.deanfnamelabel.Font = new System.Drawing.Font("Leelawadee", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deanfnamelabel.ForeColor = System.Drawing.Color.Black;
+            this.deanfnamelabel.Location = new System.Drawing.Point(0, 126);
+            this.deanfnamelabel.Name = "deanfnamelabel";
+            this.deanfnamelabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.deanfnamelabel.Size = new System.Drawing.Size(253, 26);
+            this.deanfnamelabel.TabIndex = 3;
+            this.deanfnamelabel.Text = "adminname";
+            this.deanfnamelabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.deanfnamelabel.Click += new System.EventHandler(this.deanfnamelabel_Click);
+            // 
+            // dashboarddeanpicture1
+            // 
+            this.dashboarddeanpicture1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dashboarddeanpicture1.Image = global::InternGuide.Properties.Resources.username;
+            this.dashboarddeanpicture1.ImageRotate = 0F;
+            this.dashboarddeanpicture1.Location = new System.Drawing.Point(53, 12);
+            this.dashboarddeanpicture1.Name = "dashboarddeanpicture1";
+            this.dashboarddeanpicture1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.dashboarddeanpicture1.Size = new System.Drawing.Size(147, 115);
+            this.dashboarddeanpicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.dashboarddeanpicture1.TabIndex = 2;
+            this.dashboarddeanpicture1.TabStop = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.homebtn);
+            this.flowLayoutPanel1.Controls.Add(this.deanmanageaccountbtn);
+            this.flowLayoutPanel1.Controls.Add(this.studentrequirementbtn);
+            this.flowLayoutPanel1.Controls.Add(this.Managemeetingsbtn);
+            this.flowLayoutPanel1.Controls.Add(this.insertstudentbtn);
+            this.flowLayoutPanel1.Controls.Add(this.DepartmentPartnersCompbtn);
+            this.flowLayoutPanel1.Controls.Add(this.showstudentdetailsbtn);
+            this.flowLayoutPanel1.Controls.Add(this.awdawd);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 152);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(253, 527);
+            this.flowLayoutPanel1.TabIndex = 46;
+            // 
             // DeansDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.ClientSize = new System.Drawing.Size(1184, 749);
             this.Controls.Add(this.dashpanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -438,8 +430,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logout1brn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashboarddeanpicture)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dashboarddeanpicture1)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -448,14 +442,11 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox Logout1brn;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox dashboarddeanpicture;
         private System.Windows.Forms.Panel dashpanel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label deanfnamelabel;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button deanhistlogsbtn;
         private Guna.UI2.WinForms.Guna2Button deanmanageaccountbtn;
         private Guna.UI2.WinForms.Guna2Button showstudentdetailsbtn;
         private Guna.UI2.WinForms.Guna2Button insertstudentbtn;
@@ -464,5 +455,9 @@
         private Guna.UI2.WinForms.Guna2Button awdawd;
         private Guna.UI2.WinForms.Guna2Button Managemeetingsbtn;
         private Guna.UI2.WinForms.Guna2Button DepartmentPartnersCompbtn;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label deanfnamelabel;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox dashboarddeanpicture1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
