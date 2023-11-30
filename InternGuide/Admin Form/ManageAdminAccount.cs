@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace InternGuide.Admin_Form
 {
-    public partial class AdminMangeAccount : UserControl
+    public partial class ManageAdminAccount : UserControl
     {
         public event Action<byte[]> AdminPictureUpdated;
         public event Action<string> AdminfNameUpdated;
         private int adminId;
         private byte[] selectedImageBytes;
-        private Timer updateTimer; 
-        public AdminMangeAccount(int adminId)
+        private Timer updateTimer;
+        public ManageAdminAccount(int adminId)
         {
             InitializeComponent();
             this.adminId = adminId;
@@ -29,9 +29,8 @@ namespace InternGuide.Admin_Form
             // Initialize the Timer
             updateTimer = new Timer();
             updateTimer.Interval = 2000; // 5000 milliseconds (5 seconds)
-            updateTimer.Tick += timer_Tick_1;
+            updateTimer.Tick += timer1_Tick;
         }
-  
         private void LoadAdminInformation(int adminId)
         {
             // Define your connection string
@@ -42,7 +41,7 @@ namespace InternGuide.Admin_Form
                 connection.Open();
 
                 // Define the SQL query to retrieve admin information based on the admin ID
-                string sqlQuery = "SELECT Id, fname, lname, image FROM admintable WHERE Id = @adminId";
+                string sqlQuery = "SELECT Id, fname, lname, image, email FROM admintable WHERE Id = @adminId";
 
                 using (SqlCommand cmd = new SqlCommand(sqlQuery, connection))
                 {
@@ -53,9 +52,10 @@ namespace InternGuide.Admin_Form
                         if (reader.Read())
                         {
                             // Display admin details in the textboxes
-                            idtextBox.Text = reader["Id"].ToString();
+                            idlabel.Text = reader["Id"].ToString();
                             fnametextBox.Text = reader["fname"].ToString();
-                            lnameTextBox.Text = reader["lname"].ToString();
+                            lnametextBox.Text = reader["lname"].ToString();
+                            emailtextBox.Text = reader["email"].ToString();
 
                             // Display the admin's image
                             byte[] imageBytes = reader["image"] as byte[];
@@ -76,13 +76,31 @@ namespace InternGuide.Admin_Form
             }
         }
 
+        private void browsebtn_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image Files (*.bmp;*.jpg;*.jpeg;*.gif;*.png)|*.BMP;*.JPG;*.JPEG;*.GIF;*.PNG";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Display the selected image for the admin
+                    adminpicture.Image = new Bitmap(openFileDialog.FileName);
+
+                    // Convert the selected image to a byte array for storage in the database
+                    selectedImageBytes = File.ReadAllBytes(openFileDialog.FileName);
+                }
+            }
+        }
+
         private void updatebtn_Click(object sender, EventArgs e)
         {
             string newfname = fnametextBox.Text;
-            string newlname = lnameTextBox.Text;
+            string newlname = lnametextBox.Text;
+            string newemail = emailtextBox.Text;
 
             // Update the admin's information in the database
-            if (UpdateAdminInfo(newfname, newlname, selectedImageBytes, adminId))
+            if (UpdateAdminInfo(newfname, newlname, newemail, selectedImageBytes, adminId))
             {
                 updatecompltelabel.Text = "Update Successfully.";
                 AdminfNameUpdated?.Invoke(newfname);
@@ -95,7 +113,7 @@ namespace InternGuide.Admin_Form
                 MessageBox.Show("Failed to update admin information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private bool UpdateAdminInfo(string newfname, string newlname, byte[] imageBytes, int adminId)
+        private bool UpdateAdminInfo(string newfname, string newlname, string newemail, byte[] imageBytes, int adminId)
         {
             try
             {
@@ -107,7 +125,7 @@ namespace InternGuide.Admin_Form
                     connection.Open();
 
                     // Define the SQL query to update admin information
-                    string sqlQuery = "UPDATE admintable SET fname = @fname, lname = @lname";
+                    string sqlQuery = "UPDATE admintable SET fname = @fname, lname = @lname, email = @email";
 
                     // Include image update only if an image is selected
                     if (imageBytes != null && imageBytes.Length > 0)
@@ -121,6 +139,7 @@ namespace InternGuide.Admin_Form
                     {
                         cmd.Parameters.AddWithValue("@fname", newfname);
                         cmd.Parameters.AddWithValue("@lname", newlname);
+                        cmd.Parameters.AddWithValue("@email", newemail);
 
                         // Add image parameter only if an image is selected
                         if (imageBytes != null && imageBytes.Length > 0)
@@ -145,26 +164,7 @@ namespace InternGuide.Admin_Form
                 return false;
             }
         }
-
-
-        private void browsepicturebtn_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.Filter = "Image Files (*.bmp;*.jpg;*.jpeg;*.gif;*.png)|*.BMP;*.JPG;*.JPEG;*.GIF;*.PNG";
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    // Display the selected image for the admin
-                    adminpicture.Image = new Bitmap(openFileDialog.FileName);
-
-                    // Convert the selected image to a byte array for storage in the database
-                    selectedImageBytes = File.ReadAllBytes(openFileDialog.FileName);
-                }
-            }
-        }
-
-        private void timer_Tick_1(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
             // Clear the label text and stop the Timer
             updatecompltelabel.Text = " ";

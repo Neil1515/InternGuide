@@ -122,13 +122,12 @@
             this.loginbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.loginbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.loginbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.loginbtn.Font = new System.Drawing.Font("Georgia", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginbtn.ForeColor = System.Drawing.Color.White;
             this.loginbtn.Image = global::InternGuide.Properties.Resources.login;
-            this.loginbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.loginbtn.Location = new System.Drawing.Point(40, 387);
+            this.loginbtn.Location = new System.Drawing.Point(50, 387);
             this.loginbtn.Name = "loginbtn";
-            this.loginbtn.Size = new System.Drawing.Size(273, 55);
+            this.loginbtn.Size = new System.Drawing.Size(266, 44);
             this.loginbtn.TabIndex = 11;
             this.loginbtn.Text = "Login";
             this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click_1);
@@ -161,18 +160,17 @@
             this.txtusername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtusername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtusername.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusername.IconLeft = global::InternGuide.Properties.Resources.profile_user;
             this.txtusername.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.txtusername.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.txtusername.Location = new System.Drawing.Point(40, 248);
+            this.txtusername.Location = new System.Drawing.Point(50, 257);
             this.txtusername.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtusername.Name = "txtusername";
             this.txtusername.PasswordChar = '\0';
             this.txtusername.PlaceholderText = "ID Number";
             this.txtusername.SelectedText = "";
-            this.txtusername.Size = new System.Drawing.Size(273, 52);
+            this.txtusername.Size = new System.Drawing.Size(266, 37);
             this.txtusername.TabIndex = 9;
             // 
             // txtpassword
@@ -189,17 +187,16 @@
             this.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.IconLeft = global::InternGuide.Properties.Resources.padlock;
-            this.txtpassword.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.txtpassword.Location = new System.Drawing.Point(40, 310);
+            this.txtpassword.Location = new System.Drawing.Point(50, 315);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.PlaceholderText = "Password";
             this.txtpassword.SelectedText = "";
-            this.txtpassword.Size = new System.Drawing.Size(273, 52);
+            this.txtpassword.Size = new System.Drawing.Size(266, 41);
             this.txtpassword.TabIndex = 10;
             // 
             // login

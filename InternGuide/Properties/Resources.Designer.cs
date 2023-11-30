@@ -203,6 +203,16 @@ namespace InternGuide.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap log_data1 {
+            get {
+                object obj = ResourceManager.GetObject("log-data1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login {
             get {
                 object obj = ResourceManager.GetObject("login", resourceCulture);
@@ -276,6 +286,16 @@ namespace InternGuide.Properties {
         internal static System.Drawing.Bitmap png_transparent_labor_organization_internship_blue_text1_logo {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-labor-organization-internship-blue-text1-logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap process {
+            get {
+                object obj = ResourceManager.GetObject("process", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

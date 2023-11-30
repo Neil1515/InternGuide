@@ -317,12 +317,6 @@
     <Compile Include="Admin Form\AdminHomepage.Designer.cs">
       <DependentUpon>AdminHomepage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin Form\AdminMangeAccount.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin Form\AdminMangeAccount.Designer.cs">
-      <DependentUpon>AdminMangeAccount.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin Form\deanwidget.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -346,6 +340,12 @@
     </Compile>
     <Compile Include="Admin Form\EditDeanDetails.Designer.cs">
       <DependentUpon>EditDeanDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\ManageAdminAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\ManageAdminAccount.Designer.cs">
+      <DependentUpon>ManageAdminAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminDashboard.cs">
       <SubType>Form</SubType>
@@ -506,9 +506,6 @@
     <EmbeddedResource Include="Admin Form\AdminHomepage.resx">
       <DependentUpon>AdminHomepage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin Form\AdminMangeAccount.resx">
-      <DependentUpon>AdminMangeAccount.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin Form\deanwidget.resx">
       <DependentUpon>deanwidget.cs</DependentUpon>
     </EmbeddedResource>
@@ -520,6 +517,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Form\EditDeanDetails.resx">
       <DependentUpon>EditDeanDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\ManageAdminAccount.resx">
+      <DependentUpon>ManageAdminAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
@@ -726,6 +726,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="386881156_3550009328597777_6562289270389337043_n.ico" />
+    <None Include="Resources\log-data1.png" />
+    <None Include="Resources\process.png" />
     <None Include="Resources\edit %281%29.png" />
     <None Include="Resources\people.png" />
   </ItemGroup>

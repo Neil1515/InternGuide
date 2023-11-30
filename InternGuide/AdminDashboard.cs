@@ -107,12 +107,7 @@ namespace InternGuide
 
         private void Logoutbtn_Click(object sender, EventArgs e)
         {
-            // Update the logout time in the historylogstbl table
-            UpdateLogoutHistory(adminId);
-
-            this.Hide();
-            login login = new login();
-            login.ShowDialog();
+            
         }
 
         private void UpdateLogoutHistory(int userId)
@@ -146,10 +141,10 @@ namespace InternGuide
 
         private void adminmanageaccountbtn_Click(object sender, EventArgs e)
         {
-            AdminMangeAccount adminmanageaccount = new AdminMangeAccount(adminId);
-            adminmanageaccount.AdminfNameUpdated += UpdateAdminfName;
-            adminmanageaccount.AdminPictureUpdated += UpdateAdminPicture;
-            addUserControl(adminmanageaccount);
+            ManageAdminAccount ManageAdminAccount = new ManageAdminAccount(adminId);
+            ManageAdminAccount.AdminfNameUpdated += UpdateAdminfName;
+            ManageAdminAccount.AdminPictureUpdated += UpdateAdminPicture;
+            addUserControl(ManageAdminAccount);
         }
         private void UpdateAdminPicture(byte[] imageBytes)
         {
@@ -174,6 +169,16 @@ namespace InternGuide
         {
             Adminhistlogs Adminhistlogs = new Adminhistlogs(adminId);
             addUserControl(Adminhistlogs);
+        }
+
+        private void logoutbtn_Click_1(object sender, EventArgs e)
+        {
+            // Update the logout time in the historylogstbl table
+            UpdateLogoutHistory(adminId);
+
+            this.Hide();
+            login login = new login();
+            login.ShowDialog();
         }
     }
 }

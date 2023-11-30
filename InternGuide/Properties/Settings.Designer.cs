@@ -26,8 +26,8 @@ namespace InternGuide.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=neil\\SQLEXPRESS;Initial Catalog=InternGuideDB;Integrated Security=Tru" +
-            "e")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.3;Initial Catalog=InternGuideDB;Persist Security Info=True;" +
+            "User ID=SuperAdmin1;Password=SuperAdmin1;TrustServerCertificate=True")]
         public string InternGuideDBConnectionString {
             get {
                 return ((string)(this["InternGuideDBConnectionString"]));
