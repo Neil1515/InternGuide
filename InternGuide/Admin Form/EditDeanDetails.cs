@@ -28,11 +28,20 @@ namespace InternGuide.Admin_Form
 
         private byte[] imageData;
 
-
-
+        public event EventHandler<DeanUpdatedEventArgs> DeanUpdated;
         private void EditDeanDetails_Load(object sender, EventArgs e)
         {
 
+        }
+        public class DeanUpdatedEventArgs : EventArgs
+        {
+            // You can add more properties here if needed
+            public int DeanID { get; set; }
+        }
+
+        protected virtual void OnDeanUpdated(DeanUpdatedEventArgs e)
+        {
+            DeanUpdated?.Invoke(this, e);
         }
         public EditDeanDetails(int deanId, string fName, string lName, string department, byte[] imageData)
         {
@@ -49,7 +58,7 @@ namespace InternGuide.Admin_Form
             this.FormClosing += EditDeanDetails_FormClosing;
 
             // Initialize controls with dean details
-            idtextbox.Text = deanId.ToString();
+            idlabel.Text = "Dean ID "+deanId.ToString();
             firstnametextbox.Text = fName;
             lastnametextbox.Text = lName;
             departmenttextbox.Text = department;
@@ -86,6 +95,9 @@ namespace InternGuide.Admin_Form
                 // Implement the logic to update dean details in the database
                 UpdateDeanDetailsInDatabase();
 
+                // Trigger the event to notify that dean details are updated
+                OnDeanUpdated(new DeanUpdatedEventArgs { DeanID = DeanId });
+
                 // Close the form
                 this.Close();
             }
@@ -114,10 +126,64 @@ namespace InternGuide.Admin_Form
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Dean details updated successfully!");
+
+                            // Trigger the event to notify that dean details are updated
+                            OnDeanUpdated(new DeanUpdatedEventArgs { DeanID = DeanId });
                         }
                         else
                         {
                             MessageBox.Show("Failed to update dean details.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void resetpasswordbtn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to reset the password?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Implement the logic to reset dean password in the database
+                ResetDeanPasswordInDatabase();
+
+                // Close the form or perform additional actions as needed
+                // this.Close();
+            }
+        }
+        private void ResetDeanPasswordInDatabase()
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Assuming you have a table named deanpasswordstable
+                    string updatePasswordQuery = "UPDATE departmentdeanstable SET password = @newPassword WHERE Id = @deanId";
+
+                    using (SqlCommand command = new SqlCommand(updatePasswordQuery, connection))
+                    {
+                        // Corrected the syntax error here
+                        string newPassword = "uclm-" + DeanId;
+
+                        command.Parameters.AddWithValue("@newPassword", newPassword);
+                        command.Parameters.AddWithValue("@deanId", DeanId);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Password reset successfully! New password: " + newPassword);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to reset password.");
                         }
                     }
                 }

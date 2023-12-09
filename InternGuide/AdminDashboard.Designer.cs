@@ -30,25 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.adminnamelabel = new System.Windows.Forms.Label();
+            this.myprofilebtn = new Guna.UI2.WinForms.Guna2Button();
+            this.logoutbtn = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.adminnamelabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dashpanel = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.homebtn = new Guna.UI2.WinForms.Guna2Button();
             this.departmentadminbtn = new Guna.UI2.WinForms.Guna2Button();
             this.adminmanageaccountbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.departmentadmindetailsbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.dashboardadminpicture1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.myprofilebtn = new Guna.UI2.WinForms.Guna2Button();
-            this.logoutbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.dashpanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardadminpicture1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,18 +65,48 @@
             this.panel1.Size = new System.Drawing.Size(1184, 70);
             this.panel1.TabIndex = 0;
             // 
-            // adminnamelabel
+            // myprofilebtn
             // 
-            this.adminnamelabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.adminnamelabel.Font = new System.Drawing.Font("Leelawadee", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminnamelabel.ForeColor = System.Drawing.Color.Black;
-            this.adminnamelabel.Location = new System.Drawing.Point(0, 165);
-            this.adminnamelabel.Name = "adminnamelabel";
-            this.adminnamelabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.adminnamelabel.Size = new System.Drawing.Size(253, 43);
-            this.adminnamelabel.TabIndex = 3;
-            this.adminnamelabel.Text = "adminname";
-            this.adminnamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.myprofilebtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.myprofilebtn.BorderRadius = 5;
+            this.myprofilebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.myprofilebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.myprofilebtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.myprofilebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.myprofilebtn.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myprofilebtn.ForeColor = System.Drawing.Color.White;
+            this.myprofilebtn.Image = global::InternGuide.Properties.Resources.profile_user;
+            this.myprofilebtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.myprofilebtn.ImageSize = new System.Drawing.Size(25, 25);
+            this.myprofilebtn.Location = new System.Drawing.Point(911, 20);
+            this.myprofilebtn.Name = "myprofilebtn";
+            this.myprofilebtn.Size = new System.Drawing.Size(125, 35);
+            this.myprofilebtn.TabIndex = 50;
+            this.myprofilebtn.Text = "My Profile";
+            this.myprofilebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.myprofilebtn.Click += new System.EventHandler(this.myprofilebtn_Click);
+            // 
+            // logoutbtn
+            // 
+            this.logoutbtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.logoutbtn.BorderRadius = 5;
+            this.logoutbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.logoutbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.logoutbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logoutbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.logoutbtn.Font = new System.Drawing.Font("Georgia", 11.25F);
+            this.logoutbtn.ForeColor = System.Drawing.Color.White;
+            this.logoutbtn.Image = global::InternGuide.Properties.Resources.on_off_button;
+            this.logoutbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.logoutbtn.Location = new System.Drawing.Point(1066, 20);
+            this.logoutbtn.Name = "logoutbtn";
+            this.logoutbtn.Size = new System.Drawing.Size(97, 35);
+            this.logoutbtn.TabIndex = 49;
+            this.logoutbtn.Text = "Logout";
+            this.logoutbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click_1);
             // 
             // label3
             // 
@@ -112,6 +141,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "IG";
             // 
+            // adminnamelabel
+            // 
+            this.adminnamelabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.adminnamelabel.Font = new System.Drawing.Font("Leelawadee", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminnamelabel.ForeColor = System.Drawing.Color.Black;
+            this.adminnamelabel.Location = new System.Drawing.Point(0, 165);
+            this.adminnamelabel.Name = "adminnamelabel";
+            this.adminnamelabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.adminnamelabel.Size = new System.Drawing.Size(253, 43);
+            this.adminnamelabel.TabIndex = 3;
+            this.adminnamelabel.Text = "adminname";
+            this.adminnamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -123,31 +165,11 @@
             this.panel2.Size = new System.Drawing.Size(253, 516);
             this.panel2.TabIndex = 1;
             // 
-            // dashpanel
-            // 
-            this.dashpanel.BackColor = System.Drawing.Color.White;
-            this.dashpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashpanel.Location = new System.Drawing.Point(253, 70);
-            this.dashpanel.Name = "dashpanel";
-            this.dashpanel.Size = new System.Drawing.Size(931, 516);
-            this.dashpanel.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.adminnamelabel);
-            this.panel3.Controls.Add(this.dashboardadminpicture1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(253, 208);
-            this.panel3.TabIndex = 44;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.homebtn);
             this.flowLayoutPanel1.Controls.Add(this.departmentadminbtn);
             this.flowLayoutPanel1.Controls.Add(this.adminmanageaccountbtn);
-            this.flowLayoutPanel1.Controls.Add(this.departmentadmindetailsbtn);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 208);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -239,33 +261,15 @@
             this.adminmanageaccountbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.adminmanageaccountbtn.Click += new System.EventHandler(this.adminmanageaccountbtn_Click);
             // 
-            // departmentadmindetailsbtn
+            // panel3
             // 
-            this.departmentadmindetailsbtn.BackColor = System.Drawing.Color.White;
-            this.departmentadmindetailsbtn.BorderRadius = 1;
-            this.departmentadmindetailsbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.departmentadmindetailsbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.departmentadmindetailsbtn.CheckedState.FillColor = System.Drawing.Color.White;
-            this.departmentadmindetailsbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.departmentadmindetailsbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.departmentadmindetailsbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.departmentadmindetailsbtn.DisabledState.FillColor = System.Drawing.Color.White;
-            this.departmentadmindetailsbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.departmentadmindetailsbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.departmentadmindetailsbtn.FillColor = System.Drawing.Color.White;
-            this.departmentadmindetailsbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.departmentadmindetailsbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.departmentadmindetailsbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.departmentadmindetailsbtn.Image = global::InternGuide.Properties.Resources.view;
-            this.departmentadmindetailsbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.departmentadmindetailsbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.departmentadmindetailsbtn.Location = new System.Drawing.Point(3, 174);
-            this.departmentadmindetailsbtn.Name = "departmentadmindetailsbtn";
-            this.departmentadmindetailsbtn.Size = new System.Drawing.Size(253, 51);
-            this.departmentadmindetailsbtn.TabIndex = 41;
-            this.departmentadmindetailsbtn.Text = "SHOW ALL DEANS";
-            this.departmentadmindetailsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.departmentadmindetailsbtn.Click += new System.EventHandler(this.departmentadmindetailsbtn_Click);
+            this.panel3.Controls.Add(this.adminnamelabel);
+            this.panel3.Controls.Add(this.dashboardadminpicture1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(253, 208);
+            this.panel3.TabIndex = 44;
             // 
             // dashboardadminpicture1
             // 
@@ -280,48 +284,14 @@
             this.dashboardadminpicture1.TabIndex = 2;
             this.dashboardadminpicture1.TabStop = false;
             // 
-            // myprofilebtn
+            // dashpanel
             // 
-            this.myprofilebtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.myprofilebtn.BorderRadius = 5;
-            this.myprofilebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.myprofilebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.myprofilebtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.myprofilebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.myprofilebtn.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myprofilebtn.ForeColor = System.Drawing.Color.White;
-            this.myprofilebtn.Image = global::InternGuide.Properties.Resources.profile_user;
-            this.myprofilebtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.myprofilebtn.ImageSize = new System.Drawing.Size(25, 25);
-            this.myprofilebtn.Location = new System.Drawing.Point(911, 20);
-            this.myprofilebtn.Name = "myprofilebtn";
-            this.myprofilebtn.Size = new System.Drawing.Size(125, 35);
-            this.myprofilebtn.TabIndex = 50;
-            this.myprofilebtn.Text = "My Profile";
-            this.myprofilebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.myprofilebtn.Click += new System.EventHandler(this.myprofilebtn_Click);
-            // 
-            // logoutbtn
-            // 
-            this.logoutbtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.logoutbtn.BorderRadius = 5;
-            this.logoutbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.logoutbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.logoutbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.logoutbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.logoutbtn.Font = new System.Drawing.Font("Georgia", 11.25F);
-            this.logoutbtn.ForeColor = System.Drawing.Color.White;
-            this.logoutbtn.Image = global::InternGuide.Properties.Resources.on_off_button;
-            this.logoutbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.logoutbtn.Location = new System.Drawing.Point(1066, 20);
-            this.logoutbtn.Name = "logoutbtn";
-            this.logoutbtn.Size = new System.Drawing.Size(97, 35);
-            this.logoutbtn.TabIndex = 49;
-            this.logoutbtn.Text = "Logout";
-            this.logoutbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click_1);
+            this.dashpanel.BackColor = System.Drawing.Color.White;
+            this.dashpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashpanel.Location = new System.Drawing.Point(253, 70);
+            this.dashpanel.Name = "dashpanel";
+            this.dashpanel.Size = new System.Drawing.Size(931, 516);
+            this.dashpanel.TabIndex = 2;
             // 
             // AdminDashboard
             // 
@@ -340,8 +310,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dashboardadminpicture1)).EndInit();
             this.ResumeLayout(false);
 
@@ -357,7 +327,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox dashboardadminpicture1;
         private System.Windows.Forms.Label adminnamelabel;
         private Guna.UI2.WinForms.Guna2Button homebtn;
-        private Guna.UI2.WinForms.Guna2Button departmentadmindetailsbtn;
         private Guna.UI2.WinForms.Guna2Button departmentadminbtn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

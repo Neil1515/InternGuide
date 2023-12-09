@@ -19,7 +19,8 @@ namespace InternGuide.Admin_Form
         private SqlCommand command;
         private SqlDataReader reader;
         private string imagePath;
-        public event EventHandler<AdminAddedEventArgs> AdminAdded;
+        public event EventHandler<DeanAddedEventArgs> DeanAdded;
+
         public AddDepartmentAdmin()
         {
             InitializeComponent();
@@ -29,8 +30,7 @@ namespace InternGuide.Admin_Form
         {
 
         }
-
-        public class AdminAddedEventArgs : EventArgs
+        public class DeanAddedEventArgs : EventArgs
         {
             public int DeanID { get; set; }
             public string FName { get; set; }
@@ -39,9 +39,9 @@ namespace InternGuide.Admin_Form
             public string ImagePath { get; set; }
 
         }
-        protected virtual void OnAdminAdded(AdminAddedEventArgs e)
+        protected virtual void OnDeanAdded(DeanAddedEventArgs e)
         {
-            AdminAdded?.Invoke(this, e);
+            DeanAdded?.Invoke(this, e);
         }
         private void browsepicturebtn_Click(object sender, EventArgs e)
         {
@@ -82,6 +82,7 @@ namespace InternGuide.Admin_Form
                 MessageBox.Show("Please upload an image before saving the data.");
                 return;
             }
+
             try
             {
                 // Open a new SqlConnection
@@ -96,12 +97,18 @@ namespace InternGuide.Admin_Form
                         return;
                     }
 
+                    // Check if the Dean ID already exists in the table
+                    if (DeanIdExists(deanId))
+                    {
+                        MessageBox.Show("ID"+ deanId + " already exists. Please choose a different one.");
+                        return;
+                    }
 
                     // Convert the image file to byte array
                     byte[] imageData = File.ReadAllBytes(imagePath);
 
-                    string insertQuery = "INSERT INTO departmentdeanstable ( id, department, deansfname, deanslname, password, status, image) " +
-                                         "VALUES ( @id, @department, @deansfname, @deanslname, @password, @status, @image)";
+                    string insertQuery = "INSERT INTO departmentdeanstable (id, department, deansfname, deanslname, password, status, image) " +
+                                         "VALUES (@id, @department, @deansfname, @deanslname, @password, @status, @image)";
                     command = new SqlCommand(insertQuery, connection);
 
                     command.Parameters.AddWithValue("@id", deanId);
@@ -116,16 +123,14 @@ namespace InternGuide.Admin_Form
 
                     if (result > 0)
                     {
-                        MessageBox.Show("Department Dean added successfully!");
+                        MessageBox.Show("Dean added successfully!");
 
-
-                        OnAdminAdded(new AdminAddedEventArgs
+                        OnDeanAdded(new DeanAddedEventArgs
                         {
                             DeanID = deanId,
                             FName = fnametextbox.Text,
                             LName = lnametextbox.Text,
                             Department = departmentcategorycomboBox.Text,
-
                             ImagePath = null
                         });
 
@@ -133,7 +138,7 @@ namespace InternGuide.Admin_Form
                     }
                     else
                     {
-                        MessageBox.Show("Failed to add product.");
+                        MessageBox.Show("Failed to add Dean.");
                     }
                 }
             }
@@ -142,7 +147,23 @@ namespace InternGuide.Admin_Form
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+        private bool DeanIdExists(int deanId)
+        {
+            string departmentDeanQuery = "SELECT COUNT(*) FROM departmentdeanstable WHERE id = @deanId";
+            string studentQuery = "SELECT COUNT(*) FROM studenttable WHERE Id = @deanId";
 
+            using (SqlCommand deanCommand = new SqlCommand(departmentDeanQuery, connection))
+            using (SqlCommand studentCommand = new SqlCommand(studentQuery, connection))
+            {
+                deanCommand.Parameters.AddWithValue("@deanId", deanId);
+                studentCommand.Parameters.AddWithValue("@deanId", deanId);
+
+                int deanCount = (int)deanCommand.ExecuteScalar();
+                int studentCount = (int)studentCommand.ExecuteScalar();
+
+                return deanCount > 0 || studentCount > 0;
+            }
+        }
         private void idtextBox_TextChanged(object sender, EventArgs e)
         {
 

@@ -35,8 +35,8 @@
             this.emaillabel = new System.Windows.Forms.Label();
             this.yearcourselabel = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.changeemailbtn = new System.Windows.Forms.Button();
             this.browsestudentpicture = new System.Windows.Forms.PictureBox();
+            this.changeemailbtn = new System.Windows.Forms.Button();
             this.studidlabel = new System.Windows.Forms.Label();
             this.browsepicturebtn = new System.Windows.Forms.Button();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -99,8 +99,7 @@
             // 
             // emaillabel
             // 
-            this.emaillabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.emaillabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.emaillabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emaillabel.Location = new System.Drawing.Point(290, 252);
             this.emaillabel.Name = "emaillabel";
@@ -111,8 +110,7 @@
             // 
             // yearcourselabel
             // 
-            this.yearcourselabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.yearcourselabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.yearcourselabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yearcourselabel.Location = new System.Drawing.Point(290, 197);
             this.yearcourselabel.Name = "yearcourselabel";
@@ -123,31 +121,25 @@
             // 
             // guna2CustomGradientPanel4
             // 
+            this.guna2CustomGradientPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel4.BorderColor = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel4.BorderRadius = 2;
             this.guna2CustomGradientPanel4.Controls.Add(this.browsestudentpicture);
             this.guna2CustomGradientPanel4.Controls.Add(this.changeemailbtn);
             this.guna2CustomGradientPanel4.Controls.Add(this.studidlabel);
             this.guna2CustomGradientPanel4.Controls.Add(this.browsepicturebtn);
-            this.guna2CustomGradientPanel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(0, 46);
             this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(284, 283);
             this.guna2CustomGradientPanel4.TabIndex = 53;
             // 
-            // changeemailbtn
-            // 
-            this.changeemailbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.changeemailbtn.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeemailbtn.Location = new System.Drawing.Point(7, 240);
-            this.changeemailbtn.Name = "changeemailbtn";
-            this.changeemailbtn.Size = new System.Drawing.Size(129, 40);
-            this.changeemailbtn.TabIndex = 51;
-            this.changeemailbtn.Text = "Change Email";
-            this.changeemailbtn.UseVisualStyleBackColor = true;
-            // 
             // browsestudentpicture
             // 
+            this.browsestudentpicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.browsestudentpicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.browsestudentpicture.Image = global::InternGuide.Properties.Resources.adduser;
             this.browsestudentpicture.Location = new System.Drawing.Point(7, 47);
@@ -157,6 +149,17 @@
             this.browsestudentpicture.TabIndex = 45;
             this.browsestudentpicture.TabStop = false;
             this.browsestudentpicture.Click += new System.EventHandler(this.browsestudentpicture_Click);
+            // 
+            // changeemailbtn
+            // 
+            this.changeemailbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.changeemailbtn.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeemailbtn.Location = new System.Drawing.Point(7, 240);
+            this.changeemailbtn.Name = "changeemailbtn";
+            this.changeemailbtn.Size = new System.Drawing.Size(129, 40);
+            this.changeemailbtn.TabIndex = 51;
+            this.changeemailbtn.Text = "Change Email";
+            this.changeemailbtn.UseVisualStyleBackColor = true;
             // 
             // studidlabel
             // 
@@ -171,7 +174,7 @@
             // 
             // browsepicturebtn
             // 
-            this.browsepicturebtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.browsepicturebtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.browsepicturebtn.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.browsepicturebtn.Location = new System.Drawing.Point(147, 240);
             this.browsepicturebtn.Name = "browsepicturebtn";
@@ -207,8 +210,7 @@
             // 
             // studentnamelabel
             // 
-            this.studentnamelabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.studentnamelabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.studentnamelabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentnamelabel.Location = new System.Drawing.Point(290, 82);
             this.studentnamelabel.Name = "studentnamelabel";
@@ -219,8 +221,7 @@
             // 
             // departmentlabel
             // 
-            this.departmentlabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.departmentlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.departmentlabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.departmentlabel.Location = new System.Drawing.Point(290, 138);
             this.departmentlabel.Name = "departmentlabel";

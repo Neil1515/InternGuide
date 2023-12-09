@@ -37,7 +37,7 @@ namespace InternGuide.Admin_Form
                 {
                     connection.Open();
 
-                    string query = "SELECT id, deansfname, deanslname, department, image FROM departmentdeanstable";
+                    string query = "SELECT id, deansfname, deanslname, department, image, status FROM departmentdeanstable WHERE status = 'Active'";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
@@ -47,6 +47,7 @@ namespace InternGuide.Admin_Form
                             string deansName = reader["deansfname"].ToString() + " " + reader["deanslname"].ToString();
                             string department = reader["department"].ToString();
                             byte[] imageData = (byte[])reader["image"];
+                            string status = reader["status"].ToString();
 
                             // Create a new DepartmentAdminDetailsWidget
                             deanwidget widget = new deanwidget
@@ -54,11 +55,15 @@ namespace InternGuide.Admin_Form
                                 DeansID = deansID,
                                 DeansName = deansName,
                                 Department = department,
-                                DeansImage = Image.FromStream(new MemoryStream(imageData))
+                                DeansImage = Image.FromStream(new MemoryStream(imageData)),
+                                Status = status
                             };
 
-                            // Add the widget to the FlowLayoutPanel
-                            flowLayoutPanel1.Controls.Add(widget);
+                            // Add the widget to the FlowLayoutPanel only if the status is "Active"
+                            if (status == "Active")
+                            {
+                                flowLayoutPanel1.Controls.Add(widget);
+                            }
                         }
                     }
                 }

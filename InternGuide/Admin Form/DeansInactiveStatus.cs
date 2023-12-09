@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,41 +11,26 @@ using System.Windows.Forms;
 
 namespace InternGuide.Admin_Form
 {
-    public partial class DepartmentDeans : UserControl
+    public partial class DeansInactiveStatus : Form
     {
         private string connectionString = @"Data Source=192.168.1.3;Initial Catalog=InternGuideDB;Persist Security Info=True;User ID=SuperAdmin1;Password=SuperAdmin1";
         private SqlConnection connection;
         private SqlCommand command;
         private SqlDataReader reader;
-
-        public DepartmentDeans()
+        public DeansInactiveStatus()
         {
             InitializeComponent();
         }
 
-        private void addadmindetails_Click(object sender, EventArgs e)
+        private void DeansInactiveStatus_Load(object sender, EventArgs e)
         {
-            using (AddDepartmentAdmin adddepartmentadmin = new AddDepartmentAdmin())
-            {
-                adddepartmentadmin.DeanAdded += adddepartmentdean_DeanAdded;
-                adddepartmentadmin.ShowDialog();
-            }
-        }
-
-        private void adddepartmentdean_DeanAdded(object sender, EventArgs e)
-        {
-            // Reload data into the DataGridView after a product is added
-            LoadDataIntoDataGridView();
-        }
-
-        private void DepartmentAdmin_Load(object sender, EventArgs e)
-        {
+            // TODO: This line of code loads data into the 'internGuideDBDataSetMain.departmentdeanstable' table. You can move, or remove it, as needed.
             this.departmentdeanstableTableAdapter.Fill(this.internGuideDBDataSetMain.departmentdeanstable);
 
             // Load data into the DataGridView
             LoadDataIntoDataGridView();
-        }
 
+        }
         private void LoadDataIntoDataGridView()
         {
             try
@@ -59,7 +43,7 @@ namespace InternGuide.Admin_Form
                 }
 
                 // Update the query to include a WHERE clause for the "status" column
-                string query = "SELECT id, deansfname, deanslname, department, status, image FROM departmentdeanstable WHERE status = 'Active'";
+                string query = "SELECT id, deansfname, deanslname, department, status, image FROM departmentdeanstable WHERE status = 'Inactive'";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
@@ -76,7 +60,6 @@ namespace InternGuide.Admin_Form
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
             // Check if the clicked cell is the one containing the picture
             if (e.ColumnIndex == dataGridView1.Columns["editimage"].Index && e.RowIndex >= 0)
             {
@@ -105,7 +88,6 @@ namespace InternGuide.Admin_Form
                 }
             }
         }
-       
         private byte[] GetImageDataFromDatabase(int deanId)
         {
             try
@@ -139,12 +121,6 @@ namespace InternGuide.Admin_Form
             return null;
         }
 
-        private void refreshbtn_Click(object sender, EventArgs e)
-        {
-            LoadDataIntoDataGridView();
-            txtsearch.Text = "";
-        }
-
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
             // Get the search keyword from the text box
@@ -174,7 +150,7 @@ namespace InternGuide.Admin_Form
 
                 // Use a parameterized query to avoid SQL injection
                 string query = "SELECT id, deansfname, deanslname, department, status, image FROM departmentdeanstable " +
-                               "WHERE (id LIKE @searchKeyword OR deanslname LIKE @searchKeyword OR department LIKE @searchKeyword) AND status = 'Active'";
+                               "WHERE (id LIKE @searchKeyword OR deanslname LIKE @searchKeyword OR department LIKE @searchKeyword) AND status = 'Inactive'";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
                 adapter.SelectCommand.Parameters.AddWithValue("@searchKeyword", $"%{searchKeyword}%");
@@ -194,10 +170,10 @@ namespace InternGuide.Admin_Form
             }
         }
 
-        private void inactiveusersbtn_Click(object sender, EventArgs e)
+        private void refreshbtn_Click(object sender, EventArgs e)
         {
-            DeansInactiveStatus DeansInactiveStatus = new DeansInactiveStatus();
-            DeansInactiveStatus.ShowDialog();
+            LoadDataIntoDataGridView();
+            txtsearch.Text = "";
         }
     }
 }

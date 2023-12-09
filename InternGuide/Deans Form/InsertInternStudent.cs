@@ -190,8 +190,8 @@ namespace InternGuide.Deans_Form
                                     if (count == 0)
                                     {
                                         // Student does not exist, insert it
-                                        string insertQuery = "INSERT INTO studenttable (Id, deanId, fname, lname, mname, course, department, email, yrlvl, image, password) " +
-                                            "VALUES (@id, @deanId, @fname, @lname, @mname, @course, @department, @email, @yrlvl, NULL, @password)";
+                                        string insertQuery = "INSERT INTO studenttable (Id, deanId, fname, lname, mname, course, department, email, yrlvl, image, password, status, batch) " +
+                                            "VALUES (@id, @deanId, @fname, @lname, @mname, @course, @department, @email, @yrlvl, NULL, @password, @status, @batch)";
 
                                         using (var insertCommand = new SqlCommand(insertQuery, connection, transaction))
                                         {
@@ -205,6 +205,11 @@ namespace InternGuide.Deans_Form
                                             insertCommand.Parameters.AddWithValue("@department", department); // Use the fetched department
                                             insertCommand.Parameters.AddWithValue("@deanId", currentDeanId);
                                             insertCommand.Parameters.AddWithValue("@password", $"uclm-{student.Id}");
+                                            insertCommand.Parameters.AddWithValue("@status", "Active");
+                                            // Dynamically generate batch year based on the current date
+                                            DateTime currentDate = DateTime.Now;
+                                            string batchYear = currentDate.Year.ToString();
+                                            insertCommand.Parameters.AddWithValue("@batch", $"Batch-{batchYear}");
 
                                             insertCommand.ExecuteNonQuery();
                                         }

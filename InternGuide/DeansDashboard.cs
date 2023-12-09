@@ -53,15 +53,6 @@ namespace InternGuide
             get { return deanfnamelabel.Text; }
             set { deanfnamelabel.Text = value; }
         }
-
-        private void Logout1brn_Click(object sender, EventArgs e)
-        {
-            UpdateLogoutHistory(deansId);
-
-            this.Hide();
-            login login = new login();
-            login.ShowDialog();
-        }
         private void UpdateLogoutHistory(int userId)
         {
             try
@@ -214,6 +205,15 @@ namespace InternGuide
         private void deanfnamelabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void logoutbtn_Click(object sender, EventArgs e)
+        {
+            UpdateLogoutHistory(deansId);
+
+            this.Hide();
+            login login = new login();
+            login.ShowDialog();
         }
     }
 }

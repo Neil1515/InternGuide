@@ -83,7 +83,7 @@
             // 
             // txtsearch
             // 
-            this.txtsearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtsearch.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtsearch.BackColor = System.Drawing.Color.Transparent;
             this.txtsearch.BorderColor = System.Drawing.Color.LightGray;
             this.txtsearch.BorderRadius = 5;

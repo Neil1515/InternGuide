@@ -30,8 +30,8 @@ namespace InternGuide
             // Set other properties as needed
             this.Controls.Add(dashboardAdminPicture);
 
-            AdminHomepage AdminHomepage = new AdminHomepage();
-            addUserControl(AdminHomepage);
+            DepartmentDeansDetails DepartmentAdminDetails = new DepartmentDeansDetails();
+            addUserControl(DepartmentAdminDetails);
             LoadAdminInformation(adminId);
         }
         private void LoadAdminInformation(int adminId)
@@ -135,8 +135,8 @@ namespace InternGuide
 
         private void homebtn_Click(object sender, EventArgs e)
         {
-            AdminHomepage AdminHomepage = new AdminHomepage();
-            addUserControl(AdminHomepage);
+            DepartmentDeansDetails DepartmentAdminDetails = new DepartmentDeansDetails();
+            addUserControl(DepartmentAdminDetails);
         }
 
         private void adminmanageaccountbtn_Click(object sender, EventArgs e)

@@ -14,6 +14,7 @@ namespace InternGuide.Admin_Form
 {
     public partial class deanwidget : UserControl
     {
+        public string Status { get; set; }
         public deanwidget()
         {
             InitializeComponent();
