@@ -13,11 +13,17 @@ namespace InternGuide.Deans_Form
 {
     public partial class ManageStudentReq : UserControl
     {
-        public ManageStudentReq()
+        private int deansId;
+        private string deanDepartment;
+        public ManageStudentReq(int deansId, string deanDepartment)
         {
             InitializeComponent();
-            PrelimRequirements PrelimRequirements = new PrelimRequirements();
-            addUserControl(PrelimRequirements);
+            this.deansId = deansId;
+            this.deanDepartment = deanDepartment;
+
+            // Use the correct class name and constructor parameters
+            PrelimRequirements prelimRequirements = new PrelimRequirements(deansId, deanDepartment);
+            addUserControl(prelimRequirements);
         }
 
         
@@ -36,9 +42,10 @@ namespace InternGuide.Deans_Form
 
         private void prelimbtn_Click(object sender, EventArgs e)
         {
-            PrelimRequirements PrelimRequirements = new PrelimRequirements();
-            addUserControl(PrelimRequirements);
-            
+            // Use the correct class name and constructor parameters
+            PrelimRequirements prelimRequirements = new PrelimRequirements(deansId, deanDepartment);
+            addUserControl(prelimRequirements);
+
         }
 
         private void midtermbtn_Click(object sender, EventArgs e)

@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.studenttableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.internGuideDBDataSetMain = new InternGuide.InternGuideDBDataSetMain();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.ImportStudentExcelfilesbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.studenttableTableAdapter = new InternGuide.InternGuideDBDataSetMainTableAdapters.studenttableTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,12 +43,7 @@
             this.courseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yrlvlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studenttableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.internGuideDBDataSetMain = new InternGuide.InternGuideDBDataSetMain();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.ImportStudentExcelfilesbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.studenttableTableAdapter = new InternGuide.InternGuideDBDataSetMainTableAdapters.studenttableTableAdapter();
+            this.image = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studenttableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).BeginInit();
@@ -68,7 +69,8 @@
             this.lnameDataGridViewTextBoxColumn,
             this.courseDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
-            this.yrlvlDataGridViewTextBoxColumn});
+            this.yrlvlDataGridViewTextBoxColumn,
+            this.image});
             this.dataGridView1.DataSource = this.studenttableBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
@@ -77,62 +79,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(931, 424);
             this.dataGridView1.TabIndex = 45;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fnameDataGridViewTextBoxColumn
-            // 
-            this.fnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fnameDataGridViewTextBoxColumn.DataPropertyName = "fname";
-            this.fnameDataGridViewTextBoxColumn.HeaderText = "FIRST NAME";
-            this.fnameDataGridViewTextBoxColumn.Name = "fnameDataGridViewTextBoxColumn";
-            this.fnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mnameDataGridViewTextBoxColumn
-            // 
-            this.mnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mnameDataGridViewTextBoxColumn.DataPropertyName = "mname";
-            this.mnameDataGridViewTextBoxColumn.HeaderText = "MIDDLE NAME";
-            this.mnameDataGridViewTextBoxColumn.Name = "mnameDataGridViewTextBoxColumn";
-            this.mnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lnameDataGridViewTextBoxColumn
-            // 
-            this.lnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lnameDataGridViewTextBoxColumn.DataPropertyName = "lname";
-            this.lnameDataGridViewTextBoxColumn.HeaderText = "LAST NAME";
-            this.lnameDataGridViewTextBoxColumn.Name = "lnameDataGridViewTextBoxColumn";
-            this.lnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courseDataGridViewTextBoxColumn
-            // 
-            this.courseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.courseDataGridViewTextBoxColumn.DataPropertyName = "course";
-            this.courseDataGridViewTextBoxColumn.HeaderText = "COURSE";
-            this.courseDataGridViewTextBoxColumn.Name = "courseDataGridViewTextBoxColumn";
-            this.courseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "EMAIL";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // yrlvlDataGridViewTextBoxColumn
-            // 
-            this.yrlvlDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.yrlvlDataGridViewTextBoxColumn.DataPropertyName = "yrlvl";
-            this.yrlvlDataGridViewTextBoxColumn.HeaderText = "YEAR LEVEL";
-            this.yrlvlDataGridViewTextBoxColumn.Name = "yrlvlDataGridViewTextBoxColumn";
-            this.yrlvlDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // studenttableBindingSource
             // 
@@ -200,6 +146,72 @@
             // 
             this.studenttableTableAdapter.ClearBeforeFill = true;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fnameDataGridViewTextBoxColumn
+            // 
+            this.fnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fnameDataGridViewTextBoxColumn.DataPropertyName = "fname";
+            this.fnameDataGridViewTextBoxColumn.HeaderText = "FIRST NAME";
+            this.fnameDataGridViewTextBoxColumn.Name = "fnameDataGridViewTextBoxColumn";
+            this.fnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mnameDataGridViewTextBoxColumn
+            // 
+            this.mnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mnameDataGridViewTextBoxColumn.DataPropertyName = "mname";
+            this.mnameDataGridViewTextBoxColumn.HeaderText = "MIDDLE NAME";
+            this.mnameDataGridViewTextBoxColumn.Name = "mnameDataGridViewTextBoxColumn";
+            this.mnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lnameDataGridViewTextBoxColumn
+            // 
+            this.lnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lnameDataGridViewTextBoxColumn.DataPropertyName = "lname";
+            this.lnameDataGridViewTextBoxColumn.HeaderText = "LAST NAME";
+            this.lnameDataGridViewTextBoxColumn.Name = "lnameDataGridViewTextBoxColumn";
+            this.lnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // courseDataGridViewTextBoxColumn
+            // 
+            this.courseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.courseDataGridViewTextBoxColumn.DataPropertyName = "course";
+            this.courseDataGridViewTextBoxColumn.HeaderText = "COURSE";
+            this.courseDataGridViewTextBoxColumn.Name = "courseDataGridViewTextBoxColumn";
+            this.courseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "EMAIL";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // yrlvlDataGridViewTextBoxColumn
+            // 
+            this.yrlvlDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.yrlvlDataGridViewTextBoxColumn.DataPropertyName = "yrlvl";
+            this.yrlvlDataGridViewTextBoxColumn.FillWeight = 80F;
+            this.yrlvlDataGridViewTextBoxColumn.HeaderText = "YEAR LEVEL";
+            this.yrlvlDataGridViewTextBoxColumn.Name = "yrlvlDataGridViewTextBoxColumn";
+            this.yrlvlDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // image
+            // 
+            this.image.FillWeight = 50F;
+            this.image.HeaderText = "";
+            this.image.Image = global::InternGuide.Properties.Resources.edit__1_;
+            this.image.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.image.Name = "image";
+            this.image.ReadOnly = true;
+            // 
             // InsertInternStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +235,9 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button ImportStudentExcelfilesbtn;
+        private System.Windows.Forms.BindingSource studenttableBindingSource;
+        private InternGuideDBDataSetMain internGuideDBDataSetMain;
+        private InternGuideDBDataSetMainTableAdapters.studenttableTableAdapter studenttableTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mnameDataGridViewTextBoxColumn;
@@ -230,8 +245,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn courseDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn yrlvlDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource studenttableBindingSource;
-        private InternGuideDBDataSetMain internGuideDBDataSetMain;
-        private InternGuideDBDataSetMainTableAdapters.studenttableTableAdapter studenttableTableAdapter;
+        private System.Windows.Forms.DataGridViewImageColumn image;
     }
 }

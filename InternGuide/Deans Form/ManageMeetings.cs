@@ -21,5 +21,10 @@ namespace InternGuide.Deans_Form
         {
 
         }
+
+        private void addadmindetails_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

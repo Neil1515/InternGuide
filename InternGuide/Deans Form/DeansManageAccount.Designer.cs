@@ -1,6 +1,6 @@
-﻿namespace InternGuide.Admin_Form
+﻿namespace InternGuide.Deans_Form
 {
-    partial class ManageAdminAccount
+    partial class DeansManageAccount
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,23 +31,23 @@
             this.components = new System.ComponentModel.Container();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.updatebtn = new Guna.UI2.WinForms.Guna2Button();
             this.lnametextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.fnametextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.emailtextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.browsebtn = new Guna.UI2.WinForms.Guna2Button();
-            this.historylogsbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.changepassbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.adminpicture = new System.Windows.Forms.PictureBox();
-            this.idlabel = new System.Windows.Forms.Label();
+            this.idanddepartmentlabel = new System.Windows.Forms.Label();
             this.updatecompltelabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.historylogsbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.changepassbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.deanpicture = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminpicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deanpicture)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -57,8 +57,8 @@
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(931, 564);
-            this.guna2CustomGradientPanel1.TabIndex = 48;
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1042, 679);
+            this.guna2CustomGradientPanel1.TabIndex = 49;
             // 
             // guna2CustomGradientPanel2
             // 
@@ -77,16 +77,55 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.browsebtn);
             this.guna2CustomGradientPanel2.Controls.Add(this.historylogsbtn);
             this.guna2CustomGradientPanel2.Controls.Add(this.changepassbtn);
-            this.guna2CustomGradientPanel2.Controls.Add(this.adminpicture);
-            this.guna2CustomGradientPanel2.Controls.Add(this.idlabel);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(270, 57);
+            this.guna2CustomGradientPanel2.Controls.Add(this.deanpicture);
+            this.guna2CustomGradientPanel2.Controls.Add(this.idanddepartmentlabel);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(325, 57);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(390, 440);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(390, 469);
             this.guna2CustomGradientPanel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(38, 235);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 16);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "Email";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(38, 362);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 16);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "Last Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(38, 299);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 16);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "First Name";
             // 
             // updatebtn
             // 
-            this.updatebtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.updatebtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.updatebtn.BorderRadius = 10;
             this.updatebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.updatebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -94,7 +133,7 @@
             this.updatebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.updatebtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updatebtn.ForeColor = System.Drawing.Color.White;
-            this.updatebtn.Location = new System.Drawing.Point(267, 400);
+            this.updatebtn.Location = new System.Drawing.Point(272, 433);
             this.updatebtn.Name = "updatebtn";
             this.updatebtn.Size = new System.Drawing.Size(82, 27);
             this.updatebtn.TabIndex = 62;
@@ -113,7 +152,7 @@
             this.lnametextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.lnametextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lnametextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lnametextBox.Location = new System.Drawing.Point(38, 358);
+            this.lnametextBox.Location = new System.Drawing.Point(41, 381);
             this.lnametextBox.Name = "lnametextBox";
             this.lnametextBox.PasswordChar = '\0';
             this.lnametextBox.PlaceholderText = "Last Name";
@@ -133,7 +172,7 @@
             this.fnametextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.fnametextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.fnametextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.fnametextBox.Location = new System.Drawing.Point(38, 295);
+            this.fnametextBox.Location = new System.Drawing.Point(41, 318);
             this.fnametextBox.Name = "fnametextBox";
             this.fnametextBox.PasswordChar = '\0';
             this.fnametextBox.PlaceholderText = "First Name";
@@ -153,7 +192,7 @@
             this.emailtextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.emailtextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.emailtextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailtextBox.Location = new System.Drawing.Point(38, 231);
+            this.emailtextBox.Location = new System.Drawing.Point(41, 254);
             this.emailtextBox.Name = "emailtextBox";
             this.emailtextBox.PasswordChar = '\0';
             this.emailtextBox.PlaceholderText = "Email";
@@ -171,12 +210,42 @@
             this.browsebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.browsebtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.browsebtn.ForeColor = System.Drawing.Color.White;
-            this.browsebtn.Location = new System.Drawing.Point(152, 178);
+            this.browsebtn.Location = new System.Drawing.Point(152, 214);
             this.browsebtn.Name = "browsebtn";
             this.browsebtn.Size = new System.Drawing.Size(82, 27);
             this.browsebtn.TabIndex = 57;
             this.browsebtn.Text = "Browse";
             this.browsebtn.Click += new System.EventHandler(this.browsebtn_Click);
+            // 
+            // idanddepartmentlabel
+            // 
+            this.idanddepartmentlabel.BackColor = System.Drawing.Color.Transparent;
+            this.idanddepartmentlabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.idanddepartmentlabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.idanddepartmentlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.idanddepartmentlabel.Location = new System.Drawing.Point(0, 0);
+            this.idanddepartmentlabel.Name = "idanddepartmentlabel";
+            this.idanddepartmentlabel.Size = new System.Drawing.Size(390, 71);
+            this.idanddepartmentlabel.TabIndex = 61;
+            this.idanddepartmentlabel.Text = "DEAN ID\r\nDEPARTMENT";
+            this.idanddepartmentlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // updatecompltelabel
+            // 
+            this.updatecompltelabel.BackColor = System.Drawing.Color.Transparent;
+            this.updatecompltelabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.updatecompltelabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.updatecompltelabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.updatecompltelabel.Location = new System.Drawing.Point(0, 0);
+            this.updatecompltelabel.Name = "updatecompltelabel";
+            this.updatecompltelabel.Size = new System.Drawing.Size(1042, 43);
+            this.updatecompltelabel.TabIndex = 48;
+            this.updatecompltelabel.Text = "Update Complete";
+            this.updatecompltelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // historylogsbtn
             // 
@@ -195,7 +264,6 @@
             this.historylogsbtn.Size = new System.Drawing.Size(30, 33);
             this.historylogsbtn.TabIndex = 55;
             this.historylogsbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.historylogsbtn.Click += new System.EventHandler(this.historylogsbtn_Click);
             // 
             // changepassbtn
             // 
@@ -216,98 +284,27 @@
             this.changepassbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.changepassbtn.Click += new System.EventHandler(this.changepassbtn_Click);
             // 
-            // adminpicture
+            // deanpicture
             // 
-            this.adminpicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.adminpicture.Location = new System.Drawing.Point(106, 47);
-            this.adminpicture.Name = "adminpicture";
-            this.adminpicture.Size = new System.Drawing.Size(175, 125);
-            this.adminpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.adminpicture.TabIndex = 45;
-            this.adminpicture.TabStop = false;
+            this.deanpicture.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.deanpicture.Location = new System.Drawing.Point(106, 74);
+            this.deanpicture.Name = "deanpicture";
+            this.deanpicture.Size = new System.Drawing.Size(175, 125);
+            this.deanpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.deanpicture.TabIndex = 45;
+            this.deanpicture.TabStop = false;
             // 
-            // idlabel
-            // 
-            this.idlabel.BackColor = System.Drawing.Color.Transparent;
-            this.idlabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.idlabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.idlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.idlabel.Location = new System.Drawing.Point(0, 0);
-            this.idlabel.Name = "idlabel";
-            this.idlabel.Size = new System.Drawing.Size(390, 39);
-            this.idlabel.TabIndex = 61;
-            this.idlabel.Text = "ADMIN ID";
-            this.idlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // updatecompltelabel
-            // 
-            this.updatecompltelabel.BackColor = System.Drawing.Color.Transparent;
-            this.updatecompltelabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.updatecompltelabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.updatecompltelabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.updatecompltelabel.Location = new System.Drawing.Point(0, 0);
-            this.updatecompltelabel.Name = "updatecompltelabel";
-            this.updatecompltelabel.Size = new System.Drawing.Size(931, 43);
-            this.updatecompltelabel.TabIndex = 48;
-            this.updatecompltelabel.Text = "Update Complete";
-            this.updatecompltelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(35, 339);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 16);
-            this.label4.TabIndex = 50;
-            this.label4.Text = "Last Name";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(35, 276);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "First Name";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(35, 212);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 16);
-            this.label1.TabIndex = 63;
-            this.label1.Text = "Email";
-            // 
-            // ManageAdminAccount
+            // DeansManageAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2CustomGradientPanel1);
-            this.Name = "ManageAdminAccount";
-            this.Size = new System.Drawing.Size(931, 564);
+            this.Name = "DeansManageAccount";
+            this.Size = new System.Drawing.Size(1042, 679);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adminpicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deanpicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,19 +313,19 @@
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private Guna.UI2.WinForms.Guna2Button historylogsbtn;
-        private Guna.UI2.WinForms.Guna2Button changepassbtn;
-        private System.Windows.Forms.PictureBox adminpicture;
-        private System.Windows.Forms.Label updatecompltelabel;
-        private Guna.UI2.WinForms.Guna2Button browsebtn;
-        private Guna.UI2.WinForms.Guna2TextBox lnametextBox;
-        private Guna.UI2.WinForms.Guna2TextBox fnametextBox;
-        private Guna.UI2.WinForms.Guna2TextBox emailtextBox;
-        private System.Windows.Forms.Label idlabel;
-        private Guna.UI2.WinForms.Guna2Button updatebtn;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Button updatebtn;
+        private Guna.UI2.WinForms.Guna2TextBox lnametextBox;
+        private Guna.UI2.WinForms.Guna2TextBox fnametextBox;
+        private Guna.UI2.WinForms.Guna2TextBox emailtextBox;
+        private Guna.UI2.WinForms.Guna2Button browsebtn;
+        private Guna.UI2.WinForms.Guna2Button historylogsbtn;
+        private Guna.UI2.WinForms.Guna2Button changepassbtn;
+        private System.Windows.Forms.PictureBox deanpicture;
+        private System.Windows.Forms.Label idanddepartmentlabel;
+        private System.Windows.Forms.Label updatecompltelabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }

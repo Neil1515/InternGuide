@@ -12,9 +12,13 @@ namespace InternGuide.Deans_Form.Requirements
 {
     public partial class PrelimRequirements : UserControl
     {
-        public PrelimRequirements()
+        private int deansId;
+        private string deanDepartment;
+        public PrelimRequirements(int deansId, string deanDepartment)
         {
             InitializeComponent();
+            this.deansId = deansId;
+            this.deanDepartment = deanDepartment;
         }
 
         private void PrelimRequirements_Load(object sender, EventArgs e)
@@ -24,8 +28,8 @@ namespace InternGuide.Deans_Form.Requirements
 
         private void addprelimrequirements_Click(object sender, EventArgs e)
         {
-            AddPrelimReqs AddPrelimReqs = new AddPrelimReqs();
-            AddPrelimReqs.ShowDialog();
+            AddPrelimReqs addPrelimReqsForm = new AddPrelimReqs(deansId, deanDepartment);
+            addPrelimReqsForm.ShowDialog();
         }
     }
 }

@@ -18,19 +18,18 @@ namespace InternGuide
     public partial class DeansDashboard : Form
     {
         private int deansId;
-        private PictureBox deanpicture;
+        private string deanDepartment;
         private PictureBox dashboardDeanPicture;
 
-        public DeansDashboard(int deansId)
+        public DeansDashboard(int deansId, string deanDepartment)
         {
             InitializeComponent();
             this.deansId = deansId;
+            this.deanDepartment = deanDepartment;
 
-            // Add deanpicture dynamically
-            deanpicture = new PictureBox();
-            deanpicture.Name = "deanpicture";
-            // Set other properties as needed
-            this.Controls.Add(deanpicture);
+
+            ViewStudentDetails ViewStudentDetails = new ViewStudentDetails(deansId);
+            addUserControl(ViewStudentDetails);
 
             // Initialize dashboardDeanPicture
             dashboardDeanPicture = new PictureBox();
@@ -47,11 +46,10 @@ namespace InternGuide
             // Optional: Set dashboardDeanPicture visible
             dashboardDeanPicture.Visible = true;
         }
-
         public string DeansfName
         {
             get { return deanfnamelabel.Text; }
-            set { deanfnamelabel.Text = value; }
+            set { deanfnamelabel.Text = "Dean, "+value; }
         }
         private void UpdateLogoutHistory(int userId)
         {
@@ -86,23 +84,22 @@ namespace InternGuide
 
         private void deanmanageaccountbtn_Click(object sender, EventArgs e)
         {
-            DeanManageAccount DeanManageAccount = new DeanManageAccount(deansId);
-            DeanManageAccount.DeanfNameUpdated += UpdateDeanfName;
-            DeanManageAccount.DeanPictureUpdated += UpdateDeanPicture;
-            addUserControl(DeanManageAccount);
+            DeansManageAccount DeansManageAccount = new DeansManageAccount(deansId);
+            DeansManageAccount.DeansfNameUpdated += UpdateDeansfName;
+            DeansManageAccount.DeansPictureUpdated += UpdateDeansPicture;
+            addUserControl(DeansManageAccount);
         }
 
-        private void UpdateDeanfName(string newDeanfName)
+        private void UpdateDeansfName(string newDeanfName)
         {
             DeansfName = newDeanfName;
         }
 
-        private void UpdateDeanPicture(byte[] imageBytes)
+        private void UpdateDeansPicture(byte[] imageBytes)
         {
             using (MemoryStream ms = new MemoryStream(imageBytes))
             {
-                deanpicture.Image = Image.FromStream(ms);
-                dashboardDeanPicture.Image = Image.FromStream(ms);
+                dashboarddeanpicture1.Image = Image.FromStream(ms);
             }
         }
 
@@ -112,10 +109,6 @@ namespace InternGuide
             addUserControl(InsertInternStudent);
         }
 
-        private void dashboarddeanpicture_Click(object sender, EventArgs e)
-        {
-            // This event handler can be left empty unless you have specific actions to perform when the dashboarddeanpicture is clicked.
-        }
 
         private void LoadDeanInformation(int deansId)
         {
@@ -166,19 +159,7 @@ namespace InternGuide
             }
         }
 
-        private void deanhistlogsbtn_Click(object sender, EventArgs e)
-        {
-            Deanhistorylogs deanhistorylogs = new Deanhistorylogs(deansId);
-            addUserControl(deanhistorylogs);
-        }
-
         private void homebtn_Click(object sender, EventArgs e)
-        {
-            DeanHomepage DeanHomepage = new DeanHomepage();
-            addUserControl(DeanHomepage);
-        }
-
-        private void showstudentdetailsbtn_Click(object sender, EventArgs e)
         {
             ViewStudentDetails ViewStudentDetails = new ViewStudentDetails(deansId);
             addUserControl(ViewStudentDetails);
@@ -198,7 +179,7 @@ namespace InternGuide
 
         private void studentrequirementbtn_Click(object sender, EventArgs e)
         {
-            ManageStudentReq ManageStudentReq = new ManageStudentReq();
+            ManageStudentReq ManageStudentReq = new ManageStudentReq(deansId, deanDepartment);
             addUserControl(ManageStudentReq);
         }
 

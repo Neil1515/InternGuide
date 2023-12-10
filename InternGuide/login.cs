@@ -98,14 +98,14 @@ namespace InternGuide
                     {
                         dr.Read();
                         string deansfName = dr["deansfname"].ToString();
+                        string deanDepartment = dr["department"].ToString(); // Retrieve the department
                         userId = Convert.ToInt32(dr["id"]);
                         dr.Close(); // Close the SqlDataReader after reading data
 
                         InsertLoginHistory(userId);
-                       // MessageBox.Show("Login Successful as Deans Account.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
-                        DeansDashboard deansDashboard = new DeansDashboard(userId);
-                        deansDashboard.DeansfName = deansfName; // Set the accounting member's name
+                        DeansDashboard deansDashboard = new DeansDashboard(userId, deanDepartment);
+                        deansDashboard.DeansfName = deansfName;
                         deansDashboard.ShowDialog();
                         return;
                     }

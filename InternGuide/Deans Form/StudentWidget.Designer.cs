@@ -32,7 +32,7 @@
             this.studnamelabel = new System.Windows.Forms.Label();
             this.studyrcourselabel = new System.Windows.Forms.Label();
             this.studemaillabel = new System.Windows.Forms.Label();
-            this.studentwidgetPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.studentwidgetPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.studentwidgetPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +40,7 @@
             // 
             this.studidlabel.Font = new System.Drawing.Font("Leelawadee", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studidlabel.ForeColor = System.Drawing.Color.Black;
-            this.studidlabel.Location = new System.Drawing.Point(89, 3);
+            this.studidlabel.Location = new System.Drawing.Point(93, 3);
             this.studidlabel.Name = "studidlabel";
             this.studidlabel.Size = new System.Drawing.Size(159, 18);
             this.studidlabel.TabIndex = 8;
@@ -51,7 +51,7 @@
             // 
             this.studnamelabel.Font = new System.Drawing.Font("Leelawadee", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studnamelabel.ForeColor = System.Drawing.Color.Black;
-            this.studnamelabel.Location = new System.Drawing.Point(89, 21);
+            this.studnamelabel.Location = new System.Drawing.Point(93, 21);
             this.studnamelabel.Name = "studnamelabel";
             this.studnamelabel.Size = new System.Drawing.Size(160, 18);
             this.studnamelabel.TabIndex = 9;
@@ -62,7 +62,7 @@
             // 
             this.studyrcourselabel.Font = new System.Drawing.Font("Leelawadee", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studyrcourselabel.ForeColor = System.Drawing.Color.Black;
-            this.studyrcourselabel.Location = new System.Drawing.Point(89, 39);
+            this.studyrcourselabel.Location = new System.Drawing.Point(93, 39);
             this.studyrcourselabel.Name = "studyrcourselabel";
             this.studyrcourselabel.Size = new System.Drawing.Size(160, 18);
             this.studyrcourselabel.TabIndex = 10;
@@ -73,7 +73,7 @@
             // 
             this.studemaillabel.Font = new System.Drawing.Font("Leelawadee", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studemaillabel.ForeColor = System.Drawing.Color.Black;
-            this.studemaillabel.Location = new System.Drawing.Point(89, 60);
+            this.studemaillabel.Location = new System.Drawing.Point(93, 60);
             this.studemaillabel.Name = "studemaillabel";
             this.studemaillabel.Size = new System.Drawing.Size(160, 18);
             this.studemaillabel.TabIndex = 11;
@@ -82,13 +82,12 @@
             // 
             // studentwidgetPictureBox
             // 
-            this.studentwidgetPictureBox.Image = global::InternGuide.Properties.Resources.profile_user;
-            this.studentwidgetPictureBox.ImageRotate = 0F;
-            this.studentwidgetPictureBox.Location = new System.Drawing.Point(5, 3);
+            this.studentwidgetPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.studentwidgetPictureBox.Location = new System.Drawing.Point(0, -1);
             this.studentwidgetPictureBox.Name = "studentwidgetPictureBox";
-            this.studentwidgetPictureBox.Size = new System.Drawing.Size(85, 78);
+            this.studentwidgetPictureBox.Size = new System.Drawing.Size(92, 85);
             this.studentwidgetPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.studentwidgetPictureBox.TabIndex = 12;
+            this.studentwidgetPictureBox.TabIndex = 13;
             this.studentwidgetPictureBox.TabStop = false;
             // 
             // StudentWidget
@@ -114,6 +113,6 @@
         private System.Windows.Forms.Label studnamelabel;
         private System.Windows.Forms.Label studyrcourselabel;
         private System.Windows.Forms.Label studemaillabel;
-        private Guna.UI2.WinForms.Guna2PictureBox studentwidgetPictureBox;
+        private System.Windows.Forms.PictureBox studentwidgetPictureBox;
     }
 }

@@ -31,6 +31,7 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.addprelimrequirements = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addprelimrequirements)).BeginInit();
             this.SuspendLayout();
@@ -78,10 +79,19 @@
             this.addprelimrequirements.TabStop = false;
             this.addprelimrequirements.Click += new System.EventHandler(this.addprelimrequirements_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 67);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(931, 363);
+            this.flowLayoutPanel1.TabIndex = 44;
+            // 
             // PrelimRequirements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "PrelimRequirements";
             this.Size = new System.Drawing.Size(931, 430);
@@ -98,5 +108,6 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox addprelimrequirements;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

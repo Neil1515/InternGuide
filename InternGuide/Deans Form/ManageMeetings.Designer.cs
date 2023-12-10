@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.addadmindetails = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.internGuideDBDataSetMain = new InternGuide.InternGuideDBDataSetMain();
             this.meetingscheduletableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.internGuideDBDataSetMain = new InternGuide.InternGuideDBDataSetMain();
             this.meetingscheduletableTableAdapter = new InternGuide.InternGuideDBDataSetMainTableAdapters.meetingscheduletableTableAdapter();
             this.datetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.meetingtitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,11 +42,12 @@
             this.agendaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.organizationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.locationvenueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.image = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addadmindetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meetingscheduletableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -91,6 +92,7 @@
             this.addadmindetails.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.addadmindetails.TabIndex = 38;
             this.addadmindetails.TabStop = false;
+            this.addadmindetails.Click += new System.EventHandler(this.addadmindetails_Click);
             // 
             // dataGridView1
             // 
@@ -112,7 +114,8 @@
             this.durationDataGridViewTextBoxColumn,
             this.agendaDataGridViewTextBoxColumn,
             this.organizationDataGridViewTextBoxColumn,
-            this.locationvenueDataGridViewTextBoxColumn});
+            this.locationvenueDataGridViewTextBoxColumn,
+            this.image});
             this.dataGridView1.DataSource = this.meetingscheduletableBindingSource;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(0, 73);
@@ -121,15 +124,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(931, 418);
             this.dataGridView1.TabIndex = 43;
             // 
-            // internGuideDBDataSetMain
-            // 
-            this.internGuideDBDataSetMain.DataSetName = "InternGuideDBDataSetMain";
-            this.internGuideDBDataSetMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // meetingscheduletableBindingSource
             // 
             this.meetingscheduletableBindingSource.DataMember = "meetingscheduletable";
             this.meetingscheduletableBindingSource.DataSource = this.internGuideDBDataSetMain;
+            // 
+            // internGuideDBDataSetMain
+            // 
+            this.internGuideDBDataSetMain.DataSetName = "InternGuideDBDataSetMain";
+            this.internGuideDBDataSetMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // meetingscheduletableTableAdapter
             // 
@@ -177,6 +180,15 @@
             this.locationvenueDataGridViewTextBoxColumn.Name = "locationvenueDataGridViewTextBoxColumn";
             this.locationvenueDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // image
+            // 
+            this.image.FillWeight = 50F;
+            this.image.HeaderText = "";
+            this.image.Image = global::InternGuide.Properties.Resources.edit__1_;
+            this.image.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.image.Name = "image";
+            this.image.ReadOnly = true;
+            // 
             // ManageMeetings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,8 +202,8 @@
             this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addadmindetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meetingscheduletableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,14 +214,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox addadmindetails;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource meetingscheduletableBindingSource;
+        private InternGuideDBDataSetMain internGuideDBDataSetMain;
+        private InternGuideDBDataSetMainTableAdapters.meetingscheduletableTableAdapter meetingscheduletableTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn datetimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn meetingtitleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn durationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn agendaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn organizationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn locationvenueDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource meetingscheduletableBindingSource;
-        private InternGuideDBDataSetMain internGuideDBDataSetMain;
-        private InternGuideDBDataSetMainTableAdapters.meetingscheduletableTableAdapter meetingscheduletableTableAdapter;
+        private System.Windows.Forms.DataGridViewImageColumn image;
     }
 }

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.productstatusToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,36 +46,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.admindepartpicture)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // productstatusToggleSwitch
-            // 
-            this.productstatusToggleSwitch.Checked = true;
-            this.productstatusToggleSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.productstatusToggleSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.productstatusToggleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.productstatusToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.productstatusToggleSwitch.Location = new System.Drawing.Point(230, 222);
-            this.productstatusToggleSwitch.Margin = new System.Windows.Forms.Padding(2);
-            this.productstatusToggleSwitch.Name = "productstatusToggleSwitch";
-            this.productstatusToggleSwitch.Size = new System.Drawing.Size(26, 16);
-            this.productstatusToggleSwitch.TabIndex = 61;
-            this.productstatusToggleSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.productstatusToggleSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.productstatusToggleSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.productstatusToggleSwitch.UncheckedState.InnerColor = System.Drawing.Color.White;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(167, 216);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 25);
-            this.label6.TabIndex = 58;
-            this.label6.Text = "Active";
             // 
             // label4
             // 
@@ -269,8 +237,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.fnametextbox);
             this.Controls.Add(this.idtextBox);
-            this.Controls.Add(this.productstatusToggleSwitch);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.admindepartpicture);
             this.Controls.Add(this.label7);
@@ -279,7 +245,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddDepartmentAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Department Admin";
             this.Load += new System.EventHandler(this.AddDepartmentAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.admindepartpicture)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -290,8 +255,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2ToggleSwitch productstatusToggleSwitch;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox admindepartpicture;
         private System.Windows.Forms.Label label7;

@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace InternGuide.Deans_Form
 {
-    public partial class DeanManageAccount : UserControl
+    public partial class DeansManageAccount : UserControl
     {
-        public event Action<byte[]> DeanPictureUpdated;
-        public event Action<string> DeanfNameUpdated;
+        public event Action<byte[]> DeansPictureUpdated;
+        public event Action<string> DeansfNameUpdated;
         private int deansId;
         private byte[] selectedImageBytes;
         private Timer updateTimer;
-        public DeanManageAccount(int deansId)
+        public DeansManageAccount(int deansId)
         {
             InitializeComponent();
             this.deansId = deansId;
@@ -52,11 +52,10 @@ namespace InternGuide.Deans_Form
                         if (reader.Read())
                         {
                             // Display admin details in the textboxes
-                            idtextBox.Text = reader["Id"].ToString();
-                            departmentemailtextBox.Text = reader["departmentemail"].ToString();
-                            departmentlabel.Text = reader["department"].ToString();
+                            idanddepartmentlabel.Text = reader["Id"].ToString()+ "\n"+reader["department"].ToString();
+                            emailtextBox.Text = reader["departmentemail"].ToString();
                             fnametextBox.Text = reader["deansfname"].ToString();
-                            lnameTextBox.Text = reader["deanslname"].ToString();
+                            lnametextBox.Text = reader["deanslname"].ToString();
 
                             // Display the admin's image
                             byte[] imageBytes = reader["image"] as byte[];
@@ -76,16 +75,12 @@ namespace InternGuide.Deans_Form
                 }
             }
         }
-        private void DeanManageAccount_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void updatebtn_Click(object sender, EventArgs e)
         {
             string newfname = fnametextBox.Text;
-            string newlname = lnameTextBox.Text;
-            string newemail = departmentemailtextBox.Text;
+            string newlname = lnametextBox.Text;
+            string newemail = emailtextBox.Text;
 
             // Validate input fields (Example: Check if required fields are not empty)
             if (string.IsNullOrWhiteSpace(newfname) || string.IsNullOrWhiteSpace(newlname) || string.IsNullOrWhiteSpace(newemail))
@@ -97,7 +92,7 @@ namespace InternGuide.Deans_Form
             if (UpdateDeansInfo(newfname, newlname, newemail, selectedImageBytes, deansId))
             {
                 updatecompltelabel.Text = "Update Successfully.";
-                DeanfNameUpdated?.Invoke(newfname);
+                DeansfNameUpdated?.Invoke(newfname);
 
                 // Start the timer to clear the label after 5 seconds
                 updateTimer.Start();
@@ -146,15 +141,13 @@ namespace InternGuide.Deans_Form
                                     cmd.Parameters.AddWithValue("@image", imageBytes);
 
                                     // Raise the event to notify about admin picture update
-                                    DeanPictureUpdated?.Invoke(imageBytes);
+                                    DeansPictureUpdated?.Invoke(imageBytes);
                                 }
 
                                 cmd.Parameters.AddWithValue("@deansId", deansId);
 
                                 int rowsAffected = cmd.ExecuteNonQuery();
 
-                                // Update emails for all deans in the same department
-                                UpdateEmailsForSameDepartment(connection, transaction, newemail, deansId);
 
                                 // Commit the transaction
                                 transaction.Commit();
@@ -178,19 +171,6 @@ namespace InternGuide.Deans_Form
             }
         }
 
-        private void UpdateEmailsForSameDepartment(SqlConnection connection, SqlTransaction transaction, string newEmail, int deansId)
-        {
-            // Define the SQL query to update emails for all deans in the same department
-            string updateEmailsQuery = "UPDATE departmentdeanstable SET departmentemail = @newEmail WHERE department = (SELECT department FROM departmentdeanstable WHERE id = @deansId)";
-
-            using (SqlCommand updateCmd = new SqlCommand(updateEmailsQuery, connection, transaction))
-            {
-                updateCmd.Parameters.AddWithValue("@newEmail", newEmail);
-                updateCmd.Parameters.AddWithValue("@deansId", deansId);
-
-                updateCmd.ExecuteNonQuery();
-            }
-        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             // Clear the label text and stop the Timer
@@ -198,7 +178,7 @@ namespace InternGuide.Deans_Form
             updateTimer.Stop();
         }
 
-        private void browsepicturebtn_Click(object sender, EventArgs e)
+        private void browsebtn_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -215,9 +195,10 @@ namespace InternGuide.Deans_Form
             }
         }
 
-        private void deanpicture_Click(object sender, EventArgs e)
+        private void changepassbtn_Click(object sender, EventArgs e)
         {
-
+            DeanChangePassword DeanChangePassword = new DeanChangePassword(deansId);
+            DeanChangePassword.ShowDialog();
         }
     }
 }

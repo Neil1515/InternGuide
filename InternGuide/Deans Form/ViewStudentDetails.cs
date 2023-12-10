@@ -65,7 +65,7 @@ namespace InternGuide.Deans_Form
                                     {
                                         int studentID = reader.GetInt32(reader.GetOrdinal("id"));
                                         string studentName = reader["fname"].ToString() + " " + reader["mname"].ToString() + " " + reader["lname"].ToString();
-                                        string yrlvlcourse = reader["yrlvl"].ToString() + "/" + reader["course"].ToString();
+                                        string yrlvlcourse = reader["yrlvl"].ToString()+" Year-"+ reader["course"].ToString();
                                         string studemail = reader["email"].ToString();
 
                                         // Check if the 'image' column is DBNull

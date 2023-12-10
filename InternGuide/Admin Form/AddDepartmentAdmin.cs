@@ -116,7 +116,7 @@ namespace InternGuide.Admin_Form
                     command.Parameters.AddWithValue("@deansfname", fnametextbox.Text);
                     command.Parameters.AddWithValue("@deanslname", lnametextbox.Text);
                     command.Parameters.AddWithValue("@password", ("uclm-" + deanId));
-                    command.Parameters.AddWithValue("@Status", productstatusToggleSwitch.Checked ? "Active" : "Inactive");
+                    command.Parameters.AddWithValue("@Status", "Active");
                     command.Parameters.AddWithValue("@Image", imageData);
 
                     int result = command.ExecuteNonQuery();
