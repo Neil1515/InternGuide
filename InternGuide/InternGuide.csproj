@@ -26,7 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -64,7 +64,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
@@ -521,6 +521,42 @@
     <Compile Include="Student Form\StudentHomepage.Designer.cs">
       <DependentUpon>StudentHomepage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student Form\StudentRequirements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Form\StudentRequirements.Designer.cs">
+      <DependentUpon>StudentRequirements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Form\studRequirements\RequirementsFinal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Form\studRequirements\RequirementsFinal.Designer.cs">
+      <DependentUpon>RequirementsFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Form\studRequirements\RequirementsPrelim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Form\studRequirements\RequirementsPrelim.Designer.cs">
+      <DependentUpon>RequirementsPrelim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Form\studRequirements\RequirementsMidterm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Form\studRequirements\RequirementsMidterm.Designer.cs">
+      <DependentUpon>RequirementsMidterm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Form\studRequirements\RequirementsSemifinal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Form\studRequirements\RequirementsSemifinal.Designer.cs">
+      <DependentUpon>RequirementsSemifinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Form\studRequirements\widgetprelimstudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student Form\studRequirements\widgetprelimstudent.Designer.cs">
+      <DependentUpon>widgetprelimstudent.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin Form\AddDepartmentAdmin.resx">
       <DependentUpon>AddDepartmentAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -635,6 +671,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Student Form\StudentHomepage.resx">
       <DependentUpon>StudentHomepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Form\StudentRequirements.resx">
+      <DependentUpon>StudentRequirements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Form\studRequirements\RequirementsFinal.resx">
+      <DependentUpon>RequirementsFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Form\studRequirements\RequirementsMidterm.resx">
+      <DependentUpon>RequirementsMidterm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Form\studRequirements\RequirementsPrelim.resx">
+      <DependentUpon>RequirementsPrelim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Form\studRequirements\RequirementsSemifinal.resx">
+      <DependentUpon>RequirementsSemifinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Form\studRequirements\widgetprelimstudent.resx">
+      <DependentUpon>widgetprelimstudent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="InternGuideDBDataSet.xsc">
       <DependentUpon>InternGuideDBDataSet.xsd</DependentUpon>
@@ -762,6 +816,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="386881156_3550009328597777_6562289270389337043_n.ico" />
+    <None Include="Resources\christmas-lights-acegif-64.gif" />
+    <None Include="Resources\chat-bubbles-with-ellipsis.png" />
     <None Include="Resources\passive-candidate.png" />
     <None Include="Resources\refresh.png" />
     <None Include="Resources\password-protected.png" />

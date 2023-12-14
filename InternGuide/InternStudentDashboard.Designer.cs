@@ -38,7 +38,7 @@
             this.Adminhistlogsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.studentmanageaccountbtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.insertstudentbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.studentreqbtn = new Guna.UI2.WinForms.Guna2Button();
             this.studdashboardhomepage = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.studcourselabel = new System.Windows.Forms.Label();
@@ -138,7 +138,7 @@
             this.panel2.Controls.Add(this.Adminhistlogsbtn);
             this.panel2.Controls.Add(this.studentmanageaccountbtn);
             this.panel2.Controls.Add(this.guna2Button3);
-            this.panel2.Controls.Add(this.insertstudentbtn);
+            this.panel2.Controls.Add(this.studentreqbtn);
             this.panel2.Controls.Add(this.studdashboardhomepage);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -229,32 +229,33 @@
             this.guna2Button3.Text = "MEETING SCHEDULE";
             this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // insertstudentbtn
+            // studentreqbtn
             // 
-            this.insertstudentbtn.BackColor = System.Drawing.Color.White;
-            this.insertstudentbtn.BorderRadius = 1;
-            this.insertstudentbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.insertstudentbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.insertstudentbtn.CheckedState.FillColor = System.Drawing.Color.White;
-            this.insertstudentbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.insertstudentbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.insertstudentbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.insertstudentbtn.DisabledState.FillColor = System.Drawing.Color.White;
-            this.insertstudentbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.insertstudentbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.insertstudentbtn.FillColor = System.Drawing.Color.White;
-            this.insertstudentbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertstudentbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.insertstudentbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
-            this.insertstudentbtn.Image = global::InternGuide.Properties.Resources.writing;
-            this.insertstudentbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.insertstudentbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.insertstudentbtn.Location = new System.Drawing.Point(0, 130);
-            this.insertstudentbtn.Name = "insertstudentbtn";
-            this.insertstudentbtn.Size = new System.Drawing.Size(286, 51);
-            this.insertstudentbtn.TabIndex = 47;
-            this.insertstudentbtn.Text = "INTERN REQUIREMENTS";
-            this.insertstudentbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.studentreqbtn.BackColor = System.Drawing.Color.White;
+            this.studentreqbtn.BorderRadius = 1;
+            this.studentreqbtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.studentreqbtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.studentreqbtn.CheckedState.FillColor = System.Drawing.Color.White;
+            this.studentreqbtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.studentreqbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.studentreqbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.studentreqbtn.DisabledState.FillColor = System.Drawing.Color.White;
+            this.studentreqbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.studentreqbtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.studentreqbtn.FillColor = System.Drawing.Color.White;
+            this.studentreqbtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentreqbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.studentreqbtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.studentreqbtn.Image = global::InternGuide.Properties.Resources.writing;
+            this.studentreqbtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.studentreqbtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.studentreqbtn.Location = new System.Drawing.Point(0, 130);
+            this.studentreqbtn.Name = "studentreqbtn";
+            this.studentreqbtn.Size = new System.Drawing.Size(286, 51);
+            this.studentreqbtn.TabIndex = 47;
+            this.studentreqbtn.Text = "INTERN REQUIREMENTS";
+            this.studentreqbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.studentreqbtn.Click += new System.EventHandler(this.studentreqbtn_Click);
             // 
             // studdashboardhomepage
             // 
@@ -435,7 +436,7 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox dashboardstudentpicture1;
         private Guna.UI2.WinForms.Guna2Button studdashboardhomepage;
         private Guna.UI2.WinForms.Guna2Button homebtn;
-        private Guna.UI2.WinForms.Guna2Button insertstudentbtn;
+        private Guna.UI2.WinForms.Guna2Button studentreqbtn;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Button Adminhistlogsbtn;

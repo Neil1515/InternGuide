@@ -36,9 +36,11 @@
             this.deansnamelabel = new System.Windows.Forms.Label();
             this.dashdeanpicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.internGuideDBDataSetMain = new InternGuide.InternGuideDBDataSetMain();
             this.departmentpartnershipcompanytableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.internGuideDBDataSetMain = new InternGuide.InternGuideDBDataSetMain();
             this.departmentpartnershipcompanytableTableAdapter = new InternGuide.InternGuideDBDataSetMainTableAdapters.departmentpartnershipcompanytableTableAdapter();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,15 +50,13 @@
             this.emailaddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yearstartedaspartnerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remarkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashdeanpicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentpartnershipcompanytableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,82 +166,19 @@
             this.dataGridView1.Size = new System.Drawing.Size(994, 294);
             this.dataGridView1.TabIndex = 1;
             // 
-            // internGuideDBDataSetMain
-            // 
-            this.internGuideDBDataSetMain.DataSetName = "InternGuideDBDataSetMain";
-            this.internGuideDBDataSetMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // departmentpartnershipcompanytableBindingSource
             // 
             this.departmentpartnershipcompanytableBindingSource.DataMember = "departmentpartnershipcompanytable";
             this.departmentpartnershipcompanytableBindingSource.DataSource = this.internGuideDBDataSetMain;
             // 
+            // internGuideDBDataSetMain
+            // 
+            this.internGuideDBDataSetMain.DataSetName = "InternGuideDBDataSetMain";
+            this.internGuideDBDataSetMain.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // departmentpartnershipcompanytableTableAdapter
             // 
             this.departmentpartnershipcompanytableTableAdapter.ClearBeforeFill = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // companynameDataGridViewTextBoxColumn
-            // 
-            this.companynameDataGridViewTextBoxColumn.DataPropertyName = "companyname";
-            this.companynameDataGridViewTextBoxColumn.HeaderText = "companyname";
-            this.companynameDataGridViewTextBoxColumn.Name = "companynameDataGridViewTextBoxColumn";
-            this.companynameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // contactpersonDataGridViewTextBoxColumn
-            // 
-            this.contactpersonDataGridViewTextBoxColumn.DataPropertyName = "contactperson";
-            this.contactpersonDataGridViewTextBoxColumn.HeaderText = "contactperson";
-            this.contactpersonDataGridViewTextBoxColumn.Name = "contactpersonDataGridViewTextBoxColumn";
-            this.contactpersonDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // designationDataGridViewTextBoxColumn
-            // 
-            this.designationDataGridViewTextBoxColumn.DataPropertyName = "designation";
-            this.designationDataGridViewTextBoxColumn.HeaderText = "designation";
-            this.designationDataGridViewTextBoxColumn.Name = "designationDataGridViewTextBoxColumn";
-            this.designationDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // contactnumberDataGridViewTextBoxColumn
-            // 
-            this.contactnumberDataGridViewTextBoxColumn.DataPropertyName = "contactnumber";
-            this.contactnumberDataGridViewTextBoxColumn.HeaderText = "contactnumber";
-            this.contactnumberDataGridViewTextBoxColumn.Name = "contactnumberDataGridViewTextBoxColumn";
-            this.contactnumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailaddressDataGridViewTextBoxColumn
-            // 
-            this.emailaddressDataGridViewTextBoxColumn.DataPropertyName = "emailaddress";
-            this.emailaddressDataGridViewTextBoxColumn.HeaderText = "emailaddress";
-            this.emailaddressDataGridViewTextBoxColumn.Name = "emailaddressDataGridViewTextBoxColumn";
-            this.emailaddressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // yearstartedaspartnerDataGridViewTextBoxColumn
-            // 
-            this.yearstartedaspartnerDataGridViewTextBoxColumn.DataPropertyName = "yearstartedaspartner";
-            this.yearstartedaspartnerDataGridViewTextBoxColumn.HeaderText = "yearstartedaspartner";
-            this.yearstartedaspartnerDataGridViewTextBoxColumn.Name = "yearstartedaspartnerDataGridViewTextBoxColumn";
-            this.yearstartedaspartnerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // remarkDataGridViewTextBoxColumn
-            // 
-            this.remarkDataGridViewTextBoxColumn.DataPropertyName = "remark";
-            this.remarkDataGridViewTextBoxColumn.HeaderText = "remark";
-            this.remarkDataGridViewTextBoxColumn.Name = "remarkDataGridViewTextBoxColumn";
-            this.remarkDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // guna2CustomGradientPanel2
             // 
@@ -275,6 +212,69 @@
             this.label1.Text = "Directory of Industry Partners";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // companynameDataGridViewTextBoxColumn
+            // 
+            this.companynameDataGridViewTextBoxColumn.DataPropertyName = "companyname";
+            this.companynameDataGridViewTextBoxColumn.HeaderText = "Company Name";
+            this.companynameDataGridViewTextBoxColumn.Name = "companynameDataGridViewTextBoxColumn";
+            this.companynameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // contactpersonDataGridViewTextBoxColumn
+            // 
+            this.contactpersonDataGridViewTextBoxColumn.DataPropertyName = "contactperson";
+            this.contactpersonDataGridViewTextBoxColumn.HeaderText = "Contact Person";
+            this.contactpersonDataGridViewTextBoxColumn.Name = "contactpersonDataGridViewTextBoxColumn";
+            this.contactpersonDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // designationDataGridViewTextBoxColumn
+            // 
+            this.designationDataGridViewTextBoxColumn.DataPropertyName = "designation";
+            this.designationDataGridViewTextBoxColumn.HeaderText = "Designation";
+            this.designationDataGridViewTextBoxColumn.Name = "designationDataGridViewTextBoxColumn";
+            this.designationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // contactnumberDataGridViewTextBoxColumn
+            // 
+            this.contactnumberDataGridViewTextBoxColumn.DataPropertyName = "contactnumber";
+            this.contactnumberDataGridViewTextBoxColumn.HeaderText = "Contact Number";
+            this.contactnumberDataGridViewTextBoxColumn.Name = "contactnumberDataGridViewTextBoxColumn";
+            this.contactnumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailaddressDataGridViewTextBoxColumn
+            // 
+            this.emailaddressDataGridViewTextBoxColumn.DataPropertyName = "emailaddress";
+            this.emailaddressDataGridViewTextBoxColumn.HeaderText = "Email Address";
+            this.emailaddressDataGridViewTextBoxColumn.Name = "emailaddressDataGridViewTextBoxColumn";
+            this.emailaddressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // yearstartedaspartnerDataGridViewTextBoxColumn
+            // 
+            this.yearstartedaspartnerDataGridViewTextBoxColumn.DataPropertyName = "yearstartedaspartner";
+            this.yearstartedaspartnerDataGridViewTextBoxColumn.HeaderText = "Year started As Partner";
+            this.yearstartedaspartnerDataGridViewTextBoxColumn.Name = "yearstartedaspartnerDataGridViewTextBoxColumn";
+            this.yearstartedaspartnerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // remarkDataGridViewTextBoxColumn
+            // 
+            this.remarkDataGridViewTextBoxColumn.DataPropertyName = "remark";
+            this.remarkDataGridViewTextBoxColumn.HeaderText = "Remark";
+            this.remarkDataGridViewTextBoxColumn.Name = "remarkDataGridViewTextBoxColumn";
+            this.remarkDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // StudentHomepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,8 +290,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashdeanpicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentpartnershipcompanytableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -306,6 +306,11 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label departmentemaillabel;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource departmentpartnershipcompanytableBindingSource;
+        private InternGuideDBDataSetMain internGuideDBDataSetMain;
+        private InternGuideDBDataSetMainTableAdapters.departmentpartnershipcompanytableTableAdapter departmentpartnershipcompanytableTableAdapter;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn companynameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
@@ -315,10 +320,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailaddressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn yearstartedaspartnerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn remarkDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource departmentpartnershipcompanytableBindingSource;
-        private InternGuideDBDataSetMain internGuideDBDataSetMain;
-        private InternGuideDBDataSetMainTableAdapters.departmentpartnershipcompanytableTableAdapter departmentpartnershipcompanytableTableAdapter;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private System.Windows.Forms.Label label1;
     }
 }

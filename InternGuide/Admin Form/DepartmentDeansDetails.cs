@@ -74,5 +74,56 @@ namespace InternGuide.Admin_Form
             }
         }
 
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtsearch.Text.Trim(); // Get the text from the search box
+
+            // Clear existing controls before populating again
+            flowLayoutPanel1.Controls.Clear();
+
+            string connectionString = @"Data Source=192.168.1.3;Initial Catalog=InternGuideDB;Persist Security Info=True;User ID=SuperAdmin1;Password=SuperAdmin1";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT id, deansfname, deanslname, department, image, status FROM departmentdeanstable WHERE status = 'Active' AND (deansfname LIKE @searchText OR deanslname LIKE @searchText OR department LIKE @searchText)";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int deansID = reader.GetInt32(reader.GetOrdinal("id"));
+                                string deansName = reader["deansfname"].ToString() + " " + reader["deanslname"].ToString();
+                                string department = reader["department"].ToString();
+                                byte[] imageData = (byte[])reader["image"];
+                                string status = reader["status"].ToString();
+
+                                // Create a new DeanWidget
+                                deanwidget widget = new deanwidget
+                                {
+                                    DeansID = deansID,
+                                    DeansName = deansName,
+                                    Department = department,
+                                    DeansImage = Image.FromStream(new MemoryStream(imageData)),
+                                    Status = status
+                                };
+
+                                // Add the widget to the FlowLayoutPanel
+                                flowLayoutPanel1.Controls.Add(widget);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
     }
 }

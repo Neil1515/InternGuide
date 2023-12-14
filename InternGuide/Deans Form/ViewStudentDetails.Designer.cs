@@ -30,49 +30,37 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.studdepartmentlabel = new System.Windows.Forms.Label();
             this.txtsearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.studdepartmentlabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 56);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(931, 435);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(931, 441);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.Controls.Add(this.txtsearch);
             this.guna2Panel1.Controls.Add(this.studdepartmentlabel);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(931, 50);
             this.guna2Panel1.TabIndex = 1;
             // 
-            // studdepartmentlabel
-            // 
-            this.studdepartmentlabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.studdepartmentlabel.Font = new System.Drawing.Font("Leelawadee", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studdepartmentlabel.ForeColor = System.Drawing.Color.Black;
-            this.studdepartmentlabel.Location = new System.Drawing.Point(2, 1);
-            this.studdepartmentlabel.Name = "studdepartmentlabel";
-            this.studdepartmentlabel.Size = new System.Drawing.Size(925, 42);
-            this.studdepartmentlabel.TabIndex = 9;
-            this.studdepartmentlabel.Text = "Department";
-            this.studdepartmentlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // txtsearch
             // 
-            this.txtsearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtsearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtsearch.BackColor = System.Drawing.Color.Transparent;
             this.txtsearch.BorderColor = System.Drawing.Color.LightGray;
             this.txtsearch.BorderRadius = 5;
@@ -87,25 +75,49 @@
             this.txtsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsearch.IconLeft = global::InternGuide.Properties.Resources.people;
             this.txtsearch.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.txtsearch.Location = new System.Drawing.Point(682, 13);
+            this.txtsearch.Location = new System.Drawing.Point(622, 12);
             this.txtsearch.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.PasswordChar = '\0';
             this.txtsearch.PlaceholderText = "Search...";
             this.txtsearch.SelectedText = "";
-            this.txtsearch.Size = new System.Drawing.Size(232, 30);
+            this.txtsearch.Size = new System.Drawing.Size(280, 30);
             this.txtsearch.TabIndex = 11;
+            this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
+            // 
+            // studdepartmentlabel
+            // 
+            this.studdepartmentlabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.studdepartmentlabel.Font = new System.Drawing.Font("Leelawadee", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studdepartmentlabel.ForeColor = System.Drawing.Color.Black;
+            this.studdepartmentlabel.Location = new System.Drawing.Point(2, 1);
+            this.studdepartmentlabel.Name = "studdepartmentlabel";
+            this.studdepartmentlabel.Size = new System.Drawing.Size(611, 42);
+            this.studdepartmentlabel.TabIndex = 9;
+            this.studdepartmentlabel.Text = "Department";
+            this.studdepartmentlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 50);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(931, 441);
+            this.panel1.TabIndex = 2;
             // 
             // ViewStudentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "ViewStudentDetails";
             this.Size = new System.Drawing.Size(931, 491);
             this.Load += new System.EventHandler(this.ViewStudentDetails_Load);
             this.guna2Panel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -116,5 +128,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label studdepartmentlabel;
         private Guna.UI2.WinForms.Guna2TextBox txtsearch;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -196,5 +196,13 @@ namespace InternGuide
             login login = new login();
             login.ShowDialog();
         }
+
+        private void myprofilebtn_Click(object sender, EventArgs e)
+        {
+            DeansManageAccount DeansManageAccount = new DeansManageAccount(deansId);
+            DeansManageAccount.DeansfNameUpdated += UpdateDeansfName;
+            DeansManageAccount.DeansPictureUpdated += UpdateDeansPicture;
+            addUserControl(DeansManageAccount);
+        }
     }
 }

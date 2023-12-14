@@ -178,5 +178,11 @@ namespace InternGuide
                 MessageBox.Show("Failed to update logout history: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void studentreqbtn_Click(object sender, EventArgs e)
+        {
+            StudentRequirements StudentRequirements = new StudentRequirements();
+            addUserControl(StudentRequirements);
+        }
     }
 }

@@ -45,6 +45,7 @@
             this.insertstudentbtn = new Guna.UI2.WinForms.Guna2Button();
             this.DepartmentPartnersCompbtn = new Guna.UI2.WinForms.Guna2Button();
             this.awdawd = new Guna.UI2.WinForms.Guna2Button();
+            this.messagebtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dashboarddeanpicture1 = new System.Windows.Forms.PictureBox();
             this.deanfnamelabel = new System.Windows.Forms.Label();
@@ -89,6 +90,7 @@
             this.myprofilebtn.TabIndex = 52;
             this.myprofilebtn.Text = "My Profile";
             this.myprofilebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.myprofilebtn.Click += new System.EventHandler(this.myprofilebtn_Click);
             // 
             // logoutbtn
             // 
@@ -173,6 +175,7 @@
             this.flowLayoutPanel1.Controls.Add(this.insertstudentbtn);
             this.flowLayoutPanel1.Controls.Add(this.DepartmentPartnersCompbtn);
             this.flowLayoutPanel1.Controls.Add(this.awdawd);
+            this.flowLayoutPanel1.Controls.Add(this.messagebtn);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 152);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -375,6 +378,33 @@
             this.awdawd.Text = "REPORTS";
             this.awdawd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // messagebtn
+            // 
+            this.messagebtn.BackColor = System.Drawing.Color.White;
+            this.messagebtn.BorderRadius = 1;
+            this.messagebtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.messagebtn.CheckedState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.messagebtn.CheckedState.FillColor = System.Drawing.Color.White;
+            this.messagebtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.messagebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.messagebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.messagebtn.DisabledState.FillColor = System.Drawing.Color.White;
+            this.messagebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.messagebtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.messagebtn.FillColor = System.Drawing.Color.White;
+            this.messagebtn.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.messagebtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.messagebtn.HoverState.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.messagebtn.Image = global::InternGuide.Properties.Resources.chat_bubbles_with_ellipsis;
+            this.messagebtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.messagebtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.messagebtn.Location = new System.Drawing.Point(3, 402);
+            this.messagebtn.Name = "messagebtn";
+            this.messagebtn.Size = new System.Drawing.Size(253, 51);
+            this.messagebtn.TabIndex = 52;
+            this.messagebtn.Text = "MESSAGE";
+            this.messagebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dashboarddeanpicture1);
@@ -453,5 +483,6 @@
         private Guna.UI2.WinForms.Guna2Button myprofilebtn;
         private Guna.UI2.WinForms.Guna2Button logoutbtn;
         private System.Windows.Forms.PictureBox dashboarddeanpicture1;
+        private Guna.UI2.WinForms.Guna2Button messagebtn;
     }
 }

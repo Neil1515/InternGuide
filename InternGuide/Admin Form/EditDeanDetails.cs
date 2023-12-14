@@ -25,10 +25,11 @@ namespace InternGuide.Admin_Form
         private string LName { get; set; }
         private string Department { get; set; }
         private byte[] ImageData { get; set; }
+        public event EventHandler DeanUpdated;
 
         private byte[] imageData;
 
-        public event EventHandler<DeanUpdatedEventArgs> DeanUpdated;
+        //public event EventHandler<DeanUpdatedEventArgs> DeanUpdated;
         private void EditDeanDetails_Load(object sender, EventArgs e)
         {
 
@@ -98,6 +99,7 @@ namespace InternGuide.Admin_Form
                 // Trigger the event to notify that dean details are updated
                 OnDeanUpdated(new DeanUpdatedEventArgs { DeanID = DeanId });
 
+                DeanUpdated?.Invoke(this, EventArgs.Empty);
                 // Close the form
                 this.Close();
             }

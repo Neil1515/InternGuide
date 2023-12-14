@@ -59,7 +59,7 @@ namespace InternGuide.Deans_Form.Requirements
                         {
 
                             // Now that we have the dean's department, retrieve the students from the same department
-                            string query = "SELECT requiremtitle, description, filesample FROM prelimrequirementtable WHERE department = @department";
+                            string query = "SELECT requiremtitle, description FROM prelimrequirementtable WHERE department = @department";
 
                             using (SqlCommand command = new SqlCommand(query, connection))
                             {
@@ -71,14 +71,15 @@ namespace InternGuide.Deans_Form.Requirements
                                     {
                                         string requiremTitle = reader["requiremtitle"].ToString();
                                         string description = reader["description"].ToString();
-                                        string fileSample = reader["filesample"].ToString();
+                                        //string fileSample = reader["filesample"].ToString();
 
                                         // Create a new StudentWidget
                                         widgetprelim widget = new widgetprelim
                                         {
                                             Title = requiremTitle,
                                             Description = description,
-                                            Samplefiletitle = fileSample,                                        };
+                                            //Samplefiletitle = fileSample,
+                                        };
 
                                         // Add the widget to the FlowLayoutPanel
                                         flowLayoutPanel1.Controls.Add(widget);

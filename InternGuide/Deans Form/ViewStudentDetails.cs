@@ -100,5 +100,80 @@ namespace InternGuide.Deans_Form
                 }
             }
         }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtsearch.Text.Trim(); // Get the text from the search box
+
+            // Clear existing controls before populating again
+            flowLayoutPanel1.Controls.Clear();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string deanDepartmentQuery = "SELECT department FROM departmentdeanstable WHERE Id = @deansId";
+
+                    using (SqlCommand deanDepartmentCmd = new SqlCommand(deanDepartmentQuery, connection))
+                    {
+                        deanDepartmentCmd.Parameters.AddWithValue("@deansId", deansId);
+
+                        string deanDepartment = deanDepartmentCmd.ExecuteScalar() as string;
+
+                        if (deanDepartment != null)
+                        {
+                            // Set the department text in studdepartmentlabel
+                            studdepartmentlabel.Text = $"{deanDepartment} Students";
+
+                            // Now that we have the dean's department, retrieve the students from the same department
+                            string query = "SELECT id, fname, mname, lname, yrlvl, course, email, image FROM studenttable WHERE department = @department AND (id LIKE @searchText OR lname LIKE @searchText OR course LIKE @searchText OR email LIKE @searchText)";
+
+                            using (SqlCommand command = new SqlCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@department", deanDepartment);
+                                command.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+
+                                using (SqlDataReader reader = command.ExecuteReader())
+                                {
+                                    while (reader.Read())
+                                    {
+                                        int studentID = reader.GetInt32(reader.GetOrdinal("id"));
+                                        string studentName = reader["fname"].ToString() + " " + reader["mname"].ToString() + " " + reader["lname"].ToString();
+                                        string yrlvlcourse = reader["yrlvl"].ToString() + " Year-" + reader["course"].ToString();
+                                        string studemail = reader["email"].ToString();
+
+                                        // Check if the 'image' column is DBNull
+                                        byte[] imageData = reader["image"] == DBNull.Value ? null : (byte[])reader["image"];
+
+                                        // Create a new StudentWidget
+                                        StudentWidget widget = new StudentWidget
+                                        {
+                                            StudID = studentID,
+                                            StudentName = studentName,
+                                            Yrcourse = yrlvlcourse,
+                                            Studemail = studemail,
+                                            StudentImage = imageData != null ? Image.FromStream(new MemoryStream(imageData)) : null
+                                        };
+
+                                        // Add the widget to the FlowLayoutPanel
+                                        flowLayoutPanel1.Controls.Add(widget);
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Dean not found or department not specified for the dean.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
     }
 }

@@ -30,8 +30,8 @@
         {
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.addprelimrequirements = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.addprelimrequirements = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addprelimrequirements)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +66,15 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Prelim Requirement";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 67);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(931, 363);
+            this.flowLayoutPanel1.TabIndex = 44;
+            // 
             // addprelimrequirements
             // 
             this.addprelimrequirements.BackColor = System.Drawing.Color.Transparent;
@@ -78,14 +87,6 @@
             this.addprelimrequirements.TabIndex = 38;
             this.addprelimrequirements.TabStop = false;
             this.addprelimrequirements.Click += new System.EventHandler(this.addprelimrequirements_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 67);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(931, 363);
-            this.flowLayoutPanel1.TabIndex = 44;
             // 
             // PrelimRequirements
             // 

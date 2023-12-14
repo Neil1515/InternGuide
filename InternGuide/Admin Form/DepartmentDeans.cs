@@ -95,6 +95,7 @@ namespace InternGuide.Admin_Form
                     byte[] imageData = GetImageDataFromDatabase(deanId); // Implement this method to fetch the image data
                     using (EditDeanDetails editDeanDetails = new EditDeanDetails(deanId, fName, lName, department, imageData))
                     {
+                        editDeanDetails.DeanUpdated += AddDeanDetails_DeanUpdated;
                         // Show the form
                         editDeanDetails.ShowDialog();
                     }
@@ -105,7 +106,11 @@ namespace InternGuide.Admin_Form
                 }
             }
         }
-       
+        private void AddDeanDetails_DeanUpdated(object sender, EventArgs e)
+        {
+            // Refresh DataGridView after accounting details are updated
+            LoadDataIntoDataGridView();
+        }
         private byte[] GetImageDataFromDatabase(int deanId)
         {
             try

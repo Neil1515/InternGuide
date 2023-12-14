@@ -88,19 +88,45 @@ namespace InternGuide
                     }
                 }
 
+                //dr.Close(); // Close the SqlDataReader
+
+                //// If not found in admintable, check the deanstable table
+                //cmd.CommandText = "SELECT * FROM departmentdeanstable WHERE id = @id AND password = @password";
+                //using (dr = cmd.ExecuteReader())
+                //{
+                //    if (dr.HasRows)
+                //    {
+                //        dr.Read();
+                //        string deansfName = dr["deansfname"].ToString();
+                //        string deanDepartment = dr["department"].ToString(); // Retrieve the department
+                //        userId = Convert.ToInt32(dr["id"]);
+                //        dr.Close(); // Close the SqlDataReader after reading data
+
+                //        InsertLoginHistory(userId);
+                //        this.Hide();
+                //        DeansDashboard deansDashboard = new DeansDashboard(userId, deanDepartment);
+                //        deansDashboard.DeansfName = deansfName;
+                //        deansDashboard.ShowDialog();
+                //        return;
+                //    }
+                //}
+
                 dr.Close(); // Close the SqlDataReader
 
-                // If not found in admintable, check the deanstable table
+                // Check tblaccounting table
                 cmd.CommandText = "SELECT * FROM departmentdeanstable WHERE id = @id AND password = @password";
-                using (dr = cmd.ExecuteReader())
+                dr = cmd.ExecuteReader();
+
+                if (dr.Read()) // Check if any rows were returned
                 {
-                    if (dr.HasRows)
+                    string status = dr["status"].ToString();
+                    if (status == "Active")
                     {
-                        dr.Read();
+                        //dr.Close();
                         string deansfName = dr["deansfname"].ToString();
                         string deanDepartment = dr["department"].ToString(); // Retrieve the department
                         userId = Convert.ToInt32(dr["id"]);
-                        dr.Close(); // Close the SqlDataReader after reading data
+                        dr.Close();
 
                         InsertLoginHistory(userId);
                         this.Hide();
@@ -109,9 +135,14 @@ namespace InternGuide
                         deansDashboard.ShowDialog();
                         return;
                     }
+                    else
+                    {
+                        dr.Close();
+                        idpassnotfountlabel.Text = "User is inactive. Contact admin for access.";
+                        return;
+                    }
                 }
-
-                dr.Close(); // Close the SqlDataReader
+                dr.Close();
 
                 cmd.CommandText = "SELECT * FROM studenttable WHERE id = @id AND password = @password";
                 using (dr = cmd.ExecuteReader())

@@ -45,10 +45,12 @@
             this.departmentpartnershipcompanytableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.internGuideDBDataSetMain = new InternGuide.InternGuideDBDataSetMain();
             this.departmentpartnershipcompanytableTableAdapter = new InternGuide.InternGuideDBDataSetMainTableAdapters.departmentpartnershipcompanytableTableAdapter();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentpartnershipcompanytableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -56,7 +58,6 @@
             this.guna2CustomGradientPanel1.AllowDrop = true;
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.BorderRadius = 5;
-            this.guna2CustomGradientPanel1.Controls.Add(this.ImportStudentExcelfilesbtn);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(144)))), ((int)(((byte)(255)))));
@@ -71,19 +72,19 @@
             // ImportStudentExcelfilesbtn
             // 
             this.ImportStudentExcelfilesbtn.BorderRadius = 10;
-            this.ImportStudentExcelfilesbtn.BorderThickness = 1;
             this.ImportStudentExcelfilesbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ImportStudentExcelfilesbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ImportStudentExcelfilesbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ImportStudentExcelfilesbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ImportStudentExcelfilesbtn.Dock = System.Windows.Forms.DockStyle.Right;
             this.ImportStudentExcelfilesbtn.FillColor = System.Drawing.Color.White;
             this.ImportStudentExcelfilesbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ImportStudentExcelfilesbtn.ForeColor = System.Drawing.Color.Black;
             this.ImportStudentExcelfilesbtn.Image = global::InternGuide.Properties.Resources.xls_file;
             this.ImportStudentExcelfilesbtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.ImportStudentExcelfilesbtn.Location = new System.Drawing.Point(17, 15);
+            this.ImportStudentExcelfilesbtn.Location = new System.Drawing.Point(790, 0);
             this.ImportStudentExcelfilesbtn.Name = "ImportStudentExcelfilesbtn";
-            this.ImportStudentExcelfilesbtn.Size = new System.Drawing.Size(141, 37);
+            this.ImportStudentExcelfilesbtn.Size = new System.Drawing.Size(141, 40);
             this.ImportStudentExcelfilesbtn.TabIndex = 40;
             this.ImportStudentExcelfilesbtn.Text = "Import Companies";
             this.ImportStudentExcelfilesbtn.Click += new System.EventHandler(this.ImportStudentExcelfilesbtn_Click);
@@ -109,9 +110,6 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
@@ -129,11 +127,12 @@
             this.yearstartedaspartnerDataGridViewTextBoxColumn,
             this.remarkDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.departmentpartnershipcompanytableBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 67);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 107);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(931, 424);
+            this.dataGridView1.Size = new System.Drawing.Size(931, 384);
             this.dataGridView1.TabIndex = 46;
             // 
             // statusDataGridViewTextBoxColumn
@@ -213,11 +212,21 @@
             // 
             this.departmentpartnershipcompanytableTableAdapter.ClearBeforeFill = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.ImportStudentExcelfilesbtn);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 67);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(931, 40);
+            this.panel1.TabIndex = 47;
+            // 
             // DepartmentPartnersComp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "DepartmentPartnersComp";
             this.Size = new System.Drawing.Size(931, 491);
@@ -226,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentpartnershipcompanytableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.internGuideDBDataSetMain)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -248,5 +258,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailaddressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn yearstartedaspartnerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn remarkDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
     }
 }

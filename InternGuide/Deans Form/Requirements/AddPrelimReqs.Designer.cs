@@ -153,6 +153,7 @@
             // 
             // descriptiontextbox
             // 
+            this.descriptiontextbox.AutoScroll = true;
             this.descriptiontextbox.BorderRadius = 5;
             this.descriptiontextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.descriptiontextbox.DefaultText = "";

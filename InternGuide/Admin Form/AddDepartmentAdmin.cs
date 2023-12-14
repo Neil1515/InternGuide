@@ -19,7 +19,8 @@ namespace InternGuide.Admin_Form
         private SqlCommand command;
         private SqlDataReader reader;
         private string imagePath;
-        public event EventHandler<DeanAddedEventArgs> DeanAdded;
+        //public event EventHandler<DeanAddedEventArgs> DeanAdded;
+        public event EventHandler DeanAdded;
 
         public AddDepartmentAdmin()
         {
@@ -135,6 +136,8 @@ namespace InternGuide.Admin_Form
                         });
 
                         ClearFields();
+                        DeanAdded?.Invoke(this, EventArgs.Empty);
+
                     }
                     else
                     {

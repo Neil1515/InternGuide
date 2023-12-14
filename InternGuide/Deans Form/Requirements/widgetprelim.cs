@@ -15,7 +15,9 @@ namespace InternGuide.Deans_Form.Requirements
 {
     public partial class widgetprelim : UserControl
     {
-        
+        private string title;
+        private string description;
+        private string samplefiletitle;
         public widgetprelim()
         {
             InitializeComponent();
@@ -25,9 +27,6 @@ namespace InternGuide.Deans_Form.Requirements
         {
 
         }
-        private string title;
-        private string description;
-        private string samplefiletitle;
 
         [Category("Data")]
         public string Title
@@ -44,11 +43,16 @@ namespace InternGuide.Deans_Form.Requirements
             set { description = value; descriptiontextbox.Text = "Description :\n" + value; }
         }
 
-        [Category("Data")]
-        public string Samplefiletitle
+        private void downloadsamplefilebtn_Click(object sender, EventArgs e)
         {
-            get { return samplefiletitle; }
-            set { samplefiletitle = value; sampletitletextbox.Text = value; }
+
         }
+
+        //[Category("Data")]
+        //public string Samplefiletitle
+        //{
+        //    get { return samplefiletitle; }
+        //    set { samplefiletitle = value; sampletitletextbox.Text = value; }
+        //}
     }
 }
